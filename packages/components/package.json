@@ -1,6 +1,6 @@
 {
   "name": "@potati/components",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "组件库",
   "main": "lib",
   "module": "es",
@@ -23,7 +23,7 @@
     "unplugin-element-plus": "^0.8.0"
   },
   "peerDependencies": {
-    "@potati/theme-chalk": "workspace:^1.0.0",
+    "@potati/theme-chalk": "workspace:^1.0.1",
     "element-plus": "^2.4.4"
   }
 }
