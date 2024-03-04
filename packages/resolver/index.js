@@ -7,7 +7,7 @@ function PotatiResolver() {
         return {
           name: 'Pot' + partialName,
           from: '@potati/components',
-          sideEffects: `@potati/components/es/${partialName}/style/index.css`,
+          sideEffects: `@potati/components/es/${partialName}/style/index`,
         }
       }
     },

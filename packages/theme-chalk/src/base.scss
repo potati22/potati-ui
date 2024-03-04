@@ -1,0 +1,9 @@
+@use 'mixins/var' as *;
+@use 'common/var' as *;
+
+:root {
+  @include set-css-var-color('white');
+  @include set-css-var-color('yellow');
+  @include set-css-var-color('black');
+  @include set-css-var-color('grey');
+}

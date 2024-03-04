@@ -1,0 +1,63 @@
+@use 'sass:map';
+
+@use '../mixins/function.scss' as *;
+
+// Color
+$colors: () !default;
+$colors: map.deep-merge(
+  (
+    'white': (
+      'default': #ffffff,
+    ),
+    'yellow': (
+      'default': #fded70,
+      'light-1': #ffe456,
+    ),
+    'black': (
+      'default': #000000,
+      'light-1': #0a0b0d,
+      'light-2': #18181a,
+      'light-3': #212123,
+      'light-4': #2b2b2e,
+    ),
+    'grey': (
+      'default': #e4eaf1,
+      'light-1': #b4c3d3,
+    ),
+  ),
+  $colors
+);
+
+// Background
+$bg-color: () !default;
+$bg-color: map.merge(
+  (
+    'page': getCssVar('color', 'black', 'light-2'),
+    'block': getCssVar('color', 'black', 'light-3'),
+  ),
+  $bg-color
+);
+
+// Button
+$button: () !default;
+$button: map.merge(
+  (
+    'bg-color': getCssVar('color', 'black', 'light-4'),
+    'bg-color-hover': getCssVar('color', 'black', 'light-2'),
+    'text-color': getCssVar('color', 'grey', ''),
+  ),
+  $button
+);
+
+// Radio
+$radio: () !default;
+$radio: map.merge(
+  (
+    'bg-color': getCssVar('color', 'black', 'light-4'),
+    'bg-color-hover': getCssVar('color', 'black', 'light-2'),
+    'bg-color-checked': getCssVar('color', 'black', 'light-1'),
+    'text-color': getCssVar('color', 'grey', ''),
+    'text-color-checked': getCssVar('color', 'grey', 'light-1'),
+  ),
+  $radio
+);

@@ -1,7 +1,7 @@
 import type Button from './button.vue'
 
 export interface ButtonProps {
-  text: string
+  type?: 'yellow'
 }
 
 export type ButtonInstance = InstanceType<typeof Button>

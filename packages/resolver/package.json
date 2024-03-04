@@ -1,6 +1,6 @@
 {
   "name": "@potati/resolver",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "组件库自动导入插件",
   "type": "commonjs",
   "main": "./index",

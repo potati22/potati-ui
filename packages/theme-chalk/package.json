@@ -1,0 +1,15 @@
+{
+  "name": "@potati/theme-chalk",
+  "version": "1.0.0",
+  "description": "组件库主题变量",
+  "type": "module",
+  "module": "./build/index.css",
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "sass --style expanded index.scss:./build/index.css"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -2,10 +2,15 @@ import gulp from 'gulp'
 import {
   removeDist,
   buildRootStyle,
-  buildStyle,
+  buildComponentStyle,
   buildComponent,
 } from './index.js'
 
 const { series } = gulp
 
-export default series(removeDist, buildComponent, buildStyle, buildRootStyle)
+export default series(
+  removeDist,
+  buildComponent,
+  buildComponentStyle,
+  buildRootStyle,
+)

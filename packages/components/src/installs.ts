@@ -1,4 +1,5 @@
-import PotInput from './Input/index'
 import PotButton from './Button/index'
+import PotIcon from './Icon/index'
+import PotRadio from './Radio/index'
 
-export default [PotInput, PotButton]
+export default [PotIcon, PotButton, PotRadio]

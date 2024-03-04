@@ -1,4 +1,5 @@
-import { PotInput as t } from './Input/index.js'
 import { PotButton as o } from './Button/index.js'
-const n = [t, o]
-export { n as default }
+import { PotIcon as t } from './Icon/index.js'
+import { PotRadio as r } from './Radio/index.js'
+const f = [t, o, r]
+export { f as default }

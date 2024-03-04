@@ -1,19 +1,32 @@
 <template>
   <div>
-    <PotInput ref="inputRef" v-model="state" />
     {{ state }}
-    <PotButton @click="onFocus"></PotButton>
+    <PotButton></PotButton>
+    <PotButton type="yellow"></PotButton>
+    <PotRadio v-model="state" name="enhypen" :options="members"></PotRadio>
   </div>
 </template>
 
 <script setup lang="ts">
-import type { InputInstance } from '@potati/components'
 import { ref } from 'vue'
 
 const state = ref('')
-const inputRef = ref<InputInstance>()
 
-function onFocus() {
-  inputRef.value?.focus()
-}
+const members = [
+  {
+    label: '李羲承',
+    value: '李羲承',
+    id: 1,
+  },
+  {
+    label: '粱祯元',
+    value: '粱祯元',
+    id: 2,
+  },
+  {
+    label: '朴成训',
+    value: '朴成训',
+    id: 3,
+  },
+]
 </script>

@@ -1,33 +1,41 @@
 import {
-  defineComponent as e,
-  openBlock as n,
-  createElementBlock as r,
-  createElementVNode as s,
-  toDisplayString as a,
+  defineComponent as p,
+  computed as e,
+  openBlock as s,
+  createElementBlock as l,
+  normalizeClass as u,
+  renderSlot as c,
+  createTextVNode as f,
+  toDisplayString as m,
 } from 'vue'
-const c = { class: 'pot-button' },
-  _ = /* @__PURE__ */ e({
-    name: 'PotButton',
-    __name: 'button',
-    props: {
-      text: { default: 'PotButton' },
-    },
-    setup(t) {
-      const o = t
-      return (p, u) => (
-        n(),
-        r('div', c, [
-          s(
-            'button',
-            {
-              ref: 'buttonRef',
-              class: 'pot-button__original',
-            },
-            a(o.text),
-            513,
-          ),
-        ])
+const i = /* @__PURE__ */ p({
+  name: 'PotButton',
+  __name: 'button',
+  props: {
+    type: { default: void 0 },
+  },
+  setup(o) {
+    const t = o,
+      n = e(() => ({
+        [`pot-button--${t.type}`]: t.type,
+      })),
+      r = e(() =>
+        t.type
+          ? t.type.replace(t.type.charAt(0), t.type.charAt(0).toUpperCase())
+          : 'Default',
       )
-    },
-  })
-export { _ as default }
+    return (a, d) => (
+      s(),
+      l(
+        'button',
+        {
+          ref: 'buttonRef',
+          class: u(['pot-button', n.value]),
+        },
+        [c(a.$slots, 'default', {}, () => [f(m(r.value), 1)])],
+        2,
+      )
+    )
+  },
+})
+export { i as default }

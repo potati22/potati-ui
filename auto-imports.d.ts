@@ -6,5 +6,7 @@
 export {}
 declare global {
   const PotButton: typeof import('@potati/components')['PotButton']
+  const PotIcon: typeof import('@potati/components')['PotIcon']
   const PotInput: typeof import('@potati/components')['PotInput']
+  const PotRadio: typeof import('@potati/components')['PotRadio']
 }

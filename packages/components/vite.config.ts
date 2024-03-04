@@ -1,7 +1,9 @@
+/// <reference types="vitest" />
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import dts from 'vite-plugin-dts'
 import path from 'node:path'
+import ElementPlus from 'unplugin-element-plus/vite'
 
 export default defineConfig({
   plugins: [
@@ -14,6 +16,9 @@ export default defineConfig({
       staticImport: true, // 将动态引入转换为静态（例如：`import('vue').DefineComponent` 转换为 `import { DefineComponent } from 'vue'`）
       rollupTypes: true, // 将所有的类型合并到一个文件中
     }),
+    ElementPlus({
+      useSource: true, // 导入scss而不是css
+    }),
   ],
   build: {
     // 库模式
@@ -23,7 +28,7 @@ export default defineConfig({
       name: 'POTATI_COMPONENTS',
     },
     rollupOptions: {
-      external: ['vue'], // 将vue模块排除在打包文件之外，使用用这个组件库的项目的vue模块
+      external: ['vue', 'element-plus', '@potati/theme-chalk'], // 将模块排除在打包文件之外，使用用这个组件库的项目的模块
       output: [
         {
           format: 'es',
@@ -32,14 +37,10 @@ export default defineConfig({
           dir: 'es',
           preserveModulesRoot: 'src', // 指定保留模块结构的根目录
         },
-        {
-          format: 'cjs',
-          entryFileNames: '[name].js',
-          preserveModules: true, // 打包目录和开发目录对应
-          dir: 'lib',
-          preserveModulesRoot: 'src', // 指定保留模块结构的根目录
-        },
       ],
     },
+  },
+  test: {
+    environment: 'happy-dom',
   },
 })

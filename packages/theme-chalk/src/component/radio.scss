@@ -1,0 +1,39 @@
+@use '../mixins/mixins.scss' as *;
+@use '../mixins/var.scss' as *;
+@use '../mixins/function.scss' as *;
+@use '../common/var.scss' as *;
+
+@include b('radio') {
+  @include set-component-css-var('radio', $radio);
+}
+
+@include b('radio') {
+  display: flex;
+  input {
+    position: absolute;
+    appearance: none;
+  }
+}
+
+@include b('radio') {
+  @include m('item') {
+    display: inline-block;
+    line-height: 1;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: getCssVar('radio', 'bg-color');
+    color: getCssVar('radio', 'text-color');
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: getCssVar('radio', 'bg-color-hover');
+    }
+
+    &_checked {
+      background-color: getCssVar('radio', 'bg-color-checked');
+      color: getCssVar('radio', 'text-color-checked');
+    }
+  }
+}

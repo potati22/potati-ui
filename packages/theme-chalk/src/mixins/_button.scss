@@ -1,0 +1,32 @@
+@use 'sass:map';
+@use 'var' as *;
+
+@mixin button-variant($type) {
+  $button-color-types: () !default;
+  $button-color-types: map.deep-merge(
+    (
+      'yellow': (
+        'bg-color': (
+          'color',
+          'yellow',
+          '',
+        ),
+        'bg-color-hover': (
+          'color',
+          'yellow',
+          'light-1',
+        ),
+        'text-color': (
+          'color',
+          'black',
+          'light-3',
+        ),
+      ),
+    ),
+    $button-color-types
+  );
+
+  @each $key, $value in map.get($button-color-types, $type) {
+    @include css-var-from-global(('button', $key), $value);
+  }
+}

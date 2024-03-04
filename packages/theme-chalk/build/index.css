@@ -1,0 +1,83 @@
+:root {
+  --pot-color-white: #ffffff;
+  --pot-color-yellow: #fded70;
+  --pot-color-yellow-light-1: #ffe456;
+  --pot-color-black: #000000;
+  --pot-color-black-light-1: #0a0b0d;
+  --pot-color-black-light-2: #18181a;
+  --pot-color-black-light-3: #212123;
+  --pot-color-black-light-4: #2b2b2e;
+  --pot-color-grey: #e4eaf1;
+  --pot-color-grey-light-1: #b4c3d3;
+}
+
+.pot-button {
+  --pot-button-bg-color: var(--pot-color-black-light-4);
+  --pot-button-bg-color-hover: var(--pot-color-black-light-2);
+  --pot-button-text-color: var(--pot-color-grey);
+}
+.pot-button--yellow {
+  --pot-button-bg-color: var(--pot-color-yellow);
+  --pot-button-bg-color-hover: var(--pot-color-yellow-light-1);
+  --pot-button-text-color: var(--pot-color-black-light-3);
+}
+
+.pot-button {
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1;
+  text-align: center;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: var(--pot-button-text-color);
+  background-color: var(--pot-button-bg-color);
+}
+.pot-button:hover {
+  background-color: var(--pot-button-bg-color-hover);
+}
+
+.pot-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+.pot-radio {
+  --pot-radio-bg-color: var(--pot-color-black-light-4);
+  --pot-radio-bg-color-hover: var(--pot-color-black-light-2);
+  --pot-radio-bg-color-checked: var(--pot-color-black-light-1);
+  --pot-radio-text-color: var(--pot-color-grey);
+  --pot-radio-text-color-checked: var(--pot-color-grey-light-1);
+}
+
+.pot-radio {
+  display: flex;
+}
+.pot-radio input {
+  position: absolute;
+  appearance: none;
+}
+
+.pot-radio--item {
+  display: inline-block;
+  line-height: 1;
+  text-align: center;
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: var(--pot-radio-bg-color);
+  color: var(--pot-radio-text-color);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.pot-radio--item:hover {
+  background-color: var(--pot-radio-bg-color-hover);
+}
+.pot-radio--item_checked {
+  background-color: var(--pot-radio-bg-color-checked);
+  color: var(--pot-radio-text-color-checked);
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,30 @@
+@use '../mixins/mixins.scss' as *;
+@use '../mixins/var.scss' as *;
+@use '../mixins/button.scss' as *;
+@use '../mixins/function.scss' as *;
+@use '../common/var.scss' as *;
+
+@include b('button') {
+  @each $type in ('yellow') {
+    @include m($type) {
+      @include button-variant($type);
+    }
+  }
+  @include set-component-css-var('button', $button);
+}
+
+@include b('button') {
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1;
+  text-align: center;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: getCssVar('button', 'text-color');
+  background-color: getCssVar('button', 'bg-color');
+
+  &:hover {
+    background-color: getCssVar('button', 'bg-color', 'hover');
+  }
+}
