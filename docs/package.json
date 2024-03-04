@@ -1,7 +1,8 @@
 {
   "name": "docs",
   "version": "1.0.0",
-  "description": "",
+  "description": "组件库文档",
+  "private": true,
   "main": "index.js",
   "keywords": [],
   "author": "",

@@ -1,5 +1,11 @@
 # @potati/theme-chalk
 
+## 1.0.2
+
+### Patch Changes
+
+- 修改一次错误
+
 ## 1.0.1
 
 ### Patch Changes
