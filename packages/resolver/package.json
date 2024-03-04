@@ -3,8 +3,13 @@
   "version": "1.0.0",
   "description": "组件库自动导入插件",
   "type": "commonjs",
-  "main": "./index",
-  "types": "./index.d.ts",
+  "main": "index",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "package.json"
+  ],
   "author": "",
   "license": "ISC"
 }

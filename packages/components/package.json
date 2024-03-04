@@ -9,7 +9,8 @@
   "files": [
     "es",
     "types",
-    "global.d.ts"
+    "global.d.ts",
+    "package.json"
   ],
   "scripts": {
     "build": "gulp -f build/gulpfile.js",

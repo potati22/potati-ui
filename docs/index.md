@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: 快速开始
-      link: /components/button
+      link: /guide/index
 
 features:
   - title: 💡 vue3组件库

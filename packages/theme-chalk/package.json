@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "组件库主题变量",
   "type": "module",
-  "module": "./build/index.css",
+  "module": "build/index.css",
   "files": [
-    "build"
+    "build",
+    "src",
+    "package.json"
   ],
   "scripts": {
-    "build": "sass --style expanded index.scss:./build/index.css"
+    "build": "sass --style expanded ./src/index.scss:./build/index.css"
   },
   "author": "",
   "license": "ISC"
