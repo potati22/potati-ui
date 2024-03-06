@@ -1,18 +1,19 @@
 import {
-  defineComponent as m,
-  ref as f,
-  openBlock as o,
-  createElementBlock as a,
-  Fragment as v,
+  defineComponent as p,
+  ref as m,
+  watch as v,
+  openBlock as n,
+  createElementBlock as d,
+  Fragment as f,
   renderList as _,
-  createElementVNode as r,
-  normalizeClass as g,
-  toDisplayString as h,
+  createElementVNode as i,
+  normalizeClass as h,
+  toDisplayString as g,
 } from 'vue'
-const k = { class: 'pot-radio' },
-  V = ['id', 'name', 'value'],
-  S = ['for'],
-  F = /* @__PURE__ */ m({
+const V = { class: 'pot-radio' },
+  k = ['id', 'name', 'value'],
+  y = ['for'],
+  b = /* @__PURE__ */ p({
     name: 'PotRadio',
     __name: 'radio',
     props: {
@@ -21,61 +22,63 @@ const k = { class: 'pot-radio' },
       modelValue: { default: void 0 },
     },
     emits: ['update:modelValue'],
-    setup(s, { emit: u }) {
-      const n = s,
-        c = u,
-        l = f('')
-      let i = ''
-      function p(d) {
-        const t = d.target
-        i != t.value &&
-          (c('update:modelValue', t.value), (i = t.value), (l.value = t.id))
+    setup(u, { emit: r }) {
+      const l = u,
+        s = r,
+        o = m('')
+      v(
+        () => l.modelValue,
+        (t) => {
+          o.value = t
+        },
+      )
+      function c(t) {
+        const a = t.target
+        o.value != a.value &&
+          (s('update:modelValue', a.value), (o.value = a.value))
       }
-      return (d, t) => (
-        o(),
-        a('div', k, [
-          (o(!0),
-          a(
-            v,
+      return (t, a) => (
+        n(),
+        d('div', V, [
+          (n(!0),
+          d(
+            f,
             null,
             _(
-              n.options,
+              l.options,
               (e) => (
-                o(),
-                a(
+                n(),
+                d(
                   'div',
                   {
                     key: e.id,
                   },
                   [
-                    r(
+                    i(
                       'input',
                       {
                         id: e.id.toString(),
                         type: 'radio',
-                        name: n.name,
+                        name: l.name,
                         value: e.value,
-                        onFocus: p,
+                        onFocus: c,
                       },
                       null,
                       40,
-                      V,
+                      k,
                     ),
-                    r(
+                    i(
                       'label',
                       {
                         for: e.id.toString(),
-                        class: g([
+                        class: h([
                           'pot-radio--item',
-                          {
-                            'pot-radio--item_checked':
-                              e.id.toString() === l.value,
-                          },
+                          { 'pot-radio--item_checked': e.value === o.value },
                         ]),
                       },
-                      h(e.label),
+                      g(e.label),
                       11,
-                      S,
+                      y,
                     ),
                   ],
                 )
@@ -87,4 +90,4 @@ const k = { class: 'pot-radio' },
       )
     },
   })
-export { F as default }
+export { b as default }

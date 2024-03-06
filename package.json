@@ -12,7 +12,9 @@
     "prepare": "husky install",
     "theme-chalk:build": "pnpm --filter=@potati/theme-chalk run build",
     "components:test": "pnpm --filter=@potati/components run test",
-    "components:build": "pnpm --filter=@potati/components run build"
+    "components:build": "pnpm --filter=@potati/components run build",
+    "resolver:build": "pnpm --filter=@potati/resolver run build",
+    "resolver:dev": "pnpm --filter=@potati/resolver run dev"
   },
   "keywords": [],
   "author": "",

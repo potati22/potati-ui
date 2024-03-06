@@ -11,7 +11,7 @@
       <label
         :for="item.id.toString()"
         class="pot-radio--item"
-        :class="{ 'pot-radio--item_checked': item.id.toString() === checkedId }"
+        :class="{ 'pot-radio--item_checked': item.value === checkedValue }"
         >{{ item.label }}</label
       >
     </div>
@@ -20,7 +20,7 @@
 
 <script setup lang="ts">
 import { RadioProps, RadioEmits } from './radio'
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 
 defineOptions({
   name: 'PotRadio',
@@ -34,14 +34,19 @@ const props = withDefaults(defineProps<RadioProps>(), {
 
 const emit = defineEmits<RadioEmits>()
 
-const checkedId = ref('')
-let lastFocusValue = ''
+const checkedValue = ref('')
+
+watch(
+  () => props.modelValue,
+  (newVal) => {
+    checkedValue.value = newVal
+  },
+)
 
 function focusThis(e: FocusEvent) {
   const target = e.target as HTMLInputElement
-  if (lastFocusValue == target.value) return
+  if (checkedValue.value == target.value) return
   emit('update:modelValue', target.value)
-  lastFocusValue = target.value
-  checkedId.value = target.id
+  checkedValue.value = target.value
 }
 </script>

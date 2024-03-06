@@ -1,11 +1,10 @@
 {
   "name": "@potati/components",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "组件库",
   "private": false,
-  "main": "lib",
-  "module": "es",
   "type": "module",
+  "module": "es",
   "types": "types/index.d.ts",
   "files": [
     "es",
@@ -17,6 +16,9 @@
     "build": "gulp -f build/gulpfile.js",
     "test": "vitest"
   },
+  "dependencies": {
+    "@potati/theme-chalk": "workspace:^1.0.2"
+  },
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-typescript": "6.0.0-alpha.1",
@@ -24,7 +26,10 @@
     "unplugin-element-plus": "^0.8.0"
   },
   "peerDependencies": {
-    "@potati/theme-chalk": "workspace:^1.0.2",
     "element-plus": "^2.4.4"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   }
 }

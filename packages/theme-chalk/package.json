@@ -14,5 +14,9 @@
     "build": "sass --style expanded ./src/index.scss:./build/index.css"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  }
 }

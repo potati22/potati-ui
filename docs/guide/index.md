@@ -5,7 +5,7 @@
 ## 安装
 
 ```
-pnpm add @potati/components @potati/theme-chalk
+pnpm add @potati/components
 
 ```
 
@@ -18,8 +18,8 @@ pnpm add @potati/components @potati/theme-chalk
 import { createApp } from 'vue'
 import App from './App.vue'
 
-import '@potati/components/es/style'
 import PotComponents from '@potati/components'
+import '@potati/components/es/style'
 
 createApp(App).use(PotComponents).mount('#app')
 ```

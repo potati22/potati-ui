@@ -4,6 +4,7 @@
     <PotButton></PotButton>
     <PotButton type="yellow"></PotButton>
     <PotRadio v-model="state" name="enhypen" :options="members"></PotRadio>
+    <button @click="cancelFocus">cancel</button>
   </div>
 </template>
 
@@ -29,4 +30,8 @@ const members = [
     id: 3,
   },
 ]
+
+function cancelFocus() {
+  state.value = ''
+}
 </script>
