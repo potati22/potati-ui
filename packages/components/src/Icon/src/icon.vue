@@ -5,7 +5,7 @@
   </svg>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import { IconProps } from './icon'
 import { computed } from 'vue'
 

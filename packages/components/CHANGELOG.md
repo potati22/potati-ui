@@ -1,5 +1,11 @@
 # @potati/components
 
+## 1.0.5
+
+### Patch Changes
+
+- 更变types的打包产物形式
+
 ## 1.0.4
 
 ### Patch Changes

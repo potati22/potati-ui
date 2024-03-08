@@ -1,5 +1,11 @@
 # @potati/resolver
 
+## 1.1.2
+
+### Patch Changes
+
+- 优化组件导入路径
+
 ## 1.1.1
 
 ### Patch Changes

@@ -14,7 +14,7 @@ export default defineConfig({
       tsconfigPath: path.resolve(__dirname, 'tsconfig.json'),
       outDir: ['types'],
       staticImport: true, // 将动态引入转换为静态（例如：`import('vue').DefineComponent` 转换为 `import { DefineComponent } from 'vue'`）
-      rollupTypes: true, // 将所有的类型合并到一个文件中
+      rollupTypes: false, // 将所有的类型合并到一个文件中
     }),
     ElementPlus({
       useSource: true, // 导入scss而不是css

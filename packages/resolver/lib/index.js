@@ -7,7 +7,7 @@ function o() {
         const e = t.slice(3)
         return {
           name: 'Pot' + e,
-          from: '@potati/components/',
+          from: '@potati/components',
           sideEffects: `@potati/components/es/${e}/style/index`,
         }
       }
