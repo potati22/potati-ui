@@ -20,7 +20,7 @@
 
 <script setup lang="ts">
 import { RadioProps, RadioEmits } from './radio'
-import { ref, watch } from 'vue'
+import { onMounted, ref, watch } from 'vue'
 
 defineOptions({
   name: 'PotRadio',
@@ -35,6 +35,9 @@ const props = withDefaults(defineProps<RadioProps>(), {
 const emit = defineEmits<RadioEmits>()
 
 const checkedValue = ref('')
+onMounted(() => {
+  checkedValue.value = props.modelValue
+})
 
 watch(
   () => props.modelValue,

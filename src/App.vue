@@ -11,7 +11,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const state = ref('')
+const state = ref('朴成训')
 
 const members = [
   {

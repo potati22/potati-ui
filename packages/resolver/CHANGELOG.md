@@ -1,5 +1,11 @@
 # @potati/resolver
 
+## 1.1.1
+
+### Patch Changes
+
+- 解决组件导入路径错误导致的TS文件无法加载问题
+
 ## 1.1.0
 
 ### Minor Changes

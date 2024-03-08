@@ -8,9 +8,9 @@ function PotatiResolver() {
         const partialName = name.slice(3)
         return {
           name: 'Pot' + partialName,
-          from: `@potati/components/${import.meta.env.VITE_IMPORT_FORM}`,
+          from: `@potati/components/${import.meta.env.VITE_COMPONENT_FORM}`,
           sideEffects: `@potati/components/${
-            import.meta.env.VITE_IMPORT_FORM
+            import.meta.env.VITE_STYLE_FORM
           }/${partialName}/style/index`,
         }
       }

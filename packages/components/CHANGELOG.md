@@ -1,5 +1,11 @@
 # @potati/components
 
+## 1.0.4
+
+### Patch Changes
+
+- Radio组件增加初始值图案聚焦效果
+
 ## 1.0.3
 
 ### Patch Changes
