@@ -1,6 +1,6 @@
 {
   "name": "@potati/components",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "组件库",
   "private": false,
   "type": "module",
@@ -16,9 +16,6 @@
     "build": "gulp -f build/gulpfile.js",
     "test": "vitest"
   },
-  "dependencies": {
-    "@potati/theme-chalk": "workspace:^1.0.2"
-  },
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-typescript": "6.0.0-alpha.1",
@@ -26,6 +23,7 @@
     "unplugin-element-plus": "^0.8.0"
   },
   "peerDependencies": {
+    "@potati/theme-chalk": "workspace:^1.0.3",
     "element-plus": "^2.4.4"
   },
   "publishConfig": {

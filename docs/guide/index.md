@@ -5,7 +5,7 @@
 ## 安装
 
 ```
-pnpm add @potati/components
+pnpm add @potati/components @potati/theme-chalk
 
 ```
 

@@ -1,12 +1,5 @@
-import {
-  DefineComponent,
-  ComponentOptionsMixin,
-  PublicProps,
-  ExtractPropTypes,
-  PropType,
-} from 'vue'
 import { IconProps } from './icon'
-declare const _default: DefineComponent<
+declare const _default: import('vue').DefineComponent<
   __VLS_WithDefaults<
     __VLS_TypePropsToRuntimeProps<IconProps>,
     {
@@ -17,13 +10,13 @@ declare const _default: DefineComponent<
   unknown,
   {},
   {},
-  ComponentOptionsMixin,
-  ComponentOptionsMixin,
+  import('vue').ComponentOptionsMixin,
+  import('vue').ComponentOptionsMixin,
   {},
   string,
-  PublicProps,
+  import('vue').PublicProps,
   Readonly<
-    ExtractPropTypes<
+    import('vue').ExtractPropTypes<
       __VLS_WithDefaults<
         __VLS_TypePropsToRuntimeProps<IconProps>,
         {
@@ -42,10 +35,10 @@ type __VLS_NonUndefinedable<T> = T extends undefined ? never : T
 type __VLS_TypePropsToRuntimeProps<T> = {
   [K in keyof T]-?: {} extends Pick<T, K>
     ? {
-        type: PropType<__VLS_NonUndefinedable<T[K]>>
+        type: import('vue').PropType<__VLS_NonUndefinedable<T[K]>>
       }
     : {
-        type: PropType<T[K]>
+        type: import('vue').PropType<T[K]>
         required: true
       }
 }

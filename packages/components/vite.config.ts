@@ -13,7 +13,7 @@ export default defineConfig({
       // 此处直接读取tsconfig.json中的include字段
       tsconfigPath: path.resolve(__dirname, 'tsconfig.json'),
       outDir: ['types'],
-      staticImport: true, // 将动态引入转换为静态（例如：`import('vue').DefineComponent` 转换为 `import { DefineComponent } from 'vue'`）
+      staticImport: false, // 将动态引入转换为静态（例如：`import('vue').DefineComponent` 转换为 `import { DefineComponent } from 'vue'`）
       rollupTypes: false, // 将所有的类型合并到一个文件中
     }),
     ElementPlus({

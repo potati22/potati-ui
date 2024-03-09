@@ -1,13 +1,6 @@
-import {
-  DefineComponent,
-  ComponentOptionsMixin,
-  PublicProps,
-  ExtractPropTypes,
-  PropType,
-} from 'vue'
 import { ButtonProps } from './button'
 declare const _default: __VLS_WithTemplateSlots<
-  DefineComponent<
+  import('vue').DefineComponent<
     __VLS_WithDefaults<
       __VLS_TypePropsToRuntimeProps<ButtonProps>,
       {
@@ -18,13 +11,13 @@ declare const _default: __VLS_WithTemplateSlots<
     unknown,
     {},
     {},
-    ComponentOptionsMixin,
-    ComponentOptionsMixin,
+    import('vue').ComponentOptionsMixin,
+    import('vue').ComponentOptionsMixin,
     {},
     string,
-    PublicProps,
+    import('vue').PublicProps,
     Readonly<
-      ExtractPropTypes<
+      import('vue').ExtractPropTypes<
         __VLS_WithDefaults<
           __VLS_TypePropsToRuntimeProps<ButtonProps>,
           {
@@ -47,10 +40,10 @@ type __VLS_NonUndefinedable<T> = T extends undefined ? never : T
 type __VLS_TypePropsToRuntimeProps<T> = {
   [K in keyof T]-?: {} extends Pick<T, K>
     ? {
-        type: PropType<__VLS_NonUndefinedable<T[K]>>
+        type: import('vue').PropType<__VLS_NonUndefinedable<T[K]>>
       }
     : {
-        type: PropType<T[K]>
+        type: import('vue').PropType<T[K]>
         required: true
       }
 }

@@ -1,39 +1,40 @@
-import {
-  DefineComponent,
-  ComponentOptionsMixin,
-  PublicProps,
-  ExtractPropTypes,
-  PropType,
-} from 'vue'
-import { RadioOptionsItem, RadioProps } from './radio'
-declare const _default: DefineComponent<
+import { RadioProps } from './radio'
+declare const _default: import('vue').DefineComponent<
   __VLS_WithDefaults<
     __VLS_TypePropsToRuntimeProps<RadioProps>,
     {
-      name: undefined
-      options: undefined
-      modelValue: undefined
+      name: string
+      options: () => {
+        id: number
+        value: string
+        label: string
+      }[]
+      modelValue: string
     }
   >,
   {},
   unknown,
   {},
   {},
-  ComponentOptionsMixin,
-  ComponentOptionsMixin,
+  import('vue').ComponentOptionsMixin,
+  import('vue').ComponentOptionsMixin,
   {
     'update:modelValue': (value: string) => void
   },
   string,
-  PublicProps,
+  import('vue').PublicProps,
   Readonly<
-    ExtractPropTypes<
+    import('vue').ExtractPropTypes<
       __VLS_WithDefaults<
         __VLS_TypePropsToRuntimeProps<RadioProps>,
         {
-          name: undefined
-          options: undefined
-          modelValue: undefined
+          name: string
+          options: () => {
+            id: number
+            value: string
+            label: string
+          }[]
+          modelValue: string
         }
       >
     >
@@ -42,7 +43,7 @@ declare const _default: DefineComponent<
   },
   {
     name: string
-    options: RadioOptionsItem[]
+    options: import('./radio').RadioOptionsItem[]
     modelValue: string
   },
   {}
@@ -52,10 +53,10 @@ type __VLS_NonUndefinedable<T> = T extends undefined ? never : T
 type __VLS_TypePropsToRuntimeProps<T> = {
   [K in keyof T]-?: {} extends Pick<T, K>
     ? {
-        type: PropType<__VLS_NonUndefinedable<T[K]>>
+        type: import('vue').PropType<__VLS_NonUndefinedable<T[K]>>
       }
     : {
-        type: PropType<T[K]>
+        type: import('vue').PropType<T[K]>
         required: true
       }
 }

@@ -7,8 +7,15 @@
   --pot-color-black-light-2: #18181a;
   --pot-color-black-light-3: #212123;
   --pot-color-black-light-4: #2b2b2e;
+  --pot-color-black-light-5: #1b1e22;
   --pot-color-grey: #e4eaf1;
   --pot-color-grey-light-1: #b4c3d3;
+  --pot-bg-color-page: var(--pot-color-black-light-2);
+  --pot-bg-color-block: var(--pot-color-black-light-3);
+  --pot-bg-color-block-darker: var(--pot-color-black-light-5);
+  --pot-border-color: var(--pot-color-black);
+  --pot-text-color: var(--pot-color-white);
+  --pot-text-color-yellow: var(--pot-color-yellow);
 }
 
 .pot-button {

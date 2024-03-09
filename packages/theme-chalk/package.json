@@ -1,6 +1,6 @@
 {
   "name": "@potati/theme-chalk",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "组件库主题变量",
   "private": false,
   "type": "module",

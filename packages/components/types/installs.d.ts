@@ -1,25 +1,11 @@
-import { RadioOptionsItem } from './Radio/index'
-import {
-  CreateComponentPublicInstance,
-  ExtractPropTypes,
-  PropType,
-  ComponentOptionsMixin,
-  VNodeProps,
-  AllowedComponentProps,
-  ComponentCustomProps,
-  ComponentOptionsBase,
-  DefineComponent,
-  PublicProps,
-} from 'vue'
-import { SFCWithInstall } from './utils/install'
 declare const _default: (
-  | (SFCWithInstall<
+  | (import('./utils/install').SFCWithInstall<
       {
-        new (...args: any[]): CreateComponentPublicInstance<
+        new (...args: any[]): import('vue').CreateComponentPublicInstance<
           Readonly<
-            ExtractPropTypes<{
+            import('vue').ExtractPropTypes<{
               type: {
-                type: PropType<'yellow'>
+                type: import('vue').PropType<'yellow'>
                 default: undefined
               }
             }>
@@ -28,16 +14,16 @@ declare const _default: (
           unknown,
           {},
           {},
-          ComponentOptionsMixin,
-          ComponentOptionsMixin,
+          import('vue').ComponentOptionsMixin,
+          import('vue').ComponentOptionsMixin,
           {},
-          VNodeProps &
-            AllowedComponentProps &
-            ComponentCustomProps &
+          import('vue').VNodeProps &
+            import('vue').AllowedComponentProps &
+            import('vue').ComponentCustomProps &
             Readonly<
-              ExtractPropTypes<{
+              import('vue').ExtractPropTypes<{
                 type: {
-                  type: PropType<'yellow'>
+                  type: import('vue').PropType<'yellow'>
                   default: undefined
                 }
               }>
@@ -57,9 +43,9 @@ declare const _default: (
             Defaults: {}
           },
           Readonly<
-            ExtractPropTypes<{
+            import('vue').ExtractPropTypes<{
               type: {
-                type: PropType<'yellow'>
+                type: import('vue').PropType<'yellow'>
                 default: undefined
               }
             }>
@@ -75,11 +61,11 @@ declare const _default: (
         __isFragment?: undefined
         __isTeleport?: undefined
         __isSuspense?: undefined
-      } & ComponentOptionsBase<
+      } & import('vue').ComponentOptionsBase<
         Readonly<
-          ExtractPropTypes<{
+          import('vue').ExtractPropTypes<{
             type: {
-              type: PropType<'yellow'>
+              type: import('vue').PropType<'yellow'>
               default: undefined
             }
           }>
@@ -88,8 +74,8 @@ declare const _default: (
         unknown,
         {},
         {},
-        ComponentOptionsMixin,
-        ComponentOptionsMixin,
+        import('vue').ComponentOptionsMixin,
+        import('vue').ComponentOptionsMixin,
         {},
         string,
         {
@@ -99,9 +85,9 @@ declare const _default: (
         string,
         {}
       > &
-        VNodeProps &
-        AllowedComponentProps &
-        ComponentCustomProps &
+        import('vue').VNodeProps &
+        import('vue').AllowedComponentProps &
+        import('vue').ComponentCustomProps &
         (new () => {
           $slots: {
             default?(_: {}): any
@@ -109,11 +95,11 @@ declare const _default: (
         })
     > &
       Record<string, any>)
-  | (SFCWithInstall<
-      DefineComponent<
+  | (import('./utils/install').SFCWithInstall<
+      import('vue').DefineComponent<
         {
           iconClass: {
-            type: PropType<string>
+            type: import('vue').PropType<string>
             required: true
             default: string
           }
@@ -122,15 +108,15 @@ declare const _default: (
         unknown,
         {},
         {},
-        ComponentOptionsMixin,
-        ComponentOptionsMixin,
+        import('vue').ComponentOptionsMixin,
+        import('vue').ComponentOptionsMixin,
         {},
         string,
-        PublicProps,
+        import('vue').PublicProps,
         Readonly<
-          ExtractPropTypes<{
+          import('vue').ExtractPropTypes<{
             iconClass: {
-              type: PropType<string>
+              type: import('vue').PropType<string>
               required: true
               default: string
             }
@@ -143,52 +129,64 @@ declare const _default: (
       >
     > &
       Record<string, any>)
-  | (SFCWithInstall<
-      DefineComponent<
+  | (import('./utils/install').SFCWithInstall<
+      import('vue').DefineComponent<
         {
           name: {
-            type: PropType<string>
+            type: import('vue').PropType<string>
             required: true
-            default: undefined
+            default: string
           }
           options: {
-            type: PropType<RadioOptionsItem[]>
+            type: import('vue').PropType<
+              import('./Radio/index').RadioOptionsItem[]
+            >
             required: true
-            default: undefined
+            default: () => {
+              id: number
+              value: string
+              label: string
+            }[]
           }
           modelValue: {
-            type: PropType<string>
+            type: import('vue').PropType<string>
             required: true
-            default: undefined
+            default: string
           }
         },
         {},
         unknown,
         {},
         {},
-        ComponentOptionsMixin,
-        ComponentOptionsMixin,
+        import('vue').ComponentOptionsMixin,
+        import('vue').ComponentOptionsMixin,
         {
           'update:modelValue': (value: string) => void
         },
         string,
-        PublicProps,
+        import('vue').PublicProps,
         Readonly<
-          ExtractPropTypes<{
+          import('vue').ExtractPropTypes<{
             name: {
-              type: PropType<string>
+              type: import('vue').PropType<string>
               required: true
-              default: undefined
+              default: string
             }
             options: {
-              type: PropType<RadioOptionsItem[]>
+              type: import('vue').PropType<
+                import('./Radio/index').RadioOptionsItem[]
+              >
               required: true
-              default: undefined
+              default: () => {
+                id: number
+                value: string
+                label: string
+              }[]
             }
             modelValue: {
-              type: PropType<string>
+              type: import('vue').PropType<string>
               required: true
-              default: undefined
+              default: string
             }
           }>
         > & {
@@ -196,7 +194,7 @@ declare const _default: (
         },
         {
           name: string
-          options: RadioOptionsItem[]
+          options: import('./Radio/index').RadioOptionsItem[]
           modelValue: string
         },
         {}

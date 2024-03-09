@@ -2,14 +2,14 @@
   <div class="pot-radio">
     <div v-for="item in props.options" :key="item.id">
       <input
-        :id="item.id.toString()"
+        :id="props.name + item.id"
         type="radio"
         :name="props.name"
         :value="item.value"
         @focus="focusThis"
       />
       <label
-        :for="item.id.toString()"
+        :for="props.name + item.id"
         class="pot-radio--item"
         :class="{ 'pot-radio--item_checked': item.value === checkedValue }"
         >{{ item.label }}</label
@@ -27,9 +27,21 @@ defineOptions({
 })
 
 const props = withDefaults(defineProps<RadioProps>(), {
-  name: undefined,
-  options: undefined,
-  modelValue: undefined,
+  name: 'PotRadio',
+  // 复杂类型使用函数形式
+  options: () => [
+    {
+      id: 1,
+      value: 'option1',
+      label: 'option1',
+    },
+    {
+      id: 2,
+      value: 'option2',
+      label: 'option2',
+    },
+  ],
+  modelValue: 'option1',
 })
 
 const emit = defineEmits<RadioEmits>()

@@ -1,58 +1,57 @@
-import { RadioOptionsItem } from './src/radio'
-import {
-  DefineComponent,
-  PropType,
-  ComponentOptionsMixin,
-  PublicProps,
-  ExtractPropTypes,
-} from 'vue'
-import { SFCWithInstall } from '../utils/install'
-export declare const PotRadio: SFCWithInstall<
-  DefineComponent<
+export declare const PotRadio: import('../utils/install').SFCWithInstall<
+  import('vue').DefineComponent<
     {
       name: {
-        type: PropType<string>
+        type: import('vue').PropType<string>
         required: true
-        default: undefined
+        default: string
       }
       options: {
-        type: PropType<RadioOptionsItem[]>
+        type: import('vue').PropType<import('./src/radio').RadioOptionsItem[]>
         required: true
-        default: undefined
+        default: () => {
+          id: number
+          value: string
+          label: string
+        }[]
       }
       modelValue: {
-        type: PropType<string>
+        type: import('vue').PropType<string>
         required: true
-        default: undefined
+        default: string
       }
     },
     {},
     unknown,
     {},
     {},
-    ComponentOptionsMixin,
-    ComponentOptionsMixin,
+    import('vue').ComponentOptionsMixin,
+    import('vue').ComponentOptionsMixin,
     {
       'update:modelValue': (value: string) => void
     },
     string,
-    PublicProps,
+    import('vue').PublicProps,
     Readonly<
-      ExtractPropTypes<{
+      import('vue').ExtractPropTypes<{
         name: {
-          type: PropType<string>
+          type: import('vue').PropType<string>
           required: true
-          default: undefined
+          default: string
         }
         options: {
-          type: PropType<RadioOptionsItem[]>
+          type: import('vue').PropType<import('./src/radio').RadioOptionsItem[]>
           required: true
-          default: undefined
+          default: () => {
+            id: number
+            value: string
+            label: string
+          }[]
         }
         modelValue: {
-          type: PropType<string>
+          type: import('vue').PropType<string>
           required: true
-          default: undefined
+          default: string
         }
       }>
     > & {
@@ -60,7 +59,7 @@ export declare const PotRadio: SFCWithInstall<
     },
     {
       name: string
-      options: RadioOptionsItem[]
+      options: import('./src/radio').RadioOptionsItem[]
       modelValue: string
     },
     {}

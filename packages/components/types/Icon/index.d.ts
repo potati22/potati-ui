@@ -1,16 +1,8 @@
-import {
-  DefineComponent,
-  PropType,
-  ComponentOptionsMixin,
-  PublicProps,
-  ExtractPropTypes,
-} from 'vue'
-import { SFCWithInstall } from '../utils/install'
-export declare const PotIcon: SFCWithInstall<
-  DefineComponent<
+export declare const PotIcon: import('../utils/install').SFCWithInstall<
+  import('vue').DefineComponent<
     {
       iconClass: {
-        type: PropType<string>
+        type: import('vue').PropType<string>
         required: true
         default: string
       }
@@ -19,15 +11,15 @@ export declare const PotIcon: SFCWithInstall<
     unknown,
     {},
     {},
-    ComponentOptionsMixin,
-    ComponentOptionsMixin,
+    import('vue').ComponentOptionsMixin,
+    import('vue').ComponentOptionsMixin,
     {},
     string,
-    PublicProps,
+    import('vue').PublicProps,
     Readonly<
-      ExtractPropTypes<{
+      import('vue').ExtractPropTypes<{
         iconClass: {
-          type: PropType<string>
+          type: import('vue').PropType<string>
           required: true
           default: string
         }

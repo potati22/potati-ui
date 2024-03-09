@@ -19,6 +19,7 @@ $colors: map.deep-merge(
       'light-2': #18181a,
       'light-3': #212123,
       'light-4': #2b2b2e,
+      'light-5': #1b1e22,
     ),
     'grey': (
       'default': #e4eaf1,
@@ -34,8 +35,28 @@ $bg-color: map.merge(
   (
     'page': getCssVar('color', 'black', 'light-2'),
     'block': getCssVar('color', 'black', 'light-3'),
+    'block-darker': getCssVar('color', 'black', 'light-5'),
   ),
   $bg-color
+);
+
+// Border
+$border-color: () !default;
+$border-color: map.merge(
+  (
+    '': getCssVar('color', 'black', ''),
+  ),
+  $border-color
+);
+
+// Text
+$text-color: () !default;
+$text-color: map.merge(
+  (
+    '': getCssVar('color', 'white', ''),
+    'yellow': getCssVar('color', 'yellow', ''),
+  ),
+  $text-color
 );
 
 // Button

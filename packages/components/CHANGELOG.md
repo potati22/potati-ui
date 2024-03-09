@@ -1,5 +1,13 @@
 # @potati/components
 
+## 1.0.6
+
+### Patch Changes
+
+- 修复Radio组件
+- Updated dependencies
+  - @potati/theme-chalk@1.0.3
+
 ## 1.0.5
 
 ### Patch Changes

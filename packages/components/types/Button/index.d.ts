@@ -1,21 +1,10 @@
-import {
-  CreateComponentPublicInstance,
-  ExtractPropTypes,
-  PropType,
-  ComponentOptionsMixin,
-  VNodeProps,
-  AllowedComponentProps,
-  ComponentCustomProps,
-  ComponentOptionsBase,
-} from 'vue'
-import { SFCWithInstall } from '../utils/install'
-export declare const PotButton: SFCWithInstall<
+export declare const PotButton: import('../utils/install').SFCWithInstall<
   {
-    new (...args: any[]): CreateComponentPublicInstance<
+    new (...args: any[]): import('vue').CreateComponentPublicInstance<
       Readonly<
-        ExtractPropTypes<{
+        import('vue').ExtractPropTypes<{
           type: {
-            type: PropType<'yellow'>
+            type: import('vue').PropType<'yellow'>
             default: undefined
           }
         }>
@@ -24,16 +13,16 @@ export declare const PotButton: SFCWithInstall<
       unknown,
       {},
       {},
-      ComponentOptionsMixin,
-      ComponentOptionsMixin,
+      import('vue').ComponentOptionsMixin,
+      import('vue').ComponentOptionsMixin,
       {},
-      VNodeProps &
-        AllowedComponentProps &
-        ComponentCustomProps &
+      import('vue').VNodeProps &
+        import('vue').AllowedComponentProps &
+        import('vue').ComponentCustomProps &
         Readonly<
-          ExtractPropTypes<{
+          import('vue').ExtractPropTypes<{
             type: {
-              type: PropType<'yellow'>
+              type: import('vue').PropType<'yellow'>
               default: undefined
             }
           }>
@@ -53,9 +42,9 @@ export declare const PotButton: SFCWithInstall<
         Defaults: {}
       },
       Readonly<
-        ExtractPropTypes<{
+        import('vue').ExtractPropTypes<{
           type: {
-            type: PropType<'yellow'>
+            type: import('vue').PropType<'yellow'>
             default: undefined
           }
         }>
@@ -71,11 +60,11 @@ export declare const PotButton: SFCWithInstall<
     __isFragment?: undefined
     __isTeleport?: undefined
     __isSuspense?: undefined
-  } & ComponentOptionsBase<
+  } & import('vue').ComponentOptionsBase<
     Readonly<
-      ExtractPropTypes<{
+      import('vue').ExtractPropTypes<{
         type: {
-          type: PropType<'yellow'>
+          type: import('vue').PropType<'yellow'>
           default: undefined
         }
       }>
@@ -84,8 +73,8 @@ export declare const PotButton: SFCWithInstall<
     unknown,
     {},
     {},
-    ComponentOptionsMixin,
-    ComponentOptionsMixin,
+    import('vue').ComponentOptionsMixin,
+    import('vue').ComponentOptionsMixin,
     {},
     string,
     {
@@ -95,9 +84,9 @@ export declare const PotButton: SFCWithInstall<
     string,
     {}
   > &
-    VNodeProps &
-    AllowedComponentProps &
-    ComponentCustomProps &
+    import('vue').VNodeProps &
+    import('vue').AllowedComponentProps &
+    import('vue').ComponentCustomProps &
     (new () => {
       $slots: {
         default?(_: {}): any
