@@ -4221,7 +4221,7 @@ const Ja = (e, t) => {
   },
   Dc = 'modulepreload',
   Vc = function (e) {
-    return '/' + e
+    return '/docs/dist/' + e
   },
   Tr = {},
   Qa = function (t, n, s) {
@@ -4902,7 +4902,13 @@ function nu(e = {}) {
     { x: i, y: o }
   )
 }
-var Yn = { BASE_URL: '/', MODE: 'production', DEV: !1, PROD: !0, SSR: !1 },
+var Yn = {
+    BASE_URL: '/docs/dist/',
+    MODE: 'production',
+    DEV: !1,
+    PROD: !0,
+    SSR: !1,
+  },
   ca = {}
 const Yi = /^(?:[a-z]+:|\/\/)/i,
   aa = 'vitepress-theme-appearance',
@@ -5055,7 +5061,7 @@ function Ir(e) {
 function xa(e) {
   let t = e.replace(/\.html$/, '')
   if (((t = decodeURIComponent(t)), (t = t.replace(/\/$/, '/index')), Ce)) {
-    const n = '/'
+    const n = '/docs/dist/'
     t = Lr(t.slice(n.length).replace(/\//g, '_') || 'index') + '.md'
     let s = __VP_HASH_MAP__[t.toLowerCase()]
     if (

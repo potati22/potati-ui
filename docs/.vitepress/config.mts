@@ -2,6 +2,8 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/docs/dist/',
+  outDir: './dist',
   title: 'Potati UI',
   description: '一个Vue3组件库',
   themeConfig: {

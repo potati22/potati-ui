@@ -6,7 +6,7 @@ import {
   n as M,
   a as H,
   t as V,
-  b,
+  b as k,
   w as h,
   T as de,
   e as _,
@@ -17,15 +17,15 @@ import {
   g as ve,
   h as L,
   j as K,
-  k,
-  l as j,
+  k as $,
+  l as U,
   m as d,
   p as i,
   q as E,
   s as F,
-  v as x,
+  v as G,
   x as ie,
-  y as G,
+  y as x,
   z as X,
   A as he,
   B as we,
@@ -37,7 +37,7 @@ import {
   H as Pe,
   I as ee,
   J as f,
-  K as U,
+  K as j,
   L as Ve,
   M as te,
   N as J,
@@ -55,7 +55,7 @@ import {
   $ as Qe,
   a0 as Xe,
   a1 as et,
-} from './framework.fOkQ3P9O.js'
+} from './framework.BTLdhyVs.js'
 const tt = m({
     __name: 'VPBadge',
     props: { text: {}, type: { default: 'tip' } },
@@ -78,7 +78,7 @@ const tt = m({
     setup(s) {
       return (e, t) => (
         a(),
-        b(
+        k(
           de,
           { name: 'fade' },
           {
@@ -132,25 +132,25 @@ K &&
   })
 function W({ removeCurrent: s = !0, correspondingLink: e = !1 } = {}) {
   const { site: t, localeIndex: o, page: n, theme: r } = P(),
-    u = k(() => {
-      var v, $
+    u = $(() => {
+      var v, b
       return {
         label: (v = t.value.locales[o.value]) == null ? void 0 : v.label,
         link:
-          (($ = t.value.locales[o.value]) == null ? void 0 : $.link) ||
+          ((b = t.value.locales[o.value]) == null ? void 0 : b.link) ||
           (o.value === 'root' ? '/' : `/${o.value}/`),
       }
     })
   return {
-    localeLinks: k(() =>
-      Object.entries(t.value.locales).flatMap(([v, $]) =>
-        s && u.value.label === $.label
+    localeLinks: $(() =>
+      Object.entries(t.value.locales).flatMap(([v, b]) =>
+        s && u.value.label === b.label
           ? []
           : {
-              text: $.label,
+              text: b.label,
               link:
                 rt(
-                  $.link || (v === 'root' ? '/' : `/${v}/`),
+                  b.link || (v === 'root' ? '/' : `/${v}/`),
                   r.value.i18nRouting !== !1 && e,
                   n.value.relativePath.slice(u.value.link.length - 1),
                   !t.value.cleanUrls,
@@ -186,7 +186,7 @@ const it = (s) => (E('data-v-07f75c55'), (s = s()), F(), s),
         { localeLinks: o } = W({ removeCurrent: !1 }),
         n = L('/')
       return (
-        j(() => {
+        U(() => {
           var u
           const r = window.location.pathname
             .replace(e.value.base, '')
@@ -198,7 +198,7 @@ const it = (s) => (E('data-v-07f75c55'), (s = s()), F(), s),
                 : u.link) || o.value[0].link)
         }),
         (r, u) => {
-          var p, v, $, y, w
+          var p, v, b, y, w
           return (
             a(),
             l('div', lt, [
@@ -222,7 +222,7 @@ const it = (s) => (E('data-v-07f75c55'), (s = s()), F(), s),
                 'blockquote',
                 vt,
                 V(
-                  (($ = i(t).notFound) == null ? void 0 : $.quote) ??
+                  ((b = i(t).notFound) == null ? void 0 : b.quote) ??
                     "But if you don't change your direction, and if you keep looking, you may end up where you are heading.",
                 ),
                 1,
@@ -289,7 +289,7 @@ function gt(s) {
 function ce(s, e) {
   return Array.isArray(e)
     ? e.some((t) => ce(s, t))
-    : x(s, e.link)
+    : G(s, e.link)
     ? !0
     : e.items
     ? ce(s, e.items)
@@ -310,37 +310,37 @@ function D() {
   const { frontmatter: s, page: e, theme: t } = P(),
     o = ie('(min-width: 960px)'),
     n = L(!1),
-    r = k(() => {
+    r = $(() => {
       const B = t.value.sidebar,
         S = e.value.relativePath
       return B ? Ce(B, S) : []
     }),
     u = L(r.value)
-  G(r, (B, S) => {
+  x(r, (B, S) => {
     JSON.stringify(B) !== JSON.stringify(S) && (u.value = r.value)
   })
-  const p = k(
+  const p = $(
       () =>
         s.value.sidebar !== !1 &&
         u.value.length > 0 &&
         s.value.layout !== 'home',
     ),
-    v = k(() =>
-      $
+    v = $(() =>
+      b
         ? s.value.aside == null
           ? t.value.aside === 'left'
           : s.value.aside === 'left'
         : !1,
     ),
-    $ = k(() =>
+    b = $(() =>
       s.value.layout === 'home'
         ? !1
         : s.value.aside != null
         ? !!s.value.aside
         : t.value.aside !== !1,
     ),
-    y = k(() => p.value && o.value),
-    w = k(() => (p.value ? mt(u.value) : []))
+    y = $(() => p.value && o.value),
+    w = $(() => (p.value ? mt(u.value) : []))
   function C() {
     n.value = !0
   }
@@ -355,7 +355,7 @@ function D() {
     sidebar: u,
     sidebarGroups: w,
     hasSidebar: p,
-    hasAside: $,
+    hasAside: b,
     leftAside: v,
     isSidebarEnabled: y,
     open: C,
@@ -368,7 +368,7 @@ function $t(s, e) {
   X(() => {
     t = s.value ? document.activeElement : void 0
   }),
-    j(() => {
+    U(() => {
       window.addEventListener('keyup', o)
     }),
     he(() => {
@@ -381,28 +381,28 @@ function $t(s, e) {
 function kt(s) {
   const { page: e } = P(),
     t = L(!1),
-    o = k(() => s.value.collapsed != null),
-    n = k(() => !!s.value.link),
+    o = $(() => s.value.collapsed != null),
+    n = $(() => !!s.value.link),
     r = L(!1),
     u = () => {
-      r.value = x(e.value.relativePath, s.value.link)
+      r.value = G(e.value.relativePath, s.value.link)
     }
-  G([e, s, fe], u), j(u)
-  const p = k(() =>
+  x([e, s, fe], u), U(u)
+  const p = $(() =>
       r.value
         ? !0
         : s.value.items
         ? ce(e.value.relativePath, s.value.items)
         : !1,
     ),
-    v = k(() => !!(s.value.items && s.value.items.length))
+    v = $(() => !!(s.value.items && s.value.items.length))
   X(() => {
     t.value = !!(o.value && s.value.collapsed)
   }),
     we(() => {
       ;(r.value || p.value) && (t.value = !1)
     })
-  function $() {
+  function b() {
     o.value && (t.value = !t.value)
   }
   return {
@@ -412,7 +412,7 @@ function kt(s) {
     isActiveLink: r,
     hasActiveLink: p,
     hasChildren: v,
-    toggle: $,
+    toggle: b,
   }
 }
 function bt() {
@@ -420,7 +420,7 @@ function bt() {
     e = ie('(min-width: 960px)'),
     t = ie('(min-width: 1280px)')
   return {
-    isAsideEnabled: k(() =>
+    isAsideEnabled: $(() =>
       !t.value && !e.value ? !1 : s.value ? t.value : e.value,
     ),
   }
@@ -470,9 +470,9 @@ function wt(s, e) {
     if (u === 0) r.push(p)
     else {
       for (let v = u - 1; v >= 0; v--) {
-        const $ = s[v]
-        if ($.level < p.level) {
-          ;($.children || ($.children = [])).push(p)
+        const b = s[v]
+        if (b.level < p.level) {
+          ;(b.children || (b.children = [])).push(p)
           continue e
         }
       }
@@ -485,7 +485,7 @@ function Pt(s, e) {
   const { isAsideEnabled: t } = bt(),
     o = at(r, 100)
   let n = null
-  j(() => {
+  U(() => {
     requestAnimationFrame(r), window.addEventListener('scroll', o)
   }),
     je(() => {
@@ -498,8 +498,8 @@ function Pt(s, e) {
     if (!t.value) return
     const p = window.scrollY,
       v = window.innerHeight,
-      $ = document.body.offsetHeight,
-      y = Math.abs(p + v - $) < 1,
+      b = document.body.offsetHeight,
+      y = Math.abs(p + v - b) < 1,
       w = ue
         .map(({ element: T, link: N }) => ({ link: N, top: Vt(T) }))
         .filter(({ top: T }) => !Number.isNaN(T))
@@ -585,7 +585,7 @@ const Lt = ['href', 'title'],
                       ),
                       r != null && r.length
                         ? (a(),
-                          b(n, { key: 0, headers: r }, null, 8, ['headers']))
+                          k(n, { key: 0, headers: r }, null, 8, ['headers']))
                         : _('', !0),
                     ])
                   ),
@@ -691,7 +691,7 @@ const Lt = ['href', 'title'],
           c(t.$slots, 'aside-ads-before', {}, void 0, !0),
           i(e).carbonAds
             ? (a(),
-              b(zt, { key: 0, 'carbon-ads': i(e).carbonAds }, null, 8, [
+              k(zt, { key: 0, 'carbon-ads': i(e).carbonAds }, null, 8, [
                 'carbon-ads',
               ]))
             : _('', !0),
@@ -704,7 +704,7 @@ const Lt = ['href', 'title'],
   Ut = g(Ot, [['__scopeId', 'data-v-be2aafe6']])
 function xt() {
   const { theme: s, page: e } = P()
-  return k(() => {
+  return $(() => {
     const { text: t = 'Edit this page', pattern: o = '' } =
       s.value.editLink || {}
     let n
@@ -718,17 +718,17 @@ function xt() {
 }
 function jt() {
   const { page: s, theme: e, frontmatter: t } = P()
-  return k(() => {
-    var v, $, y, w, C, T, N, B
+  return $(() => {
+    var v, b, y, w, C, T, N, B
     const o = Ce(e.value.sidebar, s.value.relativePath),
       n = gt(o),
-      r = n.findIndex((S) => x(s.value.relativePath, S.link)),
+      r = n.findIndex((S) => G(s.value.relativePath, S.link)),
       u =
         (((v = e.value.docFooter) == null ? void 0 : v.prev) === !1 &&
           !t.value.prev) ||
         t.value.prev === !1,
       p =
-        ((($ = e.value.docFooter) == null ? void 0 : $.next) === !1 &&
+        (((b = e.value.docFooter) == null ? void 0 : b.next) === !1 &&
           !t.value.next) ||
         t.value.next === !1
     return {
@@ -799,12 +799,12 @@ const Jt = g(Gt, [['render', Yt]]),
     },
     setup(s) {
       const e = s,
-        t = k(() => e.tag ?? (e.href ? 'a' : 'span')),
-        o = k(() => e.href && Ve.test(e.href))
+        t = $(() => e.tag ?? (e.href ? 'a' : 'span')),
+        o = $(() => e.href && Ve.test(e.href))
       return (n, r) => (
         a(),
-        b(
-          U(t.value),
+        k(
+          j(t.value),
           {
             class: M([
               'VPLink',
@@ -831,17 +831,17 @@ const Jt = g(Gt, [['render', Yt]]),
     __name: 'VPDocFooterLastUpdated',
     setup(s) {
       const { theme: e, page: t, frontmatter: o, lang: n } = P(),
-        r = k(() => new Date(o.value.lastUpdated ?? t.value.lastUpdated)),
-        u = k(() => r.value.toISOString()),
+        r = $(() => new Date(o.value.lastUpdated ?? t.value.lastUpdated)),
+        u = $(() => r.value.toISOString()),
         p = L('')
       return (
-        j(() => {
+        U(() => {
           X(() => {
-            var v, $, y
+            var v, b, y
             p.value = new Intl.DateTimeFormat(
-              ($ =
+              (b =
                 (v = e.value.lastUpdated) == null ? void 0 : v.formatOptions) !=
-                null && $.forceLocale
+                null && b.forceLocale
                 ? n.value
                 : void 0,
               ((y = e.value.lastUpdated) == null
@@ -853,7 +853,7 @@ const Jt = g(Gt, [['render', Yt]]),
             ).format(r.value)
           })
         }),
-        (v, $) => {
+        (v, b) => {
           var y
           return (
             a(),
@@ -891,15 +891,15 @@ const Jt = g(Gt, [['render', Yt]]),
       const { theme: e, page: t, frontmatter: o } = P(),
         n = xt(),
         r = jt(),
-        u = k(() => e.value.editLink && o.value.editLink !== !1),
-        p = k(() => t.value.lastUpdated && o.value.lastUpdated !== !1),
-        v = k(() => u.value || p.value || r.value.prev || r.value.next)
-      return ($, y) => {
+        u = $(() => e.value.editLink && o.value.editLink !== !1),
+        p = $(() => t.value.lastUpdated && o.value.lastUpdated !== !1),
+        v = $(() => u.value || p.value || r.value.prev || r.value.next)
+      return (b, y) => {
         var w, C, T, N
         return v.value
           ? (a(),
             l('footer', ts, [
-              c($.$slots, 'doc-footer-before', {}, void 0, !0),
+              c(b.$slots, 'doc-footer-before', {}, void 0, !0),
               u.value || p.value
                 ? (a(),
                   l('div', ss, [
@@ -938,7 +938,7 @@ const Jt = g(Gt, [['render', Yt]]),
                     d('div', rs, [
                       (T = i(r).prev) != null && T.link
                         ? (a(),
-                          b(
+                          k(
                             z,
                             {
                               key: 0,
@@ -984,7 +984,7 @@ const Jt = g(Gt, [['render', Yt]]),
                     d('div', cs, [
                       (N = i(r).next) != null && N.link
                         ? (a(),
-                          b(
+                          k(
                             z,
                             {
                               key: 0,
@@ -1049,9 +1049,9 @@ const Jt = g(Gt, [['render', Yt]]),
       const { theme: e } = P(),
         t = te(),
         { hasSidebar: o, hasAside: n, leftAside: r } = D(),
-        u = k(() => t.path.replace(/[./]+/g, '_').replace(/_html$/, ''))
+        u = $(() => t.path.replace(/[./]+/g, '_').replace(/_html$/, ''))
       return (p, v) => {
-        const $ = R('Content')
+        const b = R('Content')
         return (
           a(),
           l(
@@ -1113,7 +1113,7 @@ const Jt = g(Gt, [['render', Yt]]),
                     c(p.$slots, 'doc-before', {}, void 0, !0),
                     d('main', bs, [
                       f(
-                        $,
+                        b,
                         {
                           class: M([
                             'vp-doc',
@@ -1161,12 +1161,12 @@ const Jt = g(Gt, [['render', Yt]]),
     },
     setup(s) {
       const e = s,
-        t = k(() => e.href && Ve.test(e.href)),
-        o = k(() => (e.tag || e.href ? 'a' : 'button'))
+        t = $(() => e.href && Ve.test(e.href)),
+        o = $(() => (e.tag || e.href ? 'a' : 'button'))
       return (n, r) => (
         a(),
-        b(
-          U(o.value),
+        k(
+          j(o.value),
           {
             class: M(['VPButton', [n.size, n.theme]]),
             href: n.href ? i(pe)(n.href) : void 0,
@@ -1377,7 +1377,7 @@ const Jt = g(Gt, [['render', Yt]]),
                         () => [
                           t.image
                             ? (a(),
-                              b(
+                              k(
                                 Q,
                                 { key: 0, class: 'image-src', image: t.image },
                                 null,
@@ -1406,7 +1406,7 @@ const Jt = g(Gt, [['render', Yt]]),
       return (t, o) =>
         i(e).hero
           ? (a(),
-            b(
+            k(
               Os,
               {
                 key: 0,
@@ -1473,7 +1473,7 @@ const Ks = g(xs, [['render', qs]]),
     setup(s) {
       return (e, t) => (
         a(),
-        b(
+        k(
           z,
           {
             class: 'VPFeature',
@@ -1504,7 +1504,7 @@ const Ks = g(xs, [['render', qs]]),
                     ]))
                   : typeof e.icon == 'object'
                   ? (a(),
-                    b(
+                    k(
                       Q,
                       {
                         key: 1,
@@ -1566,7 +1566,7 @@ const Ks = g(xs, [['render', qs]]),
     props: { features: {} },
     setup(s) {
       const e = s,
-        t = k(() => {
+        t = $(() => {
           const o = e.features.length
           if (o) {
             if (o === 2) return 'grid-2'
@@ -1637,7 +1637,7 @@ const Ks = g(xs, [['render', qs]]),
       return (t, o) =>
         i(e).features
           ? (a(),
-            b(
+            k(
               io,
               { key: 0, class: 'VPHomeFeatures', features: i(e).features },
               null,
@@ -1717,7 +1717,7 @@ const _o = g(ho, [['render', fo]]),
               ? c(n.$slots, 'not-found', { key: 0 }, () => [f(_t)], !0)
               : i(t).layout === 'page'
               ? (a(),
-                b(
+                k(
                   _o,
                   { key: 1 },
                   {
@@ -1732,7 +1732,7 @@ const _o = g(ho, [['render', fo]]),
                 ))
               : i(t).layout === 'home'
               ? (a(),
-                b(
+                k(
                   vo,
                   { key: 2 },
                   {
@@ -1767,9 +1767,9 @@ const _o = g(ho, [['render', fo]]),
                   },
                 ))
               : i(t).layout && i(t).layout !== 'doc'
-              ? (a(), b(U(i(t).layout), { key: 3 }))
+              ? (a(), k(j(i(t).layout), { key: 3 }))
               : (a(),
-                b(
+                k(
                   ws,
                   { key: 4 },
                   {
@@ -1871,7 +1871,7 @@ const _o = g(ho, [['render', fo]]),
 function Ne() {
   const { theme: s, frontmatter: e } = P(),
     t = Pe([]),
-    o = k(() => t.value.length > 0)
+    o = $(() => t.value.length > 0)
   return (
     ee(() => {
       t.value = _e(e.value.outline ?? s.value.outline)
@@ -1932,7 +1932,7 @@ const Be = g(Po, [['render', Mo]]),
             o.value = !1
           }))
       }
-      function $() {
+      function b() {
         ;(o.value = !1),
           window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
       }
@@ -1958,7 +1958,7 @@ const Be = g(Po, [['render', Mo]]),
               : (a(),
                 l(
                   'button',
-                  { key: 1, onClick: $ },
+                  { key: 1, onClick: b },
                   V(i(t).returnToTopLabel || 'Return to top'),
                   1,
                 )),
@@ -1982,7 +1982,7 @@ const Be = g(Po, [['render', Mo]]),
                           d('div', Co, [
                             d(
                               'a',
-                              { class: 'top-link', href: '#', onClick: $ },
+                              { class: 'top-link', href: '#', onClick: b },
                               V(i(t).returnToTopLabel || 'Return to top'),
                               1,
                             ),
@@ -2060,7 +2060,7 @@ const Uo = g(Bo, [['render', Oo]]),
         { headers: n } = Ne(),
         { y: r } = Le(),
         u = L(0)
-      j(() => {
+      U(() => {
         u.value = parseInt(
           getComputedStyle(document.documentElement).getPropertyValue(
             '--vp-nav-height',
@@ -2070,9 +2070,9 @@ const Uo = g(Bo, [['render', Oo]]),
         ee(() => {
           n.value = _e(t.value.outline ?? e.value.outline)
         })
-      const p = k(() => n.value.length === 0),
-        v = k(() => p.value && !o.value),
-        $ = k(() => ({
+      const p = $(() => n.value.length === 0),
+        v = $(() => p.value && !o.value),
+        b = $(() => ({
           VPLocalNav: !0,
           'has-sidebar': o.value,
           empty: p.value,
@@ -2083,7 +2083,7 @@ const Uo = g(Bo, [['render', Oo]]),
           ? (a(),
             l(
               'div',
-              { key: 0, class: M($.value) },
+              { key: 0, class: M(b.value) },
               [
                 d('div', xo, [
                   i(o)
@@ -2133,7 +2133,7 @@ function Ko() {
   }
   const r = te()
   return (
-    G(() => r.path, t),
+    x(() => r.path, t),
     { isScreenOpen: s, openScreen: e, closeScreen: t, toggleScreen: o }
   )
 }
@@ -2200,14 +2200,14 @@ const vn = g(rn, [['render', dn]]),
         o = se('toggle-appearance', () => {
           e.value = !e.value
         }),
-        n = k(() =>
+        n = $(() =>
           e.value
             ? t.value.lightModeSwitchTitle || 'Switch to light theme'
             : t.value.darkModeSwitchTitle || 'Switch to dark theme',
         )
       return (r, u) => (
         a(),
-        b(
+        k(
           Xo,
           {
             title: n.value,
@@ -2248,7 +2248,7 @@ function mn(s) {
   const e = L(!1)
   if (K) {
     !Ae && gn(), re++
-    const t = G(ge, (o) => {
+    const t = x(ge, (o) => {
       var n, r, u
       o === s.el.value || ((n = s.el.value) != null && n.contains(o))
         ? ((e.value = !0), (r = s.onFocus) == null || r.call(s))
@@ -2319,7 +2319,7 @@ const Nn = g(Vn, [['render', Tn]]),
             z,
             {
               class: M({
-                active: i(x)(
+                active: i(G)(
                   i(e).relativePath,
                   t.item.activeMatch || t.item.link,
                   !!t.item.activeMatch,
@@ -2361,7 +2361,7 @@ const Nn = g(Vn, [['render', Tn]]),
                   null,
                   [
                     'link' in o
-                      ? (a(), b(oe, { key: 0, item: o }, null, 8, ['item']))
+                      ? (a(), k(oe, { key: 0, item: o }, null, 8, ['item']))
                       : _('', !0),
                   ],
                   64,
@@ -2401,9 +2401,9 @@ const Nn = g(Vn, [['render', Tn]]),
                         [
                           'link' in o
                             ? (a(),
-                              b(oe, { key: 0, item: o }, null, 8, ['item']))
+                              k(oe, { key: 0, item: o }, null, 8, ['item']))
                             : (a(),
-                              b(
+                              k(
                                 Fn,
                                 { key: 1, text: o.text, items: o.items },
                                 null,
@@ -2466,7 +2466,7 @@ const Nn = g(Vn, [['render', Tn]]),
                   ? (a(),
                     l('span', Gn, [
                       n.icon
-                        ? (a(), b(U(n.icon), { key: 0, class: 'option-icon' }))
+                        ? (a(), k(j(n.icon), { key: 0, class: 'option-icon' }))
                         : _('', !0),
                       n.button
                         ? (a(),
@@ -2480,7 +2480,7 @@ const Nn = g(Vn, [['render', Tn]]),
                         : _('', !0),
                       f(ze, { class: 'text-icon' }),
                     ]))
-                  : (a(), b(Nn, { key: 1, class: 'icon' })),
+                  : (a(), k(Nn, { key: 1, class: 'icon' })),
               ],
               8,
               jn,
@@ -2532,7 +2532,7 @@ const Nn = g(Vn, [['render', Tn]]),
     props: { icon: {}, link: {}, ariaLabel: {} },
     setup(s) {
       const e = s,
-        t = k(() => (typeof e.icon == 'object' ? e.icon.svg : Wn[e.icon]))
+        t = $(() => (typeof e.icon == 'object' ? e.icon.svg : Wn[e.icon]))
       return (o, n) => (
         a(),
         l(
@@ -2570,7 +2570,7 @@ const Nn = g(Vn, [['render', Tn]]),
               e.links,
               ({ link: o, icon: n, ariaLabel: r }) => (
                 a(),
-                b(Zn, { key: o, icon: n, link: o, ariaLabel: r }, null, 8, [
+                k(Zn, { key: o, icon: n, link: o, ariaLabel: r }, null, 8, [
                   'icon',
                   'link',
                   'ariaLabel',
@@ -2597,7 +2597,7 @@ const Nn = g(Vn, [['render', Tn]]),
     setup(s) {
       const { site: e, theme: t } = P(),
         { localeLinks: o, currentLang: n } = W({ correspondingLink: !0 }),
-        r = k(
+        r = $(
           () =>
             (o.value.length && n.value.label) ||
             e.value.appearance ||
@@ -2606,7 +2606,7 @@ const Nn = g(Vn, [['render', Tn]]),
       return (u, p) =>
         r.value
           ? (a(),
-            b(
+            k(
               $e,
               { key: 0, class: 'VPNavBarExtra', label: 'extra navigation' },
               {
@@ -2623,7 +2623,7 @@ const Nn = g(Vn, [['render', Tn]]),
                             i(o),
                             (v) => (
                               a(),
-                              b(oe, { key: v.link, item: v }, null, 8, ['item'])
+                              k(oe, { key: v.link, item: v }, null, 8, ['item'])
                             ),
                           ),
                           128,
@@ -2717,12 +2717,12 @@ const Nn = g(Vn, [['render', Tn]]),
       const { page: e } = P()
       return (t, o) => (
         a(),
-        b(
+        k(
           z,
           {
             class: M({
               VPNavBarMenuLink: !0,
-              active: i(x)(
+              active: i(G)(
                 i(e).relativePath,
                 t.item.activeMatch || t.item.link,
                 !!t.item.activeMatch,
@@ -2754,18 +2754,18 @@ const Nn = g(Vn, [['render', Tn]]),
         { page: t } = P(),
         o = (r) =>
           'link' in r
-            ? x(t.value.relativePath, r.link, !!e.item.activeMatch)
+            ? G(t.value.relativePath, r.link, !!e.item.activeMatch)
             : r.items.some(o),
-        n = k(() => o(e.item))
+        n = $(() => o(e.item))
       return (r, u) => (
         a(),
-        b(
+        k(
           $e,
           {
             class: M({
               VPNavBarMenuGroup: !0,
               active:
-                i(x)(
+                i(G)(
                   i(t).relativePath,
                   r.item.activeMatch,
                   !!r.item.activeMatch,
@@ -2817,9 +2817,9 @@ const Nn = g(Vn, [['render', Tn]]),
                       { key: n.text },
                       [
                         'link' in n
-                          ? (a(), b(ga, { key: 0, item: n }, null, 8, ['item']))
+                          ? (a(), k(ga, { key: 0, item: n }, null, 8, ['item']))
                           : (a(),
-                            b($a, { key: 1, item: n }, null, 8, ['item'])),
+                            k($a, { key: 1, item: n }, null, 8, ['item'])),
                       ],
                       64,
                     )
@@ -2845,9 +2845,9 @@ function Va(s) {
             ? void 0
             : S.translations)) ||
         null,
-      $ = (p && u.translations) || null
+      b = (p && u.translations) || null
     let y = v,
-      w = $,
+      w = b,
       C = s
     const T = r.pop()
     for (const Y of r) {
@@ -2937,7 +2937,7 @@ const La = ['aria-label'],
         { theme: o } = P(),
         n = L(!1),
         r = L(!1)
-      j(() => {})
+      U(() => {})
       function u() {
         n.value || ((n.value = !0), setTimeout(p, 16))
       }
@@ -2951,13 +2951,13 @@ const La = ['aria-label'],
           }, 16)
       }
       const v = L(!1),
-        $ = ''
+        b = ''
       return (y, w) => {
         var C
         return (
           a(),
           l('div', Ta, [
-            i($) === 'local'
+            i(b) === 'local'
               ? (a(),
                 l(
                   I,
@@ -2965,7 +2965,7 @@ const La = ['aria-label'],
                   [
                     v.value
                       ? (a(),
-                        b(i(e), {
+                        k(i(e), {
                           key: 0,
                           onClose: w[0] || (w[0] = (T) => (v.value = !1)),
                         }))
@@ -2978,7 +2978,7 @@ const La = ['aria-label'],
                   ],
                   64,
                 ))
-              : i($) === 'algolia'
+              : i(b) === 'algolia'
               ? (a(),
                 l(
                   I,
@@ -2986,7 +2986,7 @@ const La = ['aria-label'],
                   [
                     n.value
                       ? (a(),
-                        b(
+                        k(
                           i(t),
                           {
                             key: 0,
@@ -3021,7 +3021,7 @@ const La = ['aria-label'],
       return (t, o) =>
         i(e).socialLinks
           ? (a(),
-            b(
+            k(
               ke,
               { key: 0, class: 'VPNavBarSocialLinks', links: i(e).socialLinks },
               null,
@@ -3041,7 +3041,7 @@ const La = ['aria-label'],
       const { site: e, theme: t } = P(),
         { hasSidebar: o } = D(),
         { currentLang: n } = W(),
-        r = k(() => {
+        r = $(() => {
           var v
           return typeof t.value.logoLink == 'string'
             ? t.value.logoLink
@@ -3049,21 +3049,21 @@ const La = ['aria-label'],
             ? void 0
             : v.link
         }),
-        u = k(() => {
+        u = $(() => {
           var v
           return typeof t.value.logoLink == 'string' ||
             (v = t.value.logoLink) == null
             ? void 0
             : v.rel
         }),
-        p = k(() => {
+        p = $(() => {
           var v
           return typeof t.value.logoLink == 'string' ||
             (v = t.value.logoLink) == null
             ? void 0
             : v.target
         })
-      return (v, $) => (
+      return (v, b) => (
         a(),
         l(
           'div',
@@ -3081,7 +3081,7 @@ const La = ['aria-label'],
                 c(v.$slots, 'nav-bar-title-before', {}, void 0, !0),
                 i(t).logo
                   ? (a(),
-                    b(Q, { key: 0, class: 'logo', image: i(t).logo }, null, 8, [
+                    k(Q, { key: 0, class: 'logo', image: i(t).logo }, null, 8, [
                       'image',
                     ]))
                   : _('', !0),
@@ -3134,7 +3134,7 @@ const Ee = g(xa, [['render', Ka]]),
       return (n, r) =>
         i(t).length && i(o).label
           ? (a(),
-            b(
+            k(
               $e,
               {
                 key: 0,
@@ -3154,7 +3154,7 @@ const Ee = g(xa, [['render', Ka]]),
                         i(t),
                         (u) => (
                           a(),
-                          b(oe, { key: u.link, item: u }, null, 8, ['item'])
+                          k(oe, { key: u.link, item: u }, null, 8, ['item'])
                         ),
                       ),
                       128,
@@ -3275,7 +3275,7 @@ const Ee = g(xa, [['render', Ka]]),
       const e = se('close-screen')
       return (t, o) => (
         a(),
-        b(
+        k(
           z,
           {
             class: 'VPNavScreenMenuLink',
@@ -3319,7 +3319,7 @@ const gr = g(hr, [['render', mr]]),
       const e = se('close-screen')
       return (t, o) => (
         a(),
-        b(
+        k(
           z,
           {
             class: 'VPNavScreenMenuGroupLink',
@@ -3352,7 +3352,7 @@ const gr = g(hr, [['render', mr]]),
             null,
             A(
               e.items,
-              (o) => (a(), b(Fe, { key: o.text, item: o }, null, 8, ['item'])),
+              (o) => (a(), k(Fe, { key: o.text, item: o }, null, 8, ['item'])),
             ),
             128,
           )),
@@ -3371,7 +3371,7 @@ const gr = g(hr, [['render', mr]]),
     setup(s) {
       const e = s,
         t = L(!1),
-        o = k(() => `NavScreenGroup-${e.text.replace(' ', '-').toLowerCase()}`)
+        o = $(() => `NavScreenGroup-${e.text.replace(' ', '-').toLowerCase()}`)
       function n() {
         t.value = !t.value
       }
@@ -3473,9 +3473,9 @@ const gr = g(hr, [['render', mr]]),
                       { key: n.text },
                       [
                         'link' in n
-                          ? (a(), b(vr, { key: 0, item: n }, null, 8, ['item']))
+                          ? (a(), k(vr, { key: 0, item: n }, null, 8, ['item']))
                           : (a(),
-                            b(
+                            k(
                               Cr,
                               { key: 1, text: n.text || '', items: n.items },
                               null,
@@ -3500,7 +3500,7 @@ const gr = g(hr, [['render', mr]]),
       return (t, o) =>
         i(e).socialLinks
           ? (a(),
-            b(
+            k(
               ke,
               {
                 key: 0,
@@ -3577,7 +3577,7 @@ const gr = g(hr, [['render', mr]]),
         t = Se(K ? document.body : null)
       return (o, n) => (
         a(),
-        b(
+        k(
           de,
           {
             name: 'fade',
@@ -3630,7 +3630,7 @@ const gr = g(hr, [['render', mr]]),
     setup(s) {
       const { isScreenOpen: e, closeScreen: t, toggleScreen: o } = Ko(),
         { frontmatter: n } = P(),
-        r = k(() => n.value.navbar !== !1)
+        r = $(() => n.value.navbar !== !1)
       return (
         Me('close-screen', t),
         X(() => {
@@ -3699,14 +3699,14 @@ const gr = g(hr, [['render', mr]]),
           hasActiveLink: u,
           hasChildren: p,
           toggle: v,
-        } = kt(k(() => e.item)),
-        $ = k(() => (p.value ? 'section' : 'div')),
-        y = k(() => (n.value ? 'a' : 'div')),
-        w = k(() =>
+        } = kt($(() => e.item)),
+        b = $(() => (p.value ? 'section' : 'div')),
+        y = $(() => (n.value ? 'a' : 'div')),
+        w = $(() =>
           p.value ? (e.depth + 2 === 7 ? 'p' : `h${e.depth + 2}`) : 'p',
         ),
-        C = k(() => (n.value ? void 0 : 'button')),
-        T = k(() => [
+        C = $(() => (n.value ? void 0 : 'button')),
+        T = $(() => [
           [`level-${e.depth}`],
           { collapsible: o.value },
           { collapsed: t.value },
@@ -3724,8 +3724,8 @@ const gr = g(hr, [['render', mr]]),
         const O = R('VPSidebarItem', !0)
         return (
           a(),
-          b(
-            U($.value),
+          k(
+            j(b.value),
             { class: M(['VPSidebarItem', T.value]) },
             {
               default: h(() => [
@@ -3742,7 +3742,7 @@ const gr = g(hr, [['render', mr]]),
                         Gr,
                         S.item.link
                           ? (a(),
-                            b(
+                            k(
                               z,
                               {
                                 key: 0,
@@ -3755,8 +3755,8 @@ const gr = g(hr, [['render', mr]]),
                               {
                                 default: h(() => [
                                   (a(),
-                                  b(
-                                    U(w.value),
+                                  k(
+                                    j(w.value),
                                     { class: 'text', innerHTML: S.item.text },
                                     null,
                                     8,
@@ -3769,8 +3769,8 @@ const gr = g(hr, [['render', mr]]),
                               ['tag', 'href', 'rel', 'target'],
                             ))
                           : (a(),
-                            b(
-                              U(w.value),
+                            k(
+                              j(w.value),
                               { key: 1, class: 'text', innerHTML: S.item.text },
                               null,
                               8,
@@ -3810,7 +3810,7 @@ const gr = g(hr, [['render', mr]]),
                               S.item.items,
                               (q) => (
                                 a(),
-                                b(
+                                k(
                                   O,
                                   { key: q.text, item: q, depth: S.depth + 1 },
                                   null,
@@ -3860,7 +3860,7 @@ const gr = g(hr, [['render', mr]]),
         n = L(null),
         r = Se(K ? document.body : null)
       return (
-        G(
+        x(
           [o, n],
           () => {
             var u
@@ -3917,7 +3917,7 @@ const gr = g(hr, [['render', mr]]),
     setup(s) {
       const e = te(),
         t = L()
-      G(
+      x(
         () => e.path,
         () => t.value.focus(),
       )
@@ -3966,13 +3966,13 @@ const gr = g(hr, [['render', mr]]),
     setup(s) {
       const { isOpen: e, open: t, close: o } = D(),
         n = te()
-      G(() => n.path, o), $t(e, o)
+      x(() => n.path, o), $t(e, o)
       const { frontmatter: r } = P(),
         u = et(),
-        p = k(() => !!u['home-hero-image'])
+        p = $(() => !!u['home-hero-image'])
       return (
         Me('hero-image-slot-exists', p),
-        (v, $) => {
+        (v, b) => {
           const y = R('Content')
           return i(r).layout !== !1
             ? (a(),
@@ -4106,7 +4106,7 @@ const gr = g(hr, [['render', mr]]),
                 ],
                 2,
               ))
-            : (a(), b(y, { key: 1 }))
+            : (a(), k(y, { key: 1 }))
         }
       )
     },
@@ -4139,8 +4139,8 @@ const gr = g(hr, [['render', mr]]),
     props: { type: { default: void 0 } },
     setup(s) {
       const e = s,
-        t = k(() => ({ [`pot-button--${e.type}`]: e.type })),
-        o = k(() =>
+        t = $(() => ({ [`pot-button--${e.type}`]: e.type })),
+        o = $(() =>
           e.type
             ? e.type.replace(e.type.charAt(0), e.type.charAt(0).toUpperCase())
             : 'Default',
@@ -4165,7 +4165,7 @@ const gr = g(hr, [['render', mr]]),
     props: { iconClass: { default: '' } },
     setup(s) {
       const e = s,
-        t = k(() => `#icon-${e.iconClass}`)
+        t = $(() => `#icon-${e.iconClass}`)
       return (o, n) => (
         a(), l('svg', ii, [d('use', { 'xlink:href': t.value }, null, 8, li)])
       )
@@ -4179,22 +4179,35 @@ const gr = g(hr, [['render', mr]]),
     name: 'PotRadio',
     __name: 'radio',
     props: {
-      name: { default: void 0 },
-      options: { default: void 0 },
-      modelValue: { default: void 0 },
+      name: { default: 'PotRadio' },
+      options: {
+        default: () => [
+          { id: 1, value: 'option1', label: 'option1' },
+          { id: 2, value: 'option2', label: 'option2' },
+        ],
+      },
+      modelValue: { default: 'option1' },
     },
     emits: ['update:modelValue'],
     setup(s, { emit: e }) {
       const t = s,
         o = e,
         n = L('')
-      let r = ''
-      function u(p) {
-        const v = p.target
-        r != v.value &&
-          (o('update:modelValue', v.value), (r = v.value), (n.value = v.id))
+      U(() => {
+        n.value = t.modelValue
+      }),
+        x(
+          () => t.modelValue,
+          (u) => {
+            n.value = u
+          },
+        )
+      function r(u) {
+        const p = u.target
+        n.value != p.value &&
+          (o('update:modelValue', p.value), (n.value = p.value))
       }
-      return (p, v) => (
+      return (u, p) => (
         a(),
         l('div', di, [
           (a(!0),
@@ -4203,17 +4216,17 @@ const gr = g(hr, [['render', mr]]),
             null,
             A(
               t.options,
-              ($) => (
+              (v) => (
                 a(),
-                l('div', { key: $.id }, [
+                l('div', { key: v.id }, [
                   d(
                     'input',
                     {
-                      id: $.id.toString(),
+                      id: t.name + v.id,
                       type: 'radio',
                       name: t.name,
-                      value: $.value,
-                      onFocus: u,
+                      value: v.value,
+                      onFocus: r,
                     },
                     null,
                     40,
@@ -4222,16 +4235,13 @@ const gr = g(hr, [['render', mr]]),
                   d(
                     'label',
                     {
-                      for: $.id.toString(),
+                      for: t.name + v.id,
                       class: M([
                         'pot-radio--item',
-                        {
-                          'pot-radio--item_checked':
-                            $.id.toString() === n.value,
-                        },
+                        { 'pot-radio--item_checked': v.value === n.value },
                       ]),
                     },
-                    V($.label),
+                    V(v.label),
                     11,
                     hi,
                   ),
@@ -4245,7 +4255,7 @@ const gr = g(hr, [['render', mr]]),
     },
   }),
   fi = be(pi),
-  _i = [ui, ri, fi],
+  _i = [ri, ui, fi],
   mi = ni(_i),
   $i = {
     ...oi,

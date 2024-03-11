@@ -8,7 +8,7 @@ import {
   m as s,
   a as p,
   V as g,
-} from './chunks/framework.fOkQ3P9O.js'
+} from './chunks/framework.BTLdhyVs.js'
 const y = d({
     __name: 'basic',
     setup(k) {

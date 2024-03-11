@@ -7,7 +7,7 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    PotButton: typeof import('@potati/components/src')['PotButton']
-    PotRadio: typeof import('@potati/components/src')['PotRadio']
+    PotButton: typeof import('@potati/components')['PotButton']
+    PotRadio: typeof import('@potati/components')['PotRadio']
   }
 }
