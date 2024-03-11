@@ -55,7 +55,7 @@ import {
   $ as Qe,
   a0 as Xe,
   a1 as et,
-} from './framework.BTLdhyVs.js'
+} from './framework.DzsyM-52.js'
 const tt = m({
     __name: 'VPBadge',
     props: { text: {}, type: { default: 'tip' } },

@@ -4221,7 +4221,7 @@ const Ja = (e, t) => {
   },
   Dc = 'modulepreload',
   Vc = function (e) {
-    return '/docs/dist/' + e
+    return '/potati-ui/' + e
   },
   Tr = {},
   Qa = function (t, n, s) {
@@ -4903,7 +4903,7 @@ function nu(e = {}) {
   )
 }
 var Yn = {
-    BASE_URL: '/docs/dist/',
+    BASE_URL: '/potati-ui/',
     MODE: 'production',
     DEV: !1,
     PROD: !0,
@@ -5061,7 +5061,7 @@ function Ir(e) {
 function xa(e) {
   let t = e.replace(/\.html$/, '')
   if (((t = decodeURIComponent(t)), (t = t.replace(/\/$/, '/index')), Ce)) {
-    const n = '/docs/dist/'
+    const n = '/potati-ui/'
     t = Lr(t.slice(n.length).replace(/\//g, '_') || 'index') + '.md'
     let s = __VP_HASH_MAP__[t.toLowerCase()]
     if (
