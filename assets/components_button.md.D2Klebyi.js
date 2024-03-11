@@ -7,7 +7,7 @@ import {
   m as t,
   a as s,
   V as d,
-} from './chunks/framework.BTLdhyVs.js'
+} from './chunks/framework.DzsyM-52.js'
 const r = {}
 function k(l, h) {
   const a = p('PotButton')
