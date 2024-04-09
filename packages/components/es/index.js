@@ -1,16 +1,15 @@
-import { makeInstaller as t } from "./utils/install.js";
-import o from "./installs.js";
+import { makeInstaller as o } from "./utils/install.js";
+import t from "./installs.js";
 import { PotIcon as f } from "./Icon/index.js";
-import { PotButton as l } from "./Button/index.js";
-import { PotRadio as s, PotRadioGroup as x } from "./Radio/index.js";
-import { PotSwitch as c } from "./Switch/index.js";
-console.log(o);
-const m = t(o);
+import { PotButton as n } from "./Button/index.js";
+import { PotRadio as l, PotRadioGroup as s } from "./Radio/index.js";
+import { PotSwitch as d } from "./Switch/index.js";
+const m = o(t);
 export {
-  l as PotButton,
+  n as PotButton,
   f as PotIcon,
-  s as PotRadio,
-  x as PotRadioGroup,
-  c as PotSwitch,
+  l as PotRadio,
+  s as PotRadioGroup,
+  d as PotSwitch,
   m as default
 };

@@ -1,5 +1,11 @@
 # @potati/components
 
+## 2.0.1
+
+### Patch Changes
+
+- 删除多余console
+
 ## 2.0.0
 
 ### Major Changes
