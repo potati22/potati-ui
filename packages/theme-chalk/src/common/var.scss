@@ -24,6 +24,7 @@ $colors: map.deep-merge(
     'grey': (
       'default': #e4eaf1,
       'light-1': #b4c3d3,
+      'light-2': #4c4d4f,
     ),
   ),
   $colors
@@ -81,4 +82,15 @@ $radio: map.merge(
     'text-color-checked': getCssVar('color', 'grey', 'light-1'),
   ),
   $radio
+);
+
+// Switch
+$switch: () !default;
+$switch: map.merge(
+  (
+    'bg-color-off': getCssVar('color', 'grey', 'light-2'),
+    'bg-color-on': getCssVar('color', 'yellow', 'light-1'),
+    'core-color': getCssVar('color', 'white', ''),
+  ),
+  $switch
 );

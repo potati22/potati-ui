@@ -1,5 +1,5 @@
-import type Button from './button.vue'
+import type Button from './button.vue';
 export interface ButtonProps {
-  type?: 'yellow'
+    type?: 'yellow';
 }
-export type ButtonInstance = InstanceType<typeof Button>
+export type ButtonInstance = InstanceType<typeof Button>;

@@ -1,5 +1,5 @@
-import type Icon from './icon.vue'
+import type Icon from './icon.vue';
 export interface IconProps {
-  iconClass: string
+    iconClass: string;
 }
-export type IconInstance = InstanceType<typeof Icon>
+export type IconInstance = InstanceType<typeof Icon>;

@@ -1,0 +1,45 @@
+@use '../mixins/mixins.scss' as *;
+@use '../mixins/var.scss' as *;
+@use '../mixins/function.scss' as *;
+@use '../common/var.scss' as *;
+
+@include b('switch') {
+  @include set-component-css-var('switch', $switch);
+}
+
+@include b('switch') {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  border-radius: 25%/50%;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+
+  &_on {
+    background-color: getCssVar('switch', 'bg-color-on');
+  }
+
+  &_off {
+    background-color: getCssVar('switch', 'bg-color-off');
+  }
+}
+
+@include b('switch') {
+  @include m('core') {
+    position: absolute;
+    width: getCssVar('switch', 'core-height');
+    height: getCssVar('switch', 'core-height');
+    border-radius: 50%;
+    background-color: getCssVar('switch', 'core-color');
+    transition: left 0.5s;
+
+    &_on {
+      left: getCssVar('switch', 'core-left');
+    }
+
+    &_off {
+      left: 0px;
+    }
+  }
+}

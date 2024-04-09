@@ -6,6 +6,11 @@ import path from 'node:path'
 import ElementPlus from 'unplugin-element-plus/vite'
 
 export default defineConfig({
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+    },
+  },
   plugins: [
     vue(),
     dts({
@@ -40,7 +45,7 @@ export default defineConfig({
       ],
     },
   },
-  test: {
+  /* test: {
     environment: 'happy-dom',
-  },
+  }, */
 })

@@ -1,5 +1,5 @@
-export * from './components'
+export * from './components';
 declare const _default: {
-  install: (app: import('vue').App<any>) => void
-}
-export default _default
+    install: (app: import("vue").App<any>) => void;
+};
+export default _default;

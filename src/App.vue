@@ -1,58 +1,24 @@
 <template>
   <div>
-    {{ state }}--{{ state1 }}
-    <PotButton></PotButton>
-    <PotButton type="yellow"></PotButton>
-    <PotRadio v-model="state" :options="members" name="my5"></PotRadio>
-    <div></div>
-    <PotRadio v-model="state1" :options="members1" name="my"></PotRadio>
-    <button @click="cancelFocus">cancel</button>
+    <div>{{ myHusband }}</div>
+    <PotRadioGroup v-model="myHusband">
+      <PotRadio value="heeseung">李羲承</PotRadio>
+      <PotRadio value="jungwon">梁祯元</PotRadio>
+      <PotRadio value="sunhoon">朴成勋</PotRadio>
+    </PotRadioGroup>
+    <button @click="test">test</button>
+    <div>--------------</div>
+    <PotSwitch v-model="switchValue"></PotSwitch>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const state = ref('朴成训')
-const state1 = ref('李羲承')
+const myHusband = ref('heeseung')
+const switchValue = ref(false)
 
-const members = [
-  {
-    label: '李羲承',
-    value: '李羲承',
-    id: 1,
-  },
-  {
-    label: '粱祯元',
-    value: '粱祯元',
-    id: 2,
-  },
-  {
-    label: '朴成训',
-    value: '朴成训',
-    id: 3,
-  },
-]
-
-const members1 = [
-  {
-    label: '李羲承',
-    value: '李羲承',
-    id: 2,
-  },
-  {
-    label: '粱祯元',
-    value: '粱祯元',
-    id: 1,
-  },
-  {
-    label: '朴成训',
-    value: '朴成训',
-    id: 3,
-  },
-]
-
-function cancelFocus() {
-  state.value = ''
+function test() {
+  myHusband.value = 'heeseung'
 }
 </script>

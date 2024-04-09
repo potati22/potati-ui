@@ -3,3 +3,4 @@
 export * from './Icon/index'
 export * from './Button/index'
 export * from './Radio/index'
+export * from './Switch/index'

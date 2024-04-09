@@ -1,5 +1,15 @@
 # @potati/theme-chalk
 
+## 2.0.0
+
+### Major Changes
+
+- 重构Radio、新增Switch
+
+### Patch Changes
+
+- 重构Radio、新增Switch
+
 ## 1.0.3
 
 ### Patch Changes

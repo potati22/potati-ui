@@ -8,7 +8,7 @@ import basic from '../examples/radio/basic.vue'
 
 ## 基础用法
 
-单选框不应该有太多的可选项， 如果你有很多的可选项你应该使用选择框而不是单选框
+单选框不应该有太多的可选项， 如果你有很多的可选项，则应使用选择框
 
 <basic></basic>
 
@@ -16,47 +16,34 @@ import basic from '../examples/radio/basic.vue'
 
 ```vue
 <template>
-  <PotRadio v-model="checked" name="example" :options="options" />
+  <PotRadioGroup v-model="checked">
+    <PotRadio value="option1">选项一</PotRadio>
+    <PotRadio value="option2">选项二</PotRadio>
+    <PotRadio value="option3">选项三</PotRadio>
+  </PotRadioGroup>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-interface RadioOptionsItem {
-  id: number
-  value: string
-  label: string
-}
-
-const checked = ref('')
-const options: RadioOptionsItem[] = [
-  {
-    label: 'option1',
-    value: 'option1',
-    id: 1,
-  },
-  {
-    label: 'option2',
-    value: 'option2',
-    id: 2,
-  },
-  {
-    label: 'option3',
-    value: 'option3',
-    id: 3,
-  },
-]
+const checked = ref('option1')
 </script>
 ```
 
 :::
 
-## API
+## RadioGroup API
 
 ### 属性
 
-| 属性名  | 说明                             | 类型                 | 默认值 |
-| ------- | -------------------------------- | -------------------- | ------ |
-| v-model | 选中项绑定值，必选               | `string`             | —      |
-| name    | 单选框的名称，保证全局唯一，必选 | `string`             | —      |
-| options | 单选框的所有配置项，必选         | `RadioOptionsItem[]` | —      |
+| 属性名  | 说明               | 类型     | 默认值 |
+| ------- | ------------------ | -------- | ------ |
+| v-model | 选中项绑定值，必选 | `string` | ''     |
+
+## Radio API
+
+### 属性
+
+| 属性名 | 说明         | 类型     | 默认值 |
+| ------ | ------------ | -------- | ------ |
+| value  | 选项值，必选 | `string` | ''     |

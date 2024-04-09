@@ -24,3 +24,13 @@ dist-ssr
 
 #docs
 docs/.vitepress/cache/
+
+#packages/components
+packages/components/es
+packages/components/types
+
+#packages/resolver
+packages/resolver/lib
+
+#packages/theme-chalk
+packages/theme-chalk/build

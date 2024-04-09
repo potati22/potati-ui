@@ -1,15 +1,5 @@
-import type Radio from './radio.vue'
-export interface RadioOptionsItem {
-  id: number
-  value: string
-  label: string
-}
+import type Radio from './radio.vue';
 export interface RadioProps {
-  name: string
-  options: RadioOptionsItem[]
-  modelValue: string
+    value: string;
 }
-export type RadioEmits = {
-  'update:modelValue': [value: string]
-}
-export type RadioInstance = InstanceType<typeof Radio>
+export type RadioInstance = InstanceType<typeof Radio>;

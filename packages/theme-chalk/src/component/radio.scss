@@ -8,32 +8,31 @@
 }
 
 @include b('radio') {
-  display: flex;
+  display: inline-block;
+  line-height: 1;
+  text-align: center;
+  padding: 10px 20px;
+  margin-right: 5px;
+  background-color: getCssVar('radio', 'bg-color');
+  color: getCssVar('radio', 'text-color');
+  border-radius: 4px;
+  cursor: pointer;
+
   input {
     position: absolute;
     appearance: none;
   }
+
+  &:hover {
+    background-color: getCssVar('radio', 'bg-color-hover');
+  }
+
+  &_checked {
+    background-color: getCssVar('radio', 'bg-color-checked');
+    color: getCssVar('radio', 'text-color-checked');
+  }
 }
 
-@include b('radio') {
-  @include m('item') {
-    display: inline-block;
-    line-height: 1;
-    text-align: center;
-    padding: 10px 20px;
-    margin: 5px;
-    background-color: getCssVar('radio', 'bg-color');
-    color: getCssVar('radio', 'text-color');
-    border-radius: 4px;
-    cursor: pointer;
-
-    &:hover {
-      background-color: getCssVar('radio', 'bg-color-hover');
-    }
-
-    &_checked {
-      background-color: getCssVar('radio', 'bg-color-checked');
-      color: getCssVar('radio', 'text-color-checked');
-    }
-  }
+@include b('radio-group') {
+  display: flex;
 }

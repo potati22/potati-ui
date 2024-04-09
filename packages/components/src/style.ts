@@ -2,3 +2,5 @@
 import './Button/style/index'
 import './Icon/style/index'
 import './Radio/style/index'
+import './RadioGroup/style/index'
+import './Switch/style/index'

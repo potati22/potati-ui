@@ -1,5 +1,18 @@
 # @potati/components
 
+## 2.0.0
+
+### Major Changes
+
+- 重构Radio、新增Switch
+
+### Patch Changes
+
+- 重构Radio、新增Switch
+- Updated dependencies
+- Updated dependencies
+  - @potati/theme-chalk@2.0.0
+
 ## 1.0.6
 
 ### Patch Changes
