@@ -13,8 +13,8 @@
     "docs:preview": "vitepress preview"
   },
   "dependencies": {
-    "@potati/components": "workspace:^0.0.1",
-    "@potati/theme-chalk": "workspace:^0.0.1"
+    "@potati/components": "workspace:^2.0.2",
+    "@potati/theme-chalk": "workspace:^2.0.1"
   },
   "devDependencies": {
     "vitepress": "1.0.0-rc.42"
