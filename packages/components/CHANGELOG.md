@@ -1,5 +1,13 @@
 # @potati/components
 
+## 2.0.3
+
+### Patch Changes
+
+- 修复一些问题
+- Updated dependencies
+  - @potati/theme-chalk@2.0.2
+
 ## 2.0.2
 
 ### Patch Changes
