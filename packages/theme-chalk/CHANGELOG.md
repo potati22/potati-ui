@@ -1,5 +1,11 @@
 # @potati/theme-chalk
 
+## 2.0.1
+
+### Patch Changes
+
+- 修复Switch组件
+
 ## 2.0.0
 
 ### Major Changes

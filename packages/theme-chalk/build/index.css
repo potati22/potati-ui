@@ -91,13 +91,15 @@
 .pot-switch {
   --pot-switch-bg-color-off: var(--pot-color-grey-light-2);
   --pot-switch-bg-color-on: var(--pot-color-yellow-light-1);
+  --pot-switch-width: 40px;
+  --pot-switch-height: 20px;
   --pot-switch-core-color: var(--pot-color-white);
 }
 
 .pot-switch {
   position: relative;
-  width: 40px;
-  height: 20px;
+  width: var(--pot-switch-width);
+  height: var(--pot-switch-height);
   border-radius: 25%/50%;
   display: inline-flex;
   align-items: center;
@@ -112,14 +114,14 @@
 
 .pot-switch--core {
   position: absolute;
-  width: var(--pot-switch-core-height);
-  height: var(--pot-switch-core-height);
+  width: calc(var(--pot-switch-height) - 4px);
+  height: calc(var(--pot-switch-height) - 4px);
   border-radius: 50%;
   background-color: var(--pot-switch-core-color);
   transition: left 0.5s;
 }
 .pot-switch--core_on {
-  left: var(--pot-switch-core-left);
+  left: calc(100% - var(--pot-switch-height) + 1px);
 }
 .pot-switch--core_off {
   left: 0px;

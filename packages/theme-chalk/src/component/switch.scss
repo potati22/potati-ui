@@ -9,8 +9,8 @@
 
 @include b('switch') {
   position: relative;
-  width: 40px;
-  height: 20px;
+  width: getCssVar('switch', 'width');
+  height: getCssVar('switch', 'height');
   border-radius: 25%/50%;
   display: inline-flex;
   align-items: center;
@@ -28,14 +28,14 @@
 @include b('switch') {
   @include m('core') {
     position: absolute;
-    width: getCssVar('switch', 'core-height');
-    height: getCssVar('switch', 'core-height');
+    width: calc(getCssVar('switch', 'height') - 4px);
+    height: calc(getCssVar('switch', 'height') - 4px);
     border-radius: 50%;
     background-color: getCssVar('switch', 'core-color');
     transition: left 0.5s;
 
     &_on {
-      left: getCssVar('switch', 'core-left');
+      left: calc(100% - getCssVar('switch', 'height') + 1px);
     }
 
     &_off {

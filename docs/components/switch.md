@@ -8,7 +8,11 @@ import basic from '../examples/switch/basic.vue'
 
 ## 基础用法
 
-绑定 `v-model` 到一个 `Boolean` 类型的变量。 可以使用 `--pot-switch-bg-color-on` 属性与 `--pot-switch-bg-color-off` 属性来设置开关的背景色。
+绑定 `v-model` 到一个 `Boolean` 类型的变量。
+
+可以使用 `--pot-switch-bg-color-on` 与 `--pot-switch-bg-color-off` 属性来设置开关的背景色
+
+可以使用 `--pot-switch-width`与 `--pot-switch-height` 属性来设置开关的尺寸
 
 <basic></basic>
 
@@ -16,20 +20,31 @@ import basic from '../examples/switch/basic.vue'
 
 ```vue
 <template>
-  <PotSwitch v-model="isOpen"></PotSwitch>
-  <PotSwitch
-    v-model="isOpen1"
-    :style="{
-      '--pot-switch-bg-color-on': '#13ce66',
-    }"
-  ></PotSwitch>
+  <div>
+    <PotSwitch v-model="isOpen"></PotSwitch>
+    <PotSwitch
+      v-model="isOpen1"
+      :style="{
+        '--pot-switch-bg-color-on': '#13ce66',
+      }"
+    ></PotSwitch>
+    <PotSwitch
+      v-model="isOpen2"
+      :style="{
+        '--pot-switch-bg-color-on': '#ff4949',
+        '--pot-switch-width': '60px',
+        '--pot-switch-height': '30px',
+      }"
+    ></PotSwitch>
+  </div>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-const isOpen = ref(false)
+const isOpen = ref(true)
 const isOpen1 = ref(true)
+const isOpen2 = ref(true)
 </script>
 ```
 
