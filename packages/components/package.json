@@ -23,8 +23,7 @@
     "unplugin-element-plus": "^0.8.0"
   },
   "peerDependencies": {
-    "@potati/theme-chalk": "workspace:^2.0.2",
-    "element-plus": "^2.4.4"
+    "@potati/theme-chalk": "workspace:^2.0.2"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",

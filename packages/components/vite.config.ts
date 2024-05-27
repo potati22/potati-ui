@@ -33,7 +33,7 @@ export default defineConfig({
       name: 'POTATI_COMPONENTS',
     },
     rollupOptions: {
-      external: ['vue', 'element-plus', '@potati/theme-chalk'], // 将模块排除在打包文件之外，使用用这个组件库的项目的模块
+      external: ['vue', '@potati/theme-chalk'], // 将模块排除在打包文件之外，使用用这个组件库的项目的模块
       output: [
         {
           format: 'es',
