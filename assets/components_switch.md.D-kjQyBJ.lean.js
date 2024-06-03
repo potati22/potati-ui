@@ -1,12 +1,12 @@
 import {
   d as r,
-  h as l,
-  E as o,
+  f as l,
+  L as o,
   o as k,
-  c as e,
-  J as a,
-  V as E,
-} from './chunks/framework.DzsyM-52.js'
+  a as e,
+  k as a,
+  Z as E,
+} from './chunks/framework.DeWdQpWQ.js'
 const g = r({
     __name: 'basic',
     setup(d) {
