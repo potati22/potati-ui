@@ -7,4 +7,6 @@ declare module 'vue' {
   }
 }
 
+declare module '@potati/components' {}
+
 export {}

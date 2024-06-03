@@ -1,28 +1,42 @@
 <template>
-  <div>
-    <button @click="test">test</button>
-    <div>--------------</div>
-    <PotSwitch
-      v-model="switchValue"
-      :style="{
-        '--pot-switch-width': '80px',
-        '--pot-switch-height': '40px',
-      }"
-    ></PotSwitch>
-    <div>__________</div>
-    <div v-show="isShow">
-      <PotSwitch v-model="switchValue"></PotSwitch>
-    </div>
+  <div :style="{ 'background-color': '#141414', height: '500px' }">
+    <button @click="success">success</button>
+    <button @click="info">info</button>
+    <button @click="error">error</button>
+    <button @click="warning">warning</button>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+function success() {
+  PotMessage({
+    type: 'success',
+    message: '你成功啦',
+    duration: 0,
+  })
+}
 
-const switchValue = ref(false)
-const isShow = ref(false)
+function info() {
+  PotMessage({
+    type: 'info',
+    message: 'infooooo',
+    duration: 0,
+  })
+}
 
-function test() {
-  isShow.value = !isShow.value
+function error() {
+  PotMessage({
+    type: 'error',
+    message: 'errorrrrrr',
+    duration: 0,
+  })
+}
+
+function warning() {
+  PotMessage({
+    type: 'warning',
+    message: 'warninggggg',
+    duration: 0,
+  })
 }
 </script>

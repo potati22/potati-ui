@@ -6,6 +6,10 @@
   @include set-css-var-color('yellow');
   @include set-css-var-color('black');
   @include set-css-var-color('grey');
+  @include set-css-var-color('info');
+  @include set-css-var-color('success');
+  @include set-css-var-color('error');
+  @include set-css-var-color('warning');
   @include set-component-css-var('bg-color', $bg-color);
   @include set-component-css-var('border-color', $border-color);
   @include set-component-css-var('text-color', $text-color);

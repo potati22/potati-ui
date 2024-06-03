@@ -20,9 +20,10 @@ export default defineConfig({
           text: '基础组件',
           items: [
             { text: 'Button 按钮', link: '/components/button' },
-            { text: 'Switch 开关', link: '/components/switch' },
-            { text: 'Radio 单选框', link: '/components/radio' },
             { text: 'Icon 图标', link: '/components/icon' },
+            { text: 'Message 消息提示', link: '/components/message' },
+            { text: 'Radio 单选框', link: '/components/radio' },
+            { text: 'Switch 开关', link: '/components/switch' },
           ],
         },
       ],

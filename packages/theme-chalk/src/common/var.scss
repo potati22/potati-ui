@@ -1,6 +1,10 @@
 @use 'sass:map';
+@use 'sass:math';
 
 @use '../mixins/function.scss' as *;
+
+// types
+$types: success, warning, error, info;
 
 // Color
 $colors: () !default;
@@ -26,9 +30,48 @@ $colors: map.deep-merge(
       'light-1': #b4c3d3,
       'light-2': #4c4d4f,
     ),
+    'info': (
+      'default': #909399,
+    ),
+    'success': (
+      'default': #67c23a,
+    ),
+    'error': (
+      'default': #f56c6c,
+    ),
+    'warning': (
+      'default': #e6a23c,
+    ),
   ),
   $colors
 );
+
+@mixin set-color-mix-level(
+  $type,
+  $number,
+  $mode: 'dark',
+  $mix-color: map.get($colors, 'black', 'light-2')
+) {
+  $colors: map.deep-merge(
+    (
+      $type: (
+        '#{$mode}-#{$number}':
+          mix(
+            $mix-color,
+            map.get($colors, $type, 'default'),
+            math.percentage(math.div($number, 10))
+          ),
+      ),
+    ),
+    $colors
+  ) !global;
+}
+
+// --el-${xxx}-${yyy}-dark-i
+@each $type in $types {
+  @include set-color-mix-level($type, 5);
+  @include set-color-mix-level($type, 8);
+}
 
 // Background
 $bg-color: () !default;
@@ -95,4 +138,13 @@ $switch: map.merge(
     'core-color': getCssVar('color', 'white', ''),
   ),
   $switch
+);
+
+// Message
+$message: () !default;
+$message: map.merge(
+  (
+    'top': 30px,
+  ),
+  $message
 );

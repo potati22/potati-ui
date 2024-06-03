@@ -8,8 +8,10 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     PotButton: typeof import('@potati/components/src')['PotButton']
+    PotIcon: typeof import('@potati/components/src')['PotIcon']
+    PotMessage: typeof import('@potati/components/src')['PotMessage']
     PotRadio: typeof import('@potati/components/src')['PotRadio']
     PotRadioGroup: typeof import('@potati/components/src')['PotRadioGroup']
-    PotSwitch: typeof import('@potati/components')['PotSwitch']
+    PotSwitch: typeof import('@potati/components/src')['PotSwitch']
   }
 }

@@ -1,0 +1,60 @@
+@use '../mixins/mixins.scss' as *;
+@use '../mixins/var.scss' as *;
+@use '../mixins/function.scss' as *;
+@use '../mixins/config.scss' as *;
+@use '../common/var.scss' as *;
+
+@include b('message') {
+  @include set-component-css-var('message', $message);
+}
+
+@include b('message') {
+  box-sizing: content-box;
+  position: fixed;
+  height: 20px;
+  line-height: 20px;
+  left: 50%;
+  padding: 10px;
+  border-radius: 5px;
+  translate: -50%;
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: getCssVar('message', 'bg-color');
+  border: 1px solid getCssVar('message', 'border-color');
+  color: getCssVar('message', 'text-color');
+  z-index: 100;
+}
+
+@include b('message') {
+  @each $type in ('info', 'success', 'error', 'warning') {
+    @include m($type) {
+      @include css-var-from-global(
+        ('message', 'bg-color'),
+        ('color', $type, 'dark-8')
+      );
+      @include css-var-from-global(
+        ('message', 'border-color'),
+        ('color', $type, 'dark-5')
+      );
+      @include css-var-from-global(('message', 'text-color'), ('color', $type));
+      top: getCssVar('message', 'top');
+    }
+  }
+}
+
+.#{$namespace}-message-fade-enter-active,
+.#{$namespace}-message-fade-leave-active {
+  transition: all 0.5s ease;
+}
+
+.#{$namespace}-message-fade-enter-from,
+.#{$namespace}-message-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.#{$namespace}-message-fade-leave-to {
+  top: 0;
+}

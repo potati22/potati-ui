@@ -34,3 +34,4 @@ packages/resolver/lib
 
 #packages/theme-chalk
 packages/theme-chalk/build
+packages/theme-chalk/src/index.scss

@@ -1,6 +1,14 @@
-@use './base.scss';
+/* @use './base.scss';
 
 @use './component/button.scss';
 @use './component/icon.scss';
 @use './component/radio.scss';
-@use './component/switch.scss';
+@use './component/switch.scss'; */
+
+$test: 16px;
+$test: 17px !default;
+$test: 18px;
+
+.testrr {
+  tab-size: $test;
+}
