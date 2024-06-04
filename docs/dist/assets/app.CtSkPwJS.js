@@ -1,26 +1,26 @@
 import {
-  A as o,
-  a5 as p,
-  a6 as u,
-  a7 as c,
-  a8 as l,
-  a9 as f,
-  aa as d,
-  ab as m,
-  ac as h,
-  ad as A,
+  B as o,
+  a6 as p,
+  a7 as u,
+  a8 as c,
+  a9 as l,
+  aa as f,
+  ab as d,
+  ac as m,
+  ad as h,
   ae as g,
-  af as v,
+  af as A,
+  ag as v,
   d as P,
-  s as w,
+  x as w,
   g as y,
-  G as C,
-  ag as R,
-  ah as _,
-  ai as b,
-  aj as E,
-} from './chunks/framework.DeWdQpWQ.js'
-import { R as D } from './chunks/theme.CRhBkTXh.js'
+  H as C,
+  ah as R,
+  ai as _,
+  aj as b,
+  ak as E,
+} from './chunks/framework.CD4fBMdo.js'
+import { R as D } from './chunks/theme.D_nzjXxa.js'
 function i(e) {
   if (e.extends) {
     const a = i(e.extends)
@@ -56,8 +56,8 @@ const s = i(D),
     },
   })
 async function j() {
-  const e = O(),
-    a = L()
+  const e = L(),
+    a = x()
   a.provide(u, e)
   const t = c(e.route)
   return (
@@ -80,14 +80,14 @@ async function j() {
     { app: a, router: e, data: t }
   )
 }
-function L() {
+function x() {
   return h(T)
 }
-function O() {
+function L() {
   let e = o,
     a
-  return A((t) => {
-    let n = g(t),
+  return g((t) => {
+    let n = A(t),
       r = null
     return (
       n &&

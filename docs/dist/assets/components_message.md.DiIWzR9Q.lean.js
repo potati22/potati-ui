@@ -1,25 +1,25 @@
-import { a as t } from './chunks/theme.CRhBkTXh.js'
+import { a as t } from './chunks/theme.D_nzjXxa.js'
 import {
   d as o,
-  L as c,
+  M as c,
   o as p,
   a as k,
   k as a,
   w as e,
   b as s,
   e as i,
-  Z as g,
-} from './chunks/framework.DeWdQpWQ.js'
+  $ as g,
+} from './chunks/framework.CD4fBMdo.js'
 const y = o({
     __name: 'basic',
-    setup(r) {
+    setup(d) {
       function l() {
         t({ type: 'info', message: '这是一条Info类型的消息' })
       }
       function h() {
         t({ type: 'success', message: '这是一条Success类型的消息' })
       }
-      function d() {
+      function r() {
         t({ type: 'error', message: '这是一条Error类型的消息' })
       }
       function E() {
@@ -32,7 +32,7 @@ const y = o({
           k('div', null, [
             a(n, { onClick: l }, { default: e(() => [s('info')]), _: 1 }),
             a(n, { onClick: h }, { default: e(() => [s('success')]), _: 1 }),
-            a(n, { onClick: d }, { default: e(() => [s('error')]), _: 1 }),
+            a(n, { onClick: r }, { default: e(() => [s('error')]), _: 1 }),
             a(n, { onClick: E }, { default: e(() => [s('warning')]), _: 1 }),
           ])
         )
@@ -62,7 +62,7 @@ const y = o({
     '常用于主动操作后的反馈提示，一共有四种状态「消息、成功、错误、警告」',
     -1,
   ),
-  m = i(
+  _ = i(
     'h2',
     { id: '基础用法', tabindex: '-1' },
     [
@@ -79,7 +79,7 @@ const y = o({
     ],
     -1,
   ),
-  _ = i(
+  m = i(
     'p',
     null,
     [
@@ -91,14 +91,14 @@ const y = o({
     ],
     -1,
   ),
-  f = g('', 7),
-  v = JSON.parse(
+  f = g('', 8),
+  x = JSON.parse(
     '{"title":"Message 消息提示","description":"","frontmatter":{},"headers":[],"relativePath":"components/message.md","filePath":"components/message.md"}',
   ),
   C = { name: 'components/message.md' },
-  M = Object.assign(C, {
-    setup(r) {
-      return (l, h) => (p(), k('div', null, [u, F, m, _, a(y), f]))
+  A = Object.assign(C, {
+    setup(d) {
+      return (l, h) => (p(), k('div', null, [u, F, _, m, a(y), f]))
     },
   })
-export { v as __pageData, M as default }
+export { x as __pageData, A as default }
