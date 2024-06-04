@@ -20,45 +20,46 @@ import {
   k as f,
   l as Me,
   T as oe,
-  m as _e,
-  q as _,
+  m as Ye,
+  q as _e,
+  s as _,
   _ as g,
-  s as Ye,
   x as Je,
   y as Ze,
-  z as me,
-  A as K,
-  B as E,
-  C as F,
-  D as G,
-  E as ue,
-  F as j,
-  G as se,
-  H as ge,
-  I as Ce,
-  J as Qe,
+  z as Qe,
+  A as me,
+  B as K,
+  C as E,
+  D as F,
+  E as G,
+  F as ue,
+  G as j,
+  H as se,
+  I as ge,
+  J as Ce,
   K as Xe,
-  L as R,
-  M as T,
-  N as A,
-  O as Ie,
-  P as ne,
-  Q as U,
-  R as Te,
-  S as ae,
-  U as X,
-  V as et,
+  L as et,
+  M as R,
+  N as T,
+  O as A,
+  P as Ie,
+  Q as ne,
+  R as U,
+  S as Te,
+  U as ae,
+  V as X,
   W as tt,
   X as ot,
-  Y as Ne,
-  Z as st,
+  Y as st,
+  Z as Ne,
   $ as nt,
-  a0 as Be,
-  a1 as at,
+  a0 as at,
+  a1 as Be,
   a2 as rt,
   a3 as it,
   a4 as lt,
-} from './framework.DeWdQpWQ.js'
+  a5 as ct,
+} from './framework.CD4fBMdo.js'
 const J = (o, e) => {
     if (
       ((o.install = (t) => {
@@ -69,18 +70,18 @@ const J = (o, e) => {
       for (const [t, s] of Object.entries(e)) o[t] = s
     return o
   },
-  ct = (o = []) => ({
+  ut = (o = []) => ({
     install: (e) => {
       o.forEach((t) => e.use(t))
     },
   }),
-  ut = (o, e) => (
+  dt = (o, e) => (
     (o.install = (t) => {
       ;(o._context = t._context), (t.config.globalProperties[e] = o)
     }),
     o
   ),
-  dt = m({
+  vt = m({
     name: 'PotButton',
     __name: 'button',
     props: { type: { default: void 0 } },
@@ -103,10 +104,10 @@ const J = (o, e) => {
       )
     },
   }),
-  vt = J(dt),
-  ht = { class: 'pot-icon' },
-  pt = ['xlink:href'],
-  ft = m({
+  ht = J(vt),
+  pt = { class: 'pot-icon' },
+  ft = ['xlink:href'],
+  _t = m({
     name: 'PotIcon',
     __name: 'icon',
     props: { iconClass: { default: '' } },
@@ -114,25 +115,25 @@ const J = (o, e) => {
       const e = o,
         t = $(() => `#icon-${e.iconClass}`)
       return (s, n) => (
-        a(), l('svg', ht, [u('use', { 'xlink:href': t.value }, null, 8, pt)])
+        a(), l('svg', pt, [u('use', { 'xlink:href': t.value }, null, 8, ft)])
       )
     },
   }),
-  Ae = J(ft),
+  Ae = J(_t),
   He = Symbol('radio-group')
-function _t(o, e) {
+function mt(o, e) {
   const t = Y(o, e)
   if (!t) throw new Error('该组件的上游组件需注入正确的值')
   return t
 }
-const mt = ['name', 'value'],
-  gt = m({
+const gt = ['name', 'value'],
+  $t = m({
     name: 'PotRadio',
     __name: 'radio',
     props: { value: { default: '' } },
     setup(o) {
       const e = o,
-        t = _t(He)
+        t = mt(He)
       function s(n) {
         const r = n.target
         t.changeRadioValue(r.value)
@@ -153,7 +154,7 @@ const mt = ['name', 'value'],
               { type: 'radio', name: i(t).name, value: e.value, onFocus: s },
               null,
               40,
-              mt,
+              gt,
             ),
             c(n.$slots, 'default'),
           ],
@@ -163,11 +164,11 @@ const mt = ['name', 'value'],
     },
   }),
   Le = { prefix: Math.floor(Math.random() * 1e4), current: 0 }
-function $t(o) {
+function kt(o) {
   return `${o}-${Le.prefix}-${Le.current++}`
 }
-const kt = { class: 'pot-radio-group' },
-  bt = m({
+const bt = { class: 'pot-radio-group' },
+  yt = m({
     name: 'PotRadioGroup',
     __name: 'radio-group',
     props: { modelValue: { default: '' } },
@@ -178,19 +179,19 @@ const kt = { class: 'pot-radio-group' },
         n = $(() => t.modelValue)
       return (
         fe(He, {
-          name: $t('radio-group-name'),
+          name: kt('radio-group-name'),
           changeRadioValue: (r) => {
             s('update:modelValue', r)
           },
           checkedValue: n,
         }),
-        (r, d) => (a(), l('div', kt, [c(r.$slots, 'default')]))
+        (r, d) => (a(), l('div', bt, [c(r.$slots, 'default')]))
       )
     },
   }),
-  yt = J(gt),
-  wt = J(bt),
-  Vt = m({
+  wt = J($t),
+  Vt = J(yt),
+  Pt = m({
     name: 'PotSwitch',
     __name: 'switch',
     props: { modelValue: { type: Boolean, default: !1 } },
@@ -234,38 +235,38 @@ const kt = { class: 'pot-radio-group' },
       )
     },
   }),
-  Pt = J(Vt),
-  Lt = ['id'],
-  St = m({
+  Lt = J(Pt),
+  St = ['id'],
+  Mt = m({
     name: 'PotMessage',
     __name: 'message',
     props: {
       id: {},
-      bottom: {},
       type: { default: 'info' },
       message: { default: 'message content' },
       duration: { default: 3e3 },
     },
     setup(o, { expose: e }) {
       const t = o,
-        s = S(!1)
-      let n
-      const r = $(() => ['pot-message', `pot-message--${t.type}`]),
-        d = $(() => ({ '--pot-message-top': `${t.bottom}px` }))
+        s = S(!1),
+        n = $(() => 30 + 50 * W.findIndex((w) => w.id == t.id))
+      let r
+      const d = $(() => ['pot-message', `pot-message--${t.type}`]),
+        p = $(() => ({ '--pot-message-top': `${n.value}px` }))
       O(() => {
-        ;(s.value = !0), v()
+        ;(s.value = !0), b()
       }),
-        e({ close: p })
-      function p() {
-        ;(s.value = !1), xt(t.id), b()
-      }
+        e({ close: v })
       function v() {
-        t.duration != 0 && (n = window.setTimeout(p, t.duration))
+        ;(s.value = !1), Ot(t.id), y()
       }
       function b() {
-        window.clearTimeout(n)
+        t.duration != 0 && (r = window.setTimeout(v, t.duration))
       }
-      return (y, w) => (
+      function y() {
+        window.clearTimeout(r)
+      }
+      return (w, M) => (
         a(),
         k(
           oe,
@@ -275,7 +276,7 @@ const kt = { class: 'pot-radio-group' },
               Ke(
                 u(
                   'div',
-                  { id: t.id, class: L(r.value), style: Me(d.value) },
+                  { id: t.id, class: L(d.value), style: Me(p.value) },
                   [
                     f(
                       i(Ae),
@@ -290,7 +291,7 @@ const kt = { class: 'pot-radio-group' },
                     H(' ' + P(t.message), 1),
                   ],
                   14,
-                  Lt,
+                  St,
                 ),
                 [[We, s.value]],
               ),
@@ -301,13 +302,13 @@ const kt = { class: 'pot-radio-group' },
       )
     },
   }),
-  Mt = (o, e) => {
+  Ct = (o, e) => {
     const t = o.__vccOpts || o
     for (const [s, n] of e) t[s] = n
     return t
   },
-  Ct = {},
-  It = {
+  It = {},
+  Tt = {
     t: '1717377933823',
     class: 'icon',
     viewBox: '0 0 1024 1024',
@@ -317,7 +318,7 @@ const kt = { class: 'pot-radio-group' },
     'xmlns:xlink': 'http://www.w3.org/1999/xlink',
     style: { position: 'absolute', width: '0px', height: '0px' },
   },
-  Tt = u(
+  Nt = u(
     'symbol',
     { id: 'icon-success', class: 'icon', viewBox: '0 0 1024 1024' },
     [
@@ -328,7 +329,7 @@ const kt = { class: 'pot-radio-group' },
     ],
     -1,
   ),
-  Nt = u(
+  Bt = u(
     'symbol',
     { id: 'icon-info', class: 'icon', viewBox: '0 0 1024 1024' },
     [
@@ -339,7 +340,7 @@ const kt = { class: 'pot-radio-group' },
     ],
     -1,
   ),
-  Bt = u(
+  At = u(
     'symbol',
     { id: 'icon-error', class: 'icon', viewBox: '0 0 1024 1024' },
     [
@@ -350,7 +351,7 @@ const kt = { class: 'pot-radio-group' },
     ],
     -1,
   ),
-  At = u(
+  Ht = u(
     'symbol',
     { id: 'icon-warning', class: 'icon', viewBox: '0 0 1024 1024' },
     [
@@ -361,28 +362,32 @@ const kt = { class: 'pot-radio-group' },
     ],
     -1,
   ),
-  Ht = [Tt, Nt, Bt, At]
-function zt(o, e) {
-  return a(), l('svg', It, Ht)
+  zt = [Nt, Bt, At, Ht]
+function Et(o, e) {
+  return a(), l('svg', Tt, zt)
 }
-const Et = Mt(Ct, [['render', zt]]),
-  W = []
-let Ft = 1,
+const Ft = Ct(It, [['render', Et]]),
+  W = Ye([])
+let Dt = 1,
   de = !1
-function Dt() {
-  return 30 + 50 * W.length
+function xt() {
+  if (de) return
+  de = !0
+  const o = f(Ft),
+    e = document.createElement('div')
+  _e(o, e), document.body.appendChild(e.firstElementChild)
 }
-function xt(o) {
+function Ot(o) {
   setTimeout(() => {
     const e = W.findIndex((t) => t.id == o)
     _e(null, W[e].container), W.splice(e, 1)
   }, 600)
 }
-function Ot(o) {
-  const e = `message_${Ft++}`,
+function Ut(o) {
+  const e = `message_${Dt++}`,
     t = document.createElement('div'),
-    s = { ...o, id: e, bottom: Dt() },
-    n = f(St, s)
+    s = { ...o, id: e },
+    n = f(Mt, s)
   _e(n, t), document.body.appendChild(t.firstElementChild)
   const r = n.component
   return {
@@ -395,21 +400,14 @@ function Ot(o) {
     },
   }
 }
-function Ut() {
-  if (de) return
-  de = !0
-  const o = f(Et),
-    e = document.createElement('div')
-  _e(o, e), document.body.appendChild(e.firstElementChild)
-}
 function Gt(o) {
-  !de && Ut()
-  const e = Ot(o)
+  !de && xt()
+  const e = Ut(o)
   return W.push(e), e.handler
 }
-const jt = ut(Gt, '$message'),
-  Rt = [vt, Ae, yt, wt, Pt, jt],
-  qt = ct(Rt),
+const jt = dt(Gt, '$message'),
+  Rt = [ht, Ae, wt, Vt, Lt, jt],
+  qt = ut(Rt),
   Kt = m({
     __name: 'VPBadge',
     props: { text: {}, type: { default: 'tip' } },
@@ -444,7 +442,7 @@ const jt = ut(Gt, '$message'),
     },
   }),
   Jt = g(Yt, [['__scopeId', 'data-v-59bf151a']]),
-  V = Ye
+  V = Je
 function Zt(o, e) {
   let t,
     s = !1
@@ -465,7 +463,7 @@ function $e(o) {
     hash: s,
     protocol: n,
   } = new URL(o, 'http://a.com')
-  if (Je(o) || o.startsWith('#') || !n.startsWith('http') || !Ze(e)) return o
+  if (Ze(o) || o.startsWith('#') || !n.startsWith('http') || !Qe(e)) return o
   const { site: r } = V(),
     d =
       e.endsWith('/') || e.endsWith('.html')
@@ -666,12 +664,12 @@ function D() {
     n = S(!1),
     r = $(() => {
       const B = t.value.sidebar,
-        M = e.value.relativePath
-      return B ? ze(B, M) : []
+        C = e.value.relativePath
+      return B ? ze(B, C) : []
     }),
     d = S(r.value)
-  j(r, (B, M) => {
-    JSON.stringify(B) !== JSON.stringify(M) && (d.value = r.value)
+  j(r, (B, C) => {
+    JSON.stringify(B) !== JSON.stringify(C) && (d.value = r.value)
   })
   const p = $(
       () =>
@@ -695,14 +693,14 @@ function D() {
     ),
     y = $(() => p.value && s.value),
     w = $(() => (p.value ? co(d.value) : []))
-  function C() {
+  function M() {
     n.value = !0
   }
   function I() {
     n.value = !1
   }
   function N() {
-    n.value ? I() : C()
+    n.value ? I() : M()
   }
   return {
     isOpen: n,
@@ -712,7 +710,7 @@ function D() {
     hasAside: b,
     leftAside: v,
     isSidebarEnabled: y,
-    open: C,
+    open: M,
     close: I,
     toggle: N,
   }
@@ -842,7 +840,7 @@ function mo(o, e) {
   O(() => {
     requestAnimationFrame(r), window.addEventListener('scroll', s)
   }),
-    Qe(() => {
+    Xe(() => {
       d(location.hash)
     }),
     ge(() => {
@@ -870,12 +868,12 @@ function mo(o, e) {
       d(w[w.length - 1].link)
       return
     }
-    let C = null
+    let M = null
     for (const { link: I, top: N } of w) {
-      if (N > p + Xe() + 4) break
-      C = I
+      if (N > p + et() + 4) break
+      M = I
     }
-    d(C)
+    d(M)
   }
   function d(p) {
     n && n.classList.remove('active'),
@@ -1073,10 +1071,10 @@ function Ho() {
 function zo() {
   const { page: o, theme: e, frontmatter: t } = V()
   return $(() => {
-    var v, b, y, w, C, I, N, B
+    var v, b, y, w, M, I, N, B
     const s = ze(e.value.sidebar, o.value.relativePath),
       n = uo(s),
-      r = n.findIndex((M) => G(o.value.relativePath, M.link)),
+      r = n.findIndex((C) => G(o.value.relativePath, C.link)),
       d =
         (((v = e.value.docFooter) == null ? void 0 : v.prev) === !1 &&
           !t.value.prev) ||
@@ -1099,7 +1097,7 @@ function zo() {
               ((w = n[r - 1]) == null ? void 0 : w.text),
             link:
               (typeof t.value.prev == 'object' ? t.value.prev.link : void 0) ??
-              ((C = n[r - 1]) == null ? void 0 : C.link),
+              ((M = n[r - 1]) == null ? void 0 : M.link),
           },
       next: p
         ? void 0
@@ -1249,7 +1247,7 @@ const Go = g(Eo, [['render', Uo]]),
         p = $(() => t.value.lastUpdated && s.value.lastUpdated !== !1),
         v = $(() => d.value || p.value || r.value.prev || r.value.next)
       return (b, y) => {
-        var w, C, I, N
+        var w, M, I, N
         return v.value
           ? (a(),
             l('footer', Wo, [
@@ -1286,7 +1284,7 @@ const Go = g(Eo, [['render', Uo]]),
                   ]))
                 : _('', !0),
               ((w = i(r).prev) != null && w.link) ||
-              ((C = i(r).next) != null && C.link)
+              ((M = i(r).next) != null && M.link)
                 ? (a(),
                   l('nav', Qo, [
                     u('div', Xo, [
@@ -2265,10 +2263,10 @@ const xe = g(mn, [['render', bn]]),
         n = S(0),
         r = S(),
         d = S()
-      et(r, () => {
+      tt(r, () => {
         s.value = !1
       }),
-        tt('Escape', () => {
+        ot('Escape', () => {
           s.value = !1
         }),
         ne(() => {
@@ -2282,7 +2280,7 @@ const xe = g(mn, [['render', bn]]),
       function v(y) {
         y.target.classList.contains('outline-link') &&
           (d.value && (d.value.style.transition = 'none'),
-          ot(() => {
+          st(() => {
             s.value = !1
           }))
       }
@@ -2449,7 +2447,7 @@ const An = g(Ln, [['render', Bn]]),
                           class: 'menu',
                           'aria-expanded': y.open,
                           'aria-controls': 'VPSidebarNav',
-                          onClick: w[0] || (w[0] = (C) => y.$emit('open-menu')),
+                          onClick: w[0] || (w[0] = (M) => y.$emit('open-menu')),
                         },
                         [
                           f(An, { class: 'menu-icon' }),
@@ -2538,7 +2536,7 @@ const Qn = g(Kn, [['render', Zn]]),
     focusable: 'false',
     viewBox: '0 0 24 24',
   },
-  ta = st(
+  ta = nt(
     '<path d="M12,18c-3.3,0-6-2.7-6-6s2.7-6,6-6s6,2.7,6,6S15.3,18,12,18zM12,8c-2.2,0-4,1.8-4,4c0,2.2,1.8,4,4,4c2.2,0,4-1.8,4-4C16,9.8,14.2,8,12,8z"></path><path d="M12,4c-0.6,0-1-0.4-1-1V1c0-0.6,0.4-1,1-1s1,0.4,1,1v2C13,3.6,12.6,4,12,4z"></path><path d="M12,24c-0.6,0-1-0.4-1-1v-2c0-0.6,0.4-1,1-1s1,0.4,1,1v2C13,23.6,12.6,24,12,24z"></path><path d="M5.6,6.6c-0.3,0-0.5-0.1-0.7-0.3L3.5,4.9c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l1.4,1.4c0.4,0.4,0.4,1,0,1.4C6.2,6.5,5.9,6.6,5.6,6.6z"></path><path d="M19.8,20.8c-0.3,0-0.5-0.1-0.7-0.3l-1.4-1.4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l1.4,1.4c0.4,0.4,0.4,1,0,1.4C20.3,20.7,20,20.8,19.8,20.8z"></path><path d="M3,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h2c0.6,0,1,0.4,1,1S3.6,13,3,13z"></path><path d="M23,13h-2c-0.6,0-1-0.4-1-1s0.4-1,1-1h2c0.6,0,1,0.4,1,1S23.6,13,23,13z"></path><path d="M4.2,20.8c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l1.4-1.4c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-1.4,1.4C4.7,20.7,4.5,20.8,4.2,20.8z"></path><path d="M18.4,6.6c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l1.4-1.4c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-1.4,1.4C18.9,6.5,18.6,6.6,18.4,6.6z"></path>',
     9,
   ),
@@ -2612,7 +2610,7 @@ function ca(o) {
       t(), ce--, ce || da()
     })
   }
-  return nt(e)
+  return at(e)
 }
 function ua() {
   document.addEventListener('focusin', Ue),
@@ -3189,34 +3187,34 @@ const Va = g(ma, [['render', wa]]),
 function mr(o) {
   const { localeIndex: e, theme: t } = V()
   function s(n) {
-    var N, B, M
+    var N, B, C
     const r = n.split('.'),
       d = (N = t.value.search) == null ? void 0 : N.options,
       p = d && typeof d == 'object',
       v =
         (p &&
-          ((M = (B = d.locales) == null ? void 0 : B[e.value]) == null
+          ((C = (B = d.locales) == null ? void 0 : B[e.value]) == null
             ? void 0
-            : M.translations)) ||
+            : C.translations)) ||
         null,
       b = (p && d.translations) || null
     let y = v,
       w = b,
-      C = o
+      M = o
     const I = r.pop()
     for (const Q of r) {
       let x = null
-      const q = C == null ? void 0 : C[Q]
-      q && (x = C = q)
+      const q = M == null ? void 0 : M[Q]
+      q && (x = M = q)
       const ie = w == null ? void 0 : w[Q]
       ie && (x = w = ie)
       const le = y == null ? void 0 : y[Q]
-      le && (x = y = le), q || (C = x), ie || (w = x), le || (y = x)
+      le && (x = y = le), q || (M = x), ie || (w = x), le || (y = x)
     }
     return (
       (y == null ? void 0 : y[I]) ??
       (w == null ? void 0 : w[I]) ??
-      (C == null ? void 0 : C[I]) ??
+      (M == null ? void 0 : M[I]) ??
       ''
     )
   }
@@ -3307,7 +3305,7 @@ const gr = ['aria-label'],
       const v = S(!1),
         b = ''
       return (y, w) => {
-        var C
+        var M
         return (
           a(),
           l('div', wr, [
@@ -3345,9 +3343,9 @@ const gr = ['aria-label'],
                           {
                             key: 0,
                             algolia:
-                              ((C = i(s).search) == null
+                              ((M = i(s).search) == null
                                 ? void 0
-                                : C.options) ?? i(s).algolia,
+                                : M.options) ?? i(s).algolia,
                             onVnodeBeforeMount:
                               w[2] || (w[2] = (I) => (r.value = !0)),
                           },
@@ -4063,7 +4061,7 @@ const ui = g(ai, [['render', ci]]),
         w = $(() =>
           p.value ? (e.depth + 2 === 7 ? 'p' : `h${e.depth + 2}`) : 'p',
         ),
-        C = $(() => (n.value ? void 0 : 'button')),
+        M = $(() => (n.value ? void 0 : 'button')),
         I = $(() => [
           [`level-${e.depth}`],
           { collapsible: s.value },
@@ -4072,13 +4070,13 @@ const ui = g(ai, [['render', ci]]),
           { 'is-active': r.value },
           { 'has-active': d.value },
         ])
-      function N(M) {
-        ;('key' in M && M.key !== 'Enter') || (!e.item.link && v())
+      function N(C) {
+        ;('key' in C && C.key !== 'Enter') || (!e.item.link && v())
       }
       function B() {
         e.item.link && v()
       }
-      return (M, Q) => {
+      return (C, Q) => {
         const x = R('VPSidebarItem', !0)
         return (
           a(),
@@ -4087,18 +4085,18 @@ const ui = g(ai, [['render', ci]]),
             { class: L(['VPSidebarItem', I.value]) },
             {
               default: h(() => [
-                M.item.text
+                C.item.text
                   ? (a(),
                     l(
                       'div',
                       X(
-                        { key: 0, class: 'item', role: C.value },
-                        rt(M.item.items ? { click: N, keydown: N } : {}, !0),
-                        { tabindex: M.item.items && 0 },
+                        { key: 0, class: 'item', role: M.value },
+                        it(C.item.items ? { click: N, keydown: N } : {}, !0),
+                        { tabindex: C.item.items && 0 },
                       ),
                       [
                         zi,
-                        M.item.link
+                        C.item.link
                           ? (a(),
                             k(
                               z,
@@ -4106,16 +4104,16 @@ const ui = g(ai, [['render', ci]]),
                                 key: 0,
                                 tag: y.value,
                                 class: 'link',
-                                href: M.item.link,
-                                rel: M.item.rel,
-                                target: M.item.target,
+                                href: C.item.link,
+                                rel: C.item.rel,
+                                target: C.item.target,
                               },
                               {
                                 default: h(() => [
                                   (a(),
                                   k(
                                     U(w.value),
-                                    { class: 'text', innerHTML: M.item.text },
+                                    { class: 'text', innerHTML: C.item.text },
                                     null,
                                     8,
                                     ['innerHTML'],
@@ -4129,12 +4127,12 @@ const ui = g(ai, [['render', ci]]),
                           : (a(),
                             k(
                               U(w.value),
-                              { key: 1, class: 'text', innerHTML: M.item.text },
+                              { key: 1, class: 'text', innerHTML: C.item.text },
                               null,
                               8,
                               ['innerHTML'],
                             )),
-                        M.item.collapsed != null
+                        C.item.collapsed != null
                           ? (a(),
                             l(
                               'div',
@@ -4144,7 +4142,7 @@ const ui = g(ai, [['render', ci]]),
                                 role: 'button',
                                 'aria-label': 'toggle section',
                                 onClick: B,
-                                onKeydown: at(B, ['enter']),
+                                onKeydown: rt(B, ['enter']),
                                 tabindex: '0',
                               },
                               [f(xe, { class: 'caret-icon' })],
@@ -4156,21 +4154,21 @@ const ui = g(ai, [['render', ci]]),
                       Hi,
                     ))
                   : _('', !0),
-                M.item.items && M.item.items.length
+                C.item.items && C.item.items.length
                   ? (a(),
                     l('div', Ei, [
-                      M.depth < 5
+                      C.depth < 5
                         ? (a(!0),
                           l(
                             T,
                             { key: 0 },
                             A(
-                              M.item.items,
+                              C.item.items,
                               (q) => (
                                 a(),
                                 k(
                                   x,
-                                  { key: q.text, item: q, depth: M.depth + 1 },
+                                  { key: q.text, item: q, depth: C.depth + 1 },
                                   null,
                                   8,
                                   ['item', 'depth'],
@@ -4238,7 +4236,7 @@ const ui = g(ai, [['render', ci]]),
                   class: L(['VPSidebar', { open: d.open }]),
                   ref_key: 'navEl',
                   ref: n,
-                  onClick: p[0] || (p[0] = it(() => {}, ['stop'])),
+                  onClick: p[0] || (p[0] = lt(() => {}, ['stop'])),
                 },
                 [
                   xi,
@@ -4326,7 +4324,7 @@ const ui = g(ai, [['render', ci]]),
         n = ae()
       j(() => n.path, s), vo(e, s)
       const { frontmatter: r } = V(),
-        d = lt(),
+        d = ct(),
         p = $(() => !!d['home-hero-image'])
       return (
         fe('hero-image-slot-exists', p),
