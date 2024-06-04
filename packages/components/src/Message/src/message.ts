@@ -6,5 +6,4 @@ export interface MessageOptions {
 
 export interface MessageProps extends MessageOptions {
   id: string
-  bottom: number
 }

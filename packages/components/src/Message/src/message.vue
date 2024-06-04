@@ -14,7 +14,7 @@
 
 <script lang="ts" setup>
 import { ref, computed, onMounted } from 'vue'
-import { closeInstance } from './method'
+import { closeInstance, instances } from './method'
 import { PotIcon } from '@potati/components/src/Icon'
 
 import type { MessageProps } from './message'
@@ -30,6 +30,10 @@ const props = withDefaults(defineProps<MessageProps>(), {
 })
 
 const visible = ref(false)
+const top = computed(() => {
+  const idx = instances.findIndex((item) => item.id == props.id)
+  return 30 + 50 * idx
+})
 let stopTimer: number
 
 const classObject = computed(() => {
@@ -38,7 +42,7 @@ const classObject = computed(() => {
 
 const styleObject = computed(() => {
   return {
-    '--pot-message-top': `${props.bottom}px`,
+    '--pot-message-top': `${top.value}px`,
   }
 })
 

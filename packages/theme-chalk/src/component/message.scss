@@ -25,6 +25,7 @@
   border: 1px solid getCssVar('message', 'border-color');
   color: getCssVar('message', 'text-color');
   z-index: 100;
+  transition: top 0.4s;
 }
 
 @include b('message') {

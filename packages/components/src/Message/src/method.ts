@@ -1,4 +1,4 @@
-import { createVNode, render } from 'vue'
+import { createVNode, render, reactive } from 'vue'
 import MessageConstructor from './message.vue'
 import IconConstructor from './icon.vue'
 
@@ -12,13 +12,18 @@ interface MessageInstance {
   }
 }
 
-// TODO: close时将实例从instances中删除
-const instances: MessageInstance[] = []
+export const instances: MessageInstance[] = reactive([])
 let seed = 1
 let iconInseted = false
 
-function getOffset() {
-  return 30 + 50 * instances.length
+// 将ICON图标挂载到页面，并只挂载一次
+function insetIconJustOnce() {
+  if (iconInseted) return
+  iconInseted = true
+  const vnode = createVNode(IconConstructor)
+  const container = document.createElement('div')
+  render(vnode, container)
+  document.body.appendChild(container.firstElementChild!)
 }
 
 export function closeInstance(id: string) {
@@ -36,7 +41,6 @@ function createMessage(options: MessageOptions) {
   const props: MessageProps = {
     ...options,
     id,
-    bottom: getOffset(),
   }
 
   const vnode = createVNode(MessageConstructor, props as Record<string, any>)
@@ -58,15 +62,6 @@ function createMessage(options: MessageOptions) {
   }
 
   return instance
-}
-
-function insetIconJustOnce() {
-  if (iconInseted) return
-  iconInseted = true
-  const vnode = createVNode(IconConstructor)
-  const container = document.createElement('div')
-  render(vnode, container)
-  document.body.appendChild(container.firstElementChild!)
 }
 
 function message(options: MessageOptions) {

@@ -36,10 +36,11 @@ export const makeInstaller = (components: Plugin[] = []) => {
   }
 }
 
+// 注册函数式组件，使得可以在组件通过this.name访问函数组件
 export const withInstallFunction = <T>(fn: T, name: string) => {
   ;(fn as SFCWithInstall<T>).install = (app: App) => {
     ;(fn as SFCInstallWithContext<T>)._context = app._context
-    app.config.globalProperties[name] = fn
+    app.config.globalProperties[name] = fn // app.config.globalProperties用于注册能够被应用内所有组件实例访问到的全局属性的对象
   }
 
   return fn as SFCInstallWithContext<T>
