@@ -21,6 +21,10 @@ export default defineConfig({
           items: [
             { text: 'Button 按钮', link: '/components/button' },
             { text: 'Icon 图标', link: '/components/icon' },
+            {
+              text: 'Infinite Scroll 无限滚动',
+              link: '/components/infinite-scroll',
+            },
             { text: 'Message 消息提示', link: '/components/message' },
             { text: 'Radio 单选框', link: '/components/radio' },
             { text: 'Switch 开关', link: '/components/switch' },

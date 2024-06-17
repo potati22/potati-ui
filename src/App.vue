@@ -1,38 +1,32 @@
 <template>
-  <div :style="{ 'background-color': '#141414', height: '500px' }">
-    <button @click="success">success</button>
-    <button @click="info">info</button>
-    <button @click="error">error</button>
-    <button @click="warning">warning</button>
-  </div>
+  <ul
+    v-infinite-scroll="load"
+    :infinite-scroll-disabled="disabled"
+    :infinite-scroll-distance="50"
+    :style="{
+      'background-color': 'blue',
+      height: '200px',
+      width: '100px',
+      overflow: 'auto',
+    }"
+  >
+    <li v-for="i in count" :key="i" class="list-item">{{ i }}</li>
+  </ul>
+  <PotButton></PotButton>
 </template>
 
 <script setup lang="ts">
-function success() {
-  PotMessage({
-    type: 'success',
-    message: '你成功啦',
-  })
-}
+import { computed, ref } from 'vue'
 
-function info() {
-  PotMessage({
-    type: 'info',
-    message: 'infooooo',
-  })
-}
-
-function error() {
-  PotMessage({
-    type: 'error',
-    message: 'errorrrrrr',
-  })
-}
-
-function warning() {
-  PotMessage({
-    type: 'warning',
-    message: 'warninggggg',
-  })
+const count = ref(6)
+const loading = ref(false)
+const noMore = computed(() => count.value >= 100)
+const disabled = computed(() => loading.value || noMore.value)
+const load = () => {
+  loading.value = true
+  setTimeout(() => {
+    count.value += 5
+    loading.value = false
+  }, 2000)
 }
 </script>

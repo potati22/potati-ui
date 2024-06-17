@@ -1,7 +1,7 @@
-import { a as t } from './chunks/theme.D_nzjXxa.js'
+import { a as t } from './chunks/theme.CjlbvN5R.js'
 import {
   d as o,
-  M as c,
+  N as c,
   o as p,
   a as k,
   k as a,
@@ -9,7 +9,7 @@ import {
   b as s,
   e as i,
   $ as g,
-} from './chunks/framework.CD4fBMdo.js'
+} from './chunks/framework.D7pjZlIy.js'
 const y = o({
     __name: 'basic',
     setup(d) {

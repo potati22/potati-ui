@@ -1,3 +1,4 @@
 declare module '@potati/resolver' {
-  export const PotatiResolver: () => any
+  export const PotatiComponentResolver: () => any
+  export const PotatiDirectiveResolver: () => any
 }

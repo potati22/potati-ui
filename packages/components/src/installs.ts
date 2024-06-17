@@ -3,6 +3,7 @@ import PotIcon from './Icon/index'
 import { PotRadio, PotRadioGroup } from './Radio/index'
 import PotSwitch from './Switch/index'
 import PotMessage from './Message/index'
+import PotInfiniteScroll from './InfiniteScroll/index'
 
 export default [
   PotButton,
@@ -11,4 +12,5 @@ export default [
   PotRadioGroup,
   PotSwitch,
   PotMessage,
+  PotInfiniteScroll,
 ]

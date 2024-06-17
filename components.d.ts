@@ -7,11 +7,14 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    PotButton: typeof import('@potati/components/src')['PotButton']
+    PotButton: typeof import('@potati/components')['PotButton']
     PotIcon: typeof import('@potati/components/src')['PotIcon']
     PotMessage: typeof import('@potati/components/src')['PotMessage']
     PotRadio: typeof import('@potati/components/src')['PotRadio']
     PotRadioGroup: typeof import('@potati/components/src')['PotRadioGroup']
     PotSwitch: typeof import('@potati/components/src')['PotSwitch']
+  }
+  export interface ComponentCustomProperties {
+    vInfiniteScroll: typeof import('@potati/components')['PotInfiniteScroll']
   }
 }

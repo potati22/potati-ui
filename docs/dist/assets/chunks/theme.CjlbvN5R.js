@@ -3,64 +3,64 @@ import {
   c as $,
   o as a,
   a as l,
-  r as c,
+  r as u,
   n as L,
-  b as H,
+  b as A,
   t as P,
-  e as u,
-  i as Y,
+  e as d,
+  i as J,
   u as i,
-  p as fe,
+  p as me,
   f as S,
-  g as O,
+  g as U,
   h as k,
   w as h,
-  j as Ke,
-  v as We,
+  j as et,
+  v as tt,
   k as f,
-  l as Me,
-  T as oe,
-  m as Ye,
-  q as _e,
-  s as _,
+  l as Be,
+  T as se,
+  m as ot,
+  q as ge,
+  s as He,
+  x as _,
   _ as g,
-  x as Je,
-  y as Ze,
-  z as Qe,
-  A as me,
-  B as K,
-  C as E,
-  D as F,
-  E as G,
-  F as ue,
-  G as j,
-  H as se,
-  I as ge,
-  J as Ce,
-  K as Xe,
-  L as et,
-  M as R,
-  N as T,
-  O as A,
-  P as Ie,
-  Q as ne,
-  R as U,
-  S as Te,
-  U as ae,
-  V as X,
-  W as tt,
-  X as ot,
-  Y as st,
-  Z as Ne,
-  $ as nt,
-  a0 as at,
-  a1 as Be,
-  a2 as rt,
-  a3 as it,
-  a4 as lt,
-  a5 as ct,
-} from './framework.CD4fBMdo.js'
-const J = (o, e) => {
+  y as st,
+  z as nt,
+  A as at,
+  B as $e,
+  C as W,
+  D as E,
+  E as F,
+  F as G,
+  G as de,
+  H as R,
+  I as ne,
+  J as be,
+  K as Ae,
+  L as rt,
+  M as it,
+  N as q,
+  O as I,
+  P as H,
+  Q as ze,
+  R as ae,
+  S as j,
+  U as Ee,
+  V as re,
+  W as ee,
+  X as lt,
+  Y as ct,
+  Z as Fe,
+  $ as ut,
+  a0 as dt,
+  a1 as De,
+  a2 as vt,
+  a3 as ht,
+  a4 as pt,
+  a5 as ft,
+} from './framework.D7pjZlIy.js'
+const Z = (o, e) => {
     if (
       ((o.install = (t) => {
         for (const s of [o, ...Object.values(e ?? {})]) t.component(s.name, s)
@@ -70,18 +70,18 @@ const J = (o, e) => {
       for (const [t, s] of Object.entries(e)) o[t] = s
     return o
   },
-  ut = (o = []) => ({
+  _t = (o = []) => ({
     install: (e) => {
       o.forEach((t) => e.use(t))
     },
   }),
-  dt = (o, e) => (
+  mt = (o, e) => (
     (o.install = (t) => {
       ;(o._context = t._context), (t.config.globalProperties[e] = o)
     }),
     o
   ),
-  vt = m({
+  gt = m({
     name: 'PotButton',
     __name: 'button',
     props: { type: { default: void 0 } },
@@ -98,16 +98,16 @@ const J = (o, e) => {
         l(
           'button',
           { ref: 'buttonRef', class: L(['pot-button', t.value]) },
-          [c(n.$slots, 'default', {}, () => [H(P(s.value), 1)])],
+          [u(n.$slots, 'default', {}, () => [A(P(s.value), 1)])],
           2,
         )
       )
     },
   }),
-  ht = J(vt),
-  pt = { class: 'pot-icon' },
-  ft = ['xlink:href'],
-  _t = m({
+  $t = Z(gt),
+  bt = { class: 'pot-icon' },
+  kt = ['xlink:href'],
+  yt = m({
     name: 'PotIcon',
     __name: 'icon',
     props: { iconClass: { default: '' } },
@@ -115,25 +115,25 @@ const J = (o, e) => {
       const e = o,
         t = $(() => `#icon-${e.iconClass}`)
       return (s, n) => (
-        a(), l('svg', pt, [u('use', { 'xlink:href': t.value }, null, 8, ft)])
+        a(), l('svg', bt, [d('use', { 'xlink:href': t.value }, null, 8, kt)])
       )
     },
   }),
-  Ae = J(_t),
-  He = Symbol('radio-group')
-function mt(o, e) {
-  const t = Y(o, e)
+  xe = Z(yt),
+  Oe = Symbol('radio-group')
+function wt(o, e) {
+  const t = J(o, e)
   if (!t) throw new Error('该组件的上游组件需注入正确的值')
   return t
 }
-const gt = ['name', 'value'],
-  $t = m({
+const Vt = ['name', 'value'],
+  Pt = m({
     name: 'PotRadio',
     __name: 'radio',
     props: { value: { default: '' } },
     setup(o) {
       const e = o,
-        t = mt(He)
+        t = wt(Oe)
       function s(n) {
         const r = n.target
         t.changeRadioValue(r.value)
@@ -149,26 +149,26 @@ const gt = ['name', 'value'],
             ]),
           },
           [
-            u(
+            d(
               'input',
               { type: 'radio', name: i(t).name, value: e.value, onFocus: s },
               null,
               40,
-              gt,
+              Vt,
             ),
-            c(n.$slots, 'default'),
+            u(n.$slots, 'default'),
           ],
           2,
         )
       )
     },
   }),
-  Le = { prefix: Math.floor(Math.random() * 1e4), current: 0 }
-function kt(o) {
-  return `${o}-${Le.prefix}-${Le.current++}`
+  Ce = { prefix: Math.floor(Math.random() * 1e4), current: 0 }
+function Lt(o) {
+  return `${o}-${Ce.prefix}-${Ce.current++}`
 }
-const bt = { class: 'pot-radio-group' },
-  yt = m({
+const St = { class: 'pot-radio-group' },
+  Mt = m({
     name: 'PotRadioGroup',
     __name: 'radio-group',
     props: { modelValue: { default: '' } },
@@ -178,20 +178,20 @@ const bt = { class: 'pot-radio-group' },
         s = e,
         n = $(() => t.modelValue)
       return (
-        fe(He, {
-          name: kt('radio-group-name'),
+        me(Oe, {
+          name: Lt('radio-group-name'),
           changeRadioValue: (r) => {
             s('update:modelValue', r)
           },
           checkedValue: n,
         }),
-        (r, d) => (a(), l('div', bt, [c(r.$slots, 'default')]))
+        (r, c) => (a(), l('div', St, [u(r.$slots, 'default')]))
       )
     },
   }),
-  wt = J($t),
-  Vt = J(yt),
-  Pt = m({
+  Ct = Z(Pt),
+  Tt = Z(Mt),
+  It = m({
     name: 'PotSwitch',
     __name: 'switch',
     props: { modelValue: { type: Boolean, default: !1 } },
@@ -202,7 +202,7 @@ const bt = { class: 'pot-radio-group' },
       function n() {
         s('update:modelValue', !t.modelValue)
       }
-      return (r, d) => (
+      return (r, c) => (
         a(),
         l(
           'div',
@@ -214,7 +214,7 @@ const bt = { class: 'pot-radio-group' },
             onClick: n,
           },
           [
-            u(
+            d(
               'div',
               {
                 class: L([
@@ -235,9 +235,9 @@ const bt = { class: 'pot-radio-group' },
       )
     },
   }),
-  Lt = J(Pt),
-  St = ['id'],
-  Mt = m({
+  Nt = Z(It),
+  Bt = ['id'],
+  Ht = m({
     name: 'PotMessage',
     __name: 'message',
     props: {
@@ -249,16 +249,16 @@ const bt = { class: 'pot-radio-group' },
     setup(o, { expose: e }) {
       const t = o,
         s = S(!1),
-        n = $(() => 30 + 50 * W.findIndex((w) => w.id == t.id))
+        n = $(() => 30 + 50 * Y.findIndex((w) => w.id == t.id))
       let r
-      const d = $(() => ['pot-message', `pot-message--${t.type}`]),
+      const c = $(() => ['pot-message', `pot-message--${t.type}`]),
         p = $(() => ({ '--pot-message-top': `${n.value}px` }))
-      O(() => {
+      U(() => {
         ;(s.value = !0), b()
       }),
         e({ close: v })
       function v() {
-        ;(s.value = !1), Ot(t.id), y()
+        ;(s.value = !1), Kt(t.id), y()
       }
       function b() {
         t.duration != 0 && (r = window.setTimeout(v, t.duration))
@@ -269,17 +269,17 @@ const bt = { class: 'pot-radio-group' },
       return (w, M) => (
         a(),
         k(
-          oe,
+          se,
           { name: 'pot-message-fade' },
           {
             default: h(() => [
-              Ke(
-                u(
+              et(
+                d(
                   'div',
-                  { id: t.id, class: L(d.value), style: Me(p.value) },
+                  { id: t.id, class: L(c.value), style: Be(p.value) },
                   [
                     f(
-                      i(Ae),
+                      i(xe),
                       {
                         'icon-class': t.type,
                         style: { 'margin-right': '5px' },
@@ -288,12 +288,12 @@ const bt = { class: 'pot-radio-group' },
                       8,
                       ['icon-class'],
                     ),
-                    H(' ' + P(t.message), 1),
+                    A(' ' + P(t.message), 1),
                   ],
                   14,
-                  St,
+                  Bt,
                 ),
-                [[We, s.value]],
+                [[tt, s.value]],
               ),
             ]),
             _: 1,
@@ -302,13 +302,13 @@ const bt = { class: 'pot-radio-group' },
       )
     },
   }),
-  Ct = (o, e) => {
+  At = (o, e) => {
     const t = o.__vccOpts || o
     for (const [s, n] of e) t[s] = n
     return t
   },
-  It = {},
-  Tt = {
+  zt = {},
+  Et = {
     t: '1717377933823',
     class: 'icon',
     viewBox: '0 0 1024 1024',
@@ -318,77 +318,77 @@ const bt = { class: 'pot-radio-group' },
     'xmlns:xlink': 'http://www.w3.org/1999/xlink',
     style: { position: 'absolute', width: '0px', height: '0px' },
   },
-  Nt = u(
+  Ft = d(
     'symbol',
     { id: 'icon-success', class: 'icon', viewBox: '0 0 1024 1024' },
     [
-      u('path', {
+      d('path', {
         d: 'M512 917.333333c223.865905 0 405.333333-181.467429 405.333333-405.333333S735.865905 106.666667 512 106.666667 106.666667 288.134095 106.666667 512 288.134095 917.333333 512 917.333333z m234.057143-512.585143L469.333333 681.447619l-148.723809-148.723809 41.447619-41.496381 107.27619 107.27619 235.276191-235.27619 41.447619 41.496381z',
         'p-id': '9845',
       }),
     ],
     -1,
   ),
-  Bt = u(
+  Dt = d(
     'symbol',
     { id: 'icon-info', class: 'icon', viewBox: '0 0 1024 1024' },
     [
-      u('path', {
+      d('path', {
         d: 'M512 917.333333c223.865905 0 405.333333-181.467429 405.333333-405.333333S735.865905 106.666667 512 106.666667 106.666667 288.134095 106.666667 512 288.134095 917.333333 512 917.333333z m-29.330286-547.206095v-60.781714h58.660572v60.781714h-58.660572z m0 344.551619v-304.030476h58.660572v304.030476h-58.660572z',
         'p-id': '10331',
       }),
     ],
     -1,
   ),
-  At = u(
+  xt = d(
     'symbol',
     { id: 'icon-error', class: 'icon', viewBox: '0 0 1024 1024' },
     [
-      u('path', {
+      d('path', {
         d: 'M512 917.333333c223.865905 0 405.333333-181.467429 405.333333-405.333333S735.865905 106.666667 512 106.666667 106.666667 288.134095 106.666667 512 288.134095 917.333333 512 917.333333z m-170.081524-276.723809L470.552381 512l-128.609524-128.585143 41.496381-41.496381L512 470.552381l128.585143-128.609524 41.496381 41.496381L553.496381 512l128.585143 128.585143-41.496381 41.496381L512 553.496381l-128.585143 128.585143-41.496381-41.496381z',
         'p-id': '10007',
       }),
     ],
     -1,
   ),
-  Ht = u(
+  Ot = d(
     'symbol',
     { id: 'icon-warning', class: 'icon', viewBox: '0 0 1024 1024' },
     [
-      u('path', {
+      d('path', {
         d: 'M512 917.333333c223.865905 0 405.333333-181.467429 405.333333-405.333333S735.865905 106.666667 512 106.666667 106.666667 288.134095 106.666667 512 288.134095 917.333333 512 917.333333z m29.330286-608.01219v304.030476h-58.660572v-304.030476h58.660572z m0 344.551619v60.806095h-58.660572v-60.806095h58.660572z',
         'p-id': '10169',
       }),
     ],
     -1,
   ),
-  zt = [Nt, Bt, At, Ht]
-function Et(o, e) {
-  return a(), l('svg', Tt, zt)
+  Ut = [Ft, Dt, xt, Ot]
+function jt(o, e) {
+  return a(), l('svg', Et, Ut)
 }
-const Ft = Ct(It, [['render', Et]]),
-  W = Ye([])
-let Dt = 1,
-  de = !1
-function xt() {
-  if (de) return
-  de = !0
-  const o = f(Ft),
+const Gt = At(zt, [['render', jt]]),
+  Y = ot([])
+let Rt = 1,
+  ve = !1
+function qt() {
+  if (ve) return
+  ve = !0
+  const o = f(Gt),
     e = document.createElement('div')
-  _e(o, e), document.body.appendChild(e.firstElementChild)
+  ge(o, e), document.body.appendChild(e.firstElementChild)
 }
-function Ot(o) {
+function Kt(o) {
   setTimeout(() => {
-    const e = W.findIndex((t) => t.id == o)
-    _e(null, W[e].container), W.splice(e, 1)
+    const e = Y.findIndex((t) => t.id == o)
+    ge(null, Y[e].container), Y.splice(e, 1)
   }, 600)
 }
-function Ut(o) {
-  const e = `message_${Dt++}`,
+function Wt(o) {
+  const e = `message_${Rt++}`,
     t = document.createElement('div'),
     s = { ...o, id: e },
-    n = f(Mt, s)
-  _e(n, t), document.body.appendChild(t.firstElementChild)
+    n = f(Ht, s)
+  ge(n, t), document.body.appendChild(t.firstElementChild)
   const r = n.component
   return {
     id: e,
@@ -400,15 +400,122 @@ function Ut(o) {
     },
   }
 }
-function Gt(o) {
-  !de && xt()
-  const e = Ut(o)
-  return W.push(e), e.handler
+function Yt(o) {
+  !ve && qt()
+  const e = Wt(o)
+  return Y.push(e), e.handler
 }
-const jt = dt(Gt, '$message'),
-  Rt = [ht, Ae, wt, Vt, Lt, jt],
-  qt = ut(Rt),
-  Kt = m({
+const Jt = mt(Yt, '$message')
+function Zt(o, e) {
+  throw new ElementPlusError(`[${o}] ${e}`)
+}
+function Te(o, e) {
+  let t = null
+  return function (...s) {
+    t ||
+      (t = setTimeout(() => {
+        o.apply(this, s), (t = null)
+      }, e))
+  }
+}
+const Qt = typeof window < 'u' && typeof document < 'u'
+function Xt(o) {
+  const e = Object.create(null)
+  return (t) => e[t] || (e[t] = o(t))
+}
+const eo = /-(\w)/g,
+  to = Xt((o) => o.replace(eo, (e, t) => (t ? t.toUpperCase() : ''))),
+  oo = (o, e) => {
+    var t
+    if (!o || !e) return ''
+    let s = to(e)
+    s === 'float' && (s = 'cssFloat')
+    try {
+      const n = o.style[s]
+      if (n) return n
+      const r =
+        (t = document.defaultView) == null ? void 0 : t.getComputedStyle(o, '')
+      return r ? r[s] : ''
+    } catch {
+      return o.style[s]
+    }
+  },
+  so = (o, e) => {
+    if (!Qt) return !1
+    const t = {
+        undefined: 'overflow',
+        true: 'overflow-y',
+        false: 'overflow-x',
+      }[String(e)],
+      s = oo(o, t)
+    return ['scroll', 'auto', 'overlay'].some((n) => s.includes(n))
+  },
+  O = 'PotInfiniteScroll',
+  no = 50,
+  ao = 200,
+  ro = 0,
+  io = {
+    delay: { type: Number, default: ao },
+    distance: { type: Number, default: ro },
+    disabled: { type: Boolean, default: !1 },
+    immediate: { type: Boolean, default: !0 },
+  },
+  ke = (o) =>
+    Object.entries(io).reduce((e, [t, s]) => {
+      const { type: n, default: r } = s
+      let c = o.getAttribute(`infinite-scroll-${t}`) ?? r
+      return (
+        (c = c === 'false' ? !1 : c),
+        (c = n(c)),
+        (e[t] = Number.isNaN(c) ? r : c),
+        e
+      )
+    }, {}),
+  lo = (o, e) => {
+    const { observer: t, lastScrollTop: s } = o[O],
+      { disabled: n, distance: r } = ke(o),
+      { clientHeight: c, scrollHeight: p, scrollTop: v } = o,
+      b = v - s
+    ;(o[O].lastScrollTop = v), !(t || n || b < 0) && p - (c + v) <= r && e()
+  },
+  Ue = (o) => {
+    const { observer: e } = o[O]
+    e && (e.disconnect(), delete o[O].observer)
+  }
+function Ie(o, e) {
+  const { disabled: t } = ke(o)
+  t || o.clientHeight === 0 || (o.scrollHeight <= o.clientHeight ? e() : Ue(o))
+}
+const co = {
+    async mounted(o, e) {
+      if (!so(o)) throw '绑定的元素不具有滚动机制'
+      const t = e.value
+      typeof t != 'function' &&
+        Zt(O, "'v-infinite-scroll' binding value must be a function"),
+        await He()
+      const { delay: s, immediate: n } = ke(o),
+        r = Te(lo.bind(null, o, t), s)
+      if (((o[O] = { lastScrollTop: o.scrollTop, cb: t, onScroll: r }), n)) {
+        const c = new MutationObserver(Te(Ie.bind(null, o, t), no))
+        ;(o[O].observer = c),
+          c.observe(o, { childList: !0, subtree: !0 }),
+          Ie(o, t)
+      }
+      o.addEventListener('scroll', r)
+    },
+    unmounted(o) {
+      const { onScroll: e } = o[O]
+      o.removeEventListener('scroll', e), Ue(o)
+    },
+  },
+  he = co
+he.install = (o) => {
+  o.directive('InfiniteScroll', he)
+}
+const uo = he,
+  vo = [$t, xe, Ct, Tt, Nt, Jt, uo],
+  ho = _t(vo),
+  po = m({
     __name: 'VPBadge',
     props: { text: {}, type: { default: 'tip' } },
     setup(o) {
@@ -417,33 +524,33 @@ const jt = dt(Gt, '$message'),
         l(
           'span',
           { class: L(['VPBadge', e.type]) },
-          [c(e.$slots, 'default', {}, () => [H(P(e.text), 1)])],
+          [u(e.$slots, 'default', {}, () => [A(P(e.text), 1)])],
           2,
         )
       )
     },
   }),
-  Wt = { key: 0, class: 'VPBackdrop' },
-  Yt = m({
+  fo = { key: 0, class: 'VPBackdrop' },
+  _o = m({
     __name: 'VPBackdrop',
     props: { show: { type: Boolean } },
     setup(o) {
       return (e, t) => (
         a(),
         k(
-          oe,
+          se,
           { name: 'fade' },
           {
-            default: h(() => [e.show ? (a(), l('div', Wt)) : _('', !0)]),
+            default: h(() => [e.show ? (a(), l('div', fo)) : _('', !0)]),
             _: 1,
           },
         )
       )
     },
   }),
-  Jt = g(Yt, [['__scopeId', 'data-v-59bf151a']]),
-  V = Je
-function Zt(o, e) {
+  mo = g(_o, [['__scopeId', 'data-v-59bf151a']]),
+  V = st
+function go(o, e) {
   let t,
     s = !1
   return () => {
@@ -453,19 +560,19 @@ function Zt(o, e) {
         : (o(), (s = !0) && setTimeout(() => (s = !1), e))
   }
 }
-function ve(o) {
+function pe(o) {
   return /^\//.test(o) ? o : `/${o}`
 }
-function $e(o) {
+function ye(o) {
   const {
     pathname: e,
     search: t,
     hash: s,
     protocol: n,
   } = new URL(o, 'http://a.com')
-  if (Ze(o) || o.startsWith('#') || !n.startsWith('http') || !Qe(e)) return o
+  if (nt(o) || o.startsWith('#') || !n.startsWith('http') || !at(e)) return o
   const { site: r } = V(),
-    d =
+    c =
       e.endsWith('/') || e.endsWith('.html')
         ? o
         : o.replace(
@@ -475,16 +582,16 @@ function $e(o) {
               r.value.cleanUrls ? '' : '.html',
             )}${t}${s}`,
           )
-  return me(d)
+  return $e(c)
 }
-const ke = S(K ? location.hash : '')
-K &&
+const we = S(W ? location.hash : '')
+W &&
   window.addEventListener('hashchange', () => {
-    ke.value = location.hash
+    we.value = location.hash
   })
-function Z({ removeCurrent: o = !0, correspondingLink: e = !1 } = {}) {
+function Q({ removeCurrent: o = !0, correspondingLink: e = !1 } = {}) {
   const { site: t, localeIndex: s, page: n, theme: r } = V(),
-    d = $(() => {
+    c = $(() => {
       var v, b
       return {
         label: (v = t.value.locales[s.value]) == null ? void 0 : v.label,
@@ -496,95 +603,95 @@ function Z({ removeCurrent: o = !0, correspondingLink: e = !1 } = {}) {
   return {
     localeLinks: $(() =>
       Object.entries(t.value.locales).flatMap(([v, b]) =>
-        o && d.value.label === b.label
+        o && c.value.label === b.label
           ? []
           : {
               text: b.label,
               link:
-                Qt(
+                $o(
                   b.link || (v === 'root' ? '/' : `/${v}/`),
                   r.value.i18nRouting !== !1 && e,
-                  n.value.relativePath.slice(d.value.link.length - 1),
+                  n.value.relativePath.slice(c.value.link.length - 1),
                   !t.value.cleanUrls,
-                ) + ke.value,
+                ) + we.value,
             },
       ),
     ),
-    currentLang: d,
+    currentLang: c,
   }
 }
-function Qt(o, e, t, s) {
+function $o(o, e, t, s) {
   return e
     ? o.replace(/\/$/, '') +
-        ve(
+        pe(
           t
             .replace(/(^|\/)index\.md$/, '$1')
             .replace(/\.md$/, s ? '.html' : ''),
         )
     : o
 }
-const Xt = (o) => (E('data-v-07f75c55'), (o = o()), F(), o),
-  eo = { class: 'NotFound' },
-  to = { class: 'code' },
-  oo = { class: 'title' },
-  so = Xt(() => u('div', { class: 'divider' }, null, -1)),
-  no = { class: 'quote' },
-  ao = { class: 'action' },
-  ro = ['href', 'aria-label'],
-  io = m({
+const bo = (o) => (E('data-v-07f75c55'), (o = o()), F(), o),
+  ko = { class: 'NotFound' },
+  yo = { class: 'code' },
+  wo = { class: 'title' },
+  Vo = bo(() => d('div', { class: 'divider' }, null, -1)),
+  Po = { class: 'quote' },
+  Lo = { class: 'action' },
+  So = ['href', 'aria-label'],
+  Mo = m({
     __name: 'NotFound',
     setup(o) {
       const { site: e, theme: t } = V(),
-        { localeLinks: s } = Z({ removeCurrent: !1 }),
+        { localeLinks: s } = Q({ removeCurrent: !1 }),
         n = S('/')
       return (
-        O(() => {
-          var d
+        U(() => {
+          var c
           const r = window.location.pathname
             .replace(e.value.base, '')
             .replace(/(^.*?\/).*$/, '/$1')
           s.value.length &&
             (n.value =
-              ((d = s.value.find(({ link: p }) => p.startsWith(r))) == null
+              ((c = s.value.find(({ link: p }) => p.startsWith(r))) == null
                 ? void 0
-                : d.link) || s.value[0].link)
+                : c.link) || s.value[0].link)
         }),
-        (r, d) => {
+        (r, c) => {
           var p, v, b, y, w
           return (
             a(),
-            l('div', eo, [
-              u(
+            l('div', ko, [
+              d(
                 'p',
-                to,
+                yo,
                 P(((p = i(t).notFound) == null ? void 0 : p.code) ?? '404'),
                 1,
               ),
-              u(
+              d(
                 'h1',
-                oo,
+                wo,
                 P(
                   ((v = i(t).notFound) == null ? void 0 : v.title) ??
                     'PAGE NOT FOUND',
                 ),
                 1,
               ),
-              so,
-              u(
+              Vo,
+              d(
                 'blockquote',
-                no,
+                Po,
                 P(
                   ((b = i(t).notFound) == null ? void 0 : b.quote) ??
                     "But if you don't change your direction, and if you keep looking, you may end up where you are heading.",
                 ),
                 1,
               ),
-              u('div', ao, [
-                u(
+              d('div', Lo, [
+                d(
                   'a',
                   {
                     class: 'link',
-                    href: i(me)(n.value),
+                    href: i($e)(n.value),
                     'aria-label':
                       ((y = i(t).notFound) == null ? void 0 : y.linkLabel) ??
                       'go to home',
@@ -594,7 +701,7 @@ const Xt = (o) => (E('data-v-07f75c55'), (o = o()), F(), o),
                       'Take me home',
                   ),
                   9,
-                  ro,
+                  So,
                 ),
               ]),
             ])
@@ -603,18 +710,18 @@ const Xt = (o) => (E('data-v-07f75c55'), (o = o()), F(), o),
       )
     },
   }),
-  lo = g(io, [['__scopeId', 'data-v-07f75c55']])
-function ze(o, e) {
-  if (Array.isArray(o)) return ee(o)
+  Co = g(Mo, [['__scopeId', 'data-v-07f75c55']])
+function je(o, e) {
+  if (Array.isArray(o)) return te(o)
   if (o == null) return []
-  e = ve(e)
+  e = pe(e)
   const t = Object.keys(o)
       .sort((n, r) => r.split('/').length - n.split('/').length)
-      .find((n) => e.startsWith(ve(n))),
+      .find((n) => e.startsWith(pe(n))),
     s = t ? o[t] : []
-  return Array.isArray(s) ? ee(s) : ee(s.items, s.base)
+  return Array.isArray(s) ? te(s) : te(s.items, s.base)
 }
-function co(o) {
+function To(o) {
   const e = []
   let t = 0
   for (const s in o) {
@@ -627,7 +734,7 @@ function co(o) {
   }
   return e
 }
-function uo(o) {
+function Io(o) {
   const e = []
   function t(s) {
     for (const n of s)
@@ -638,43 +745,43 @@ function uo(o) {
   }
   return t(o), e
 }
-function he(o, e) {
+function fe(o, e) {
   return Array.isArray(e)
-    ? e.some((t) => he(o, t))
+    ? e.some((t) => fe(o, t))
     : G(o, e.link)
     ? !0
     : e.items
-    ? he(o, e.items)
+    ? fe(o, e.items)
     : !1
 }
-function ee(o, e) {
+function te(o, e) {
   return [...o].map((t) => {
     const s = { ...t },
       n = s.base || e
     return (
       n && s.link && (s.link = n + s.link),
-      s.items && (s.items = ee(s.items, n)),
+      s.items && (s.items = te(s.items, n)),
       s
     )
   })
 }
 function D() {
   const { frontmatter: o, page: e, theme: t } = V(),
-    s = ue('(min-width: 960px)'),
+    s = de('(min-width: 960px)'),
     n = S(!1),
     r = $(() => {
       const B = t.value.sidebar,
         C = e.value.relativePath
-      return B ? ze(B, C) : []
+      return B ? je(B, C) : []
     }),
-    d = S(r.value)
-  j(r, (B, C) => {
-    JSON.stringify(B) !== JSON.stringify(C) && (d.value = r.value)
+    c = S(r.value)
+  R(r, (B, C) => {
+    JSON.stringify(B) !== JSON.stringify(C) && (c.value = r.value)
   })
   const p = $(
       () =>
         o.value.sidebar !== !1 &&
-        d.value.length > 0 &&
+        c.value.length > 0 &&
         o.value.layout !== 'home',
     ),
     v = $(() =>
@@ -692,66 +799,66 @@ function D() {
         : t.value.aside !== !1,
     ),
     y = $(() => p.value && s.value),
-    w = $(() => (p.value ? co(d.value) : []))
+    w = $(() => (p.value ? To(c.value) : []))
   function M() {
     n.value = !0
   }
-  function I() {
+  function T() {
     n.value = !1
   }
   function N() {
-    n.value ? I() : M()
+    n.value ? T() : M()
   }
   return {
     isOpen: n,
-    sidebar: d,
+    sidebar: c,
     sidebarGroups: w,
     hasSidebar: p,
     hasAside: b,
     leftAside: v,
     isSidebarEnabled: y,
     open: M,
-    close: I,
+    close: T,
     toggle: N,
   }
 }
-function vo(o, e) {
+function No(o, e) {
   let t
-  se(() => {
+  ne(() => {
     t = o.value ? document.activeElement : void 0
   }),
-    O(() => {
+    U(() => {
       window.addEventListener('keyup', s)
     }),
-    ge(() => {
+    be(() => {
       window.removeEventListener('keyup', s)
     })
   function s(n) {
     n.key === 'Escape' && o.value && (e(), t == null || t.focus())
   }
 }
-function ho(o) {
+function Bo(o) {
   const { page: e } = V(),
     t = S(!1),
     s = $(() => o.value.collapsed != null),
     n = $(() => !!o.value.link),
     r = S(!1),
-    d = () => {
+    c = () => {
       r.value = G(e.value.relativePath, o.value.link)
     }
-  j([e, o, ke], d), O(d)
+  R([e, o, we], c), U(c)
   const p = $(() =>
       r.value
         ? !0
         : o.value.items
-        ? he(e.value.relativePath, o.value.items)
+        ? fe(e.value.relativePath, o.value.items)
         : !1,
     ),
     v = $(() => !!(o.value.items && o.value.items.length))
-  se(() => {
+  ne(() => {
     t.value = !!(s.value && o.value.collapsed)
   }),
-    Ce(() => {
+    Ae(() => {
       ;(r.value || p.value) && (t.value = !1)
     })
   function b() {
@@ -767,18 +874,18 @@ function ho(o) {
     toggle: b,
   }
 }
-function po() {
+function Ho() {
   const { hasSidebar: o } = D(),
-    e = ue('(min-width: 960px)'),
-    t = ue('(min-width: 1280px)')
+    e = de('(min-width: 960px)'),
+    t = de('(min-width: 1280px)')
   return {
     isAsideEnabled: $(() =>
       !t.value && !e.value ? !1 : o.value ? t.value : e.value,
     ),
   }
 }
-const pe = []
-function Ee(o) {
+const _e = []
+function Ge(o) {
   return (
     (typeof o.outline == 'object' &&
       !Array.isArray(o.outline) &&
@@ -787,16 +894,16 @@ function Ee(o) {
     'On this page'
   )
 }
-function be(o) {
+function Ve(o) {
   const e = [...document.querySelectorAll('.VPDoc :where(h1,h2,h3,h4,h5,h6)')]
     .filter((t) => t.id && t.hasChildNodes())
     .map((t) => {
       const s = Number(t.tagName[1])
-      return { element: t, title: fo(t), link: '#' + t.id, level: s }
+      return { element: t, title: Ao(t), link: '#' + t.id, level: s }
     })
-  return _o(e, o)
+  return zo(e, o)
 }
-function fo(o) {
+function Ao(o) {
   let e = ''
   for (const t of o.childNodes)
     if (t.nodeType === 1) {
@@ -810,18 +917,18 @@ function fo(o) {
     } else t.nodeType === 3 && (e += t.textContent)
   return e.trim()
 }
-function _o(o, e) {
+function zo(o, e) {
   if (e === !1) return []
   const t = (typeof e == 'object' && !Array.isArray(e) ? e.level : e) || 2,
     [s, n] = typeof t == 'number' ? [t, t] : t === 'deep' ? [2, 6] : t
-  ;(o = o.filter((d) => d.level >= s && d.level <= n)), (pe.length = 0)
-  for (const { element: d, link: p } of o) pe.push({ element: d, link: p })
+  ;(o = o.filter((c) => c.level >= s && c.level <= n)), (_e.length = 0)
+  for (const { element: c, link: p } of o) _e.push({ element: c, link: p })
   const r = []
-  e: for (let d = 0; d < o.length; d++) {
-    const p = o[d]
-    if (d === 0) r.push(p)
+  e: for (let c = 0; c < o.length; c++) {
+    const p = o[c]
+    if (c === 0) r.push(p)
     else {
-      for (let v = d - 1; v >= 0; v--) {
+      for (let v = c - 1; v >= 0; v--) {
         const b = o[v]
         if (b.level < p.level) {
           ;(b.children || (b.children = [])).push(p)
@@ -833,17 +940,17 @@ function _o(o, e) {
   }
   return r
 }
-function mo(o, e) {
-  const { isAsideEnabled: t } = po(),
-    s = Zt(r, 100)
+function Eo(o, e) {
+  const { isAsideEnabled: t } = Ho(),
+    s = go(r, 100)
   let n = null
-  O(() => {
+  U(() => {
     requestAnimationFrame(r), window.addEventListener('scroll', s)
   }),
-    Xe(() => {
-      d(location.hash)
+    rt(() => {
+      c(location.hash)
     }),
-    ge(() => {
+    be(() => {
       window.removeEventListener('scroll', s)
     })
   function r() {
@@ -852,30 +959,30 @@ function mo(o, e) {
       v = window.innerHeight,
       b = document.body.offsetHeight,
       y = Math.abs(p + v - b) < 1,
-      w = pe
-        .map(({ element: I, link: N }) => ({ link: N, top: go(I) }))
-        .filter(({ top: I }) => !Number.isNaN(I))
-        .sort((I, N) => I.top - N.top)
+      w = _e
+        .map(({ element: T, link: N }) => ({ link: N, top: Fo(T) }))
+        .filter(({ top: T }) => !Number.isNaN(T))
+        .sort((T, N) => T.top - N.top)
     if (!w.length) {
-      d(null)
+      c(null)
       return
     }
     if (p < 1) {
-      d(null)
+      c(null)
       return
     }
     if (y) {
-      d(w[w.length - 1].link)
+      c(w[w.length - 1].link)
       return
     }
     let M = null
-    for (const { link: I, top: N } of w) {
-      if (N > p + et() + 4) break
-      M = I
+    for (const { link: T, top: N } of w) {
+      if (N > p + it() + 4) break
+      M = T
     }
-    d(M)
+    c(M)
   }
-  function d(p) {
+  function c(p) {
     n && n.classList.remove('active'),
       p == null
         ? (n = null)
@@ -888,7 +995,7 @@ function mo(o, e) {
       : ((e.value.style.top = '33px'), (e.value.style.opacity = '0'))
   }
 }
-function go(o) {
+function Fo(o) {
   let e = 0
   for (; o !== document.body; ) {
     if (o === null) return NaN
@@ -896,8 +1003,8 @@ function go(o) {
   }
   return e
 }
-const $o = ['href', 'title'],
-  ko = m({
+const Do = ['href', 'title'],
+  xo = m({
     __name: 'VPDocOutlineItem',
     props: { headers: {}, root: { type: Boolean } },
     setup(o) {
@@ -907,7 +1014,7 @@ const $o = ['href', 'title'],
         n == null || n.focus({ preventScroll: !0 })
       }
       return (t, s) => {
-        const n = R('VPDocOutlineItem', !0)
+        const n = q('VPDocOutlineItem', !0)
         return (
           a(),
           l(
@@ -916,24 +1023,24 @@ const $o = ['href', 'title'],
             [
               (a(!0),
               l(
-                T,
+                I,
                 null,
-                A(
+                H(
                   t.headers,
-                  ({ children: r, link: d, title: p }) => (
+                  ({ children: r, link: c, title: p }) => (
                     a(),
                     l('li', null, [
-                      u(
+                      d(
                         'a',
                         {
                           class: 'outline-link',
-                          href: d,
+                          href: c,
                           onClick: e,
                           title: p,
                         },
                         P(p),
                         9,
-                        $o,
+                        Do,
                       ),
                       r != null && r.length
                         ? (a(),
@@ -951,32 +1058,32 @@ const $o = ['href', 'title'],
       }
     },
   }),
-  Fe = g(ko, [['__scopeId', 'data-v-1d718f80']]),
-  bo = (o) => (E('data-v-860eb583'), (o = o()), F(), o),
-  yo = { class: 'content' },
-  wo = { class: 'outline-title', role: 'heading', 'aria-level': '2' },
-  Vo = { 'aria-labelledby': 'doc-outline-aria-label' },
-  Po = bo(() =>
-    u(
+  Re = g(xo, [['__scopeId', 'data-v-1d718f80']]),
+  Oo = (o) => (E('data-v-860eb583'), (o = o()), F(), o),
+  Uo = { class: 'content' },
+  jo = { class: 'outline-title', role: 'heading', 'aria-level': '2' },
+  Go = { 'aria-labelledby': 'doc-outline-aria-label' },
+  Ro = Oo(() =>
+    d(
       'span',
       { class: 'visually-hidden', id: 'doc-outline-aria-label' },
       ' Table of Contents for current page ',
       -1,
     ),
   ),
-  Lo = m({
+  qo = m({
     __name: 'VPDocAsideOutline',
     setup(o) {
       const { frontmatter: e, theme: t } = V(),
-        s = Ie([])
-      ne(() => {
-        s.value = be(e.value.outline ?? t.value.outline)
+        s = ze([])
+      ae(() => {
+        s.value = Ve(e.value.outline ?? t.value.outline)
       })
       const n = S(),
         r = S()
       return (
-        mo(n, r),
-        (d, p) => (
+        Eo(n, r),
+        (c, p) => (
           a(),
           l(
             'div',
@@ -990,17 +1097,17 @@ const $o = ['href', 'title'],
               role: 'navigation',
             },
             [
-              u('div', yo, [
-                u(
+              d('div', Uo, [
+                d(
                   'div',
                   { class: 'outline-marker', ref_key: 'marker', ref: r },
                   null,
                   512,
                 ),
-                u('div', wo, P(i(Ee)(i(t))), 1),
-                u('nav', Vo, [
-                  Po,
-                  f(Fe, { headers: s.value, root: !0 }, null, 8, ['headers']),
+                d('div', jo, P(i(Ge)(i(t))), 1),
+                d('nav', Go, [
+                  Ro,
+                  f(Re, { headers: s.value, root: !0 }, null, 8, ['headers']),
                 ]),
               ]),
             ],
@@ -1010,51 +1117,51 @@ const $o = ['href', 'title'],
       )
     },
   }),
-  So = g(Lo, [['__scopeId', 'data-v-860eb583']]),
-  Mo = { class: 'VPDocAsideCarbonAds' },
-  Co = m({
+  Ko = g(qo, [['__scopeId', 'data-v-860eb583']]),
+  Wo = { class: 'VPDocAsideCarbonAds' },
+  Yo = m({
     __name: 'VPDocAsideCarbonAds',
     props: { carbonAds: {} },
     setup(o) {
       const e = () => null
       return (t, s) => (
         a(),
-        l('div', Mo, [
+        l('div', Wo, [
           f(i(e), { 'carbon-ads': t.carbonAds }, null, 8, ['carbon-ads']),
         ])
       )
     },
   }),
-  Io = (o) => (E('data-v-be2aafe6'), (o = o()), F(), o),
-  To = { class: 'VPDocAside' },
-  No = Io(() => u('div', { class: 'spacer' }, null, -1)),
-  Bo = m({
+  Jo = (o) => (E('data-v-be2aafe6'), (o = o()), F(), o),
+  Zo = { class: 'VPDocAside' },
+  Qo = Jo(() => d('div', { class: 'spacer' }, null, -1)),
+  Xo = m({
     __name: 'VPDocAside',
     setup(o) {
       const { theme: e } = V()
       return (t, s) => (
         a(),
-        l('div', To, [
-          c(t.$slots, 'aside-top', {}, void 0, !0),
-          c(t.$slots, 'aside-outline-before', {}, void 0, !0),
-          f(So),
-          c(t.$slots, 'aside-outline-after', {}, void 0, !0),
-          No,
-          c(t.$slots, 'aside-ads-before', {}, void 0, !0),
+        l('div', Zo, [
+          u(t.$slots, 'aside-top', {}, void 0, !0),
+          u(t.$slots, 'aside-outline-before', {}, void 0, !0),
+          f(Ko),
+          u(t.$slots, 'aside-outline-after', {}, void 0, !0),
+          Qo,
+          u(t.$slots, 'aside-ads-before', {}, void 0, !0),
           i(e).carbonAds
             ? (a(),
-              k(Co, { key: 0, 'carbon-ads': i(e).carbonAds }, null, 8, [
+              k(Yo, { key: 0, 'carbon-ads': i(e).carbonAds }, null, 8, [
                 'carbon-ads',
               ]))
             : _('', !0),
-          c(t.$slots, 'aside-ads-after', {}, void 0, !0),
-          c(t.$slots, 'aside-bottom', {}, void 0, !0),
+          u(t.$slots, 'aside-ads-after', {}, void 0, !0),
+          u(t.$slots, 'aside-bottom', {}, void 0, !0),
         ])
       )
     },
   }),
-  Ao = g(Bo, [['__scopeId', 'data-v-be2aafe6']])
-function Ho() {
+  es = g(Xo, [['__scopeId', 'data-v-be2aafe6']])
+function ts() {
   const { theme: o, page: e } = V()
   return $(() => {
     const { text: t = 'Edit this page', pattern: s = '' } =
@@ -1068,14 +1175,14 @@ function Ho() {
     )
   })
 }
-function zo() {
+function os() {
   const { page: o, theme: e, frontmatter: t } = V()
   return $(() => {
-    var v, b, y, w, M, I, N, B
-    const s = ze(e.value.sidebar, o.value.relativePath),
-      n = uo(s),
+    var v, b, y, w, M, T, N, B
+    const s = je(e.value.sidebar, o.value.relativePath),
+      n = Io(s),
       r = n.findIndex((C) => G(o.value.relativePath, C.link)),
-      d =
+      c =
         (((v = e.value.docFooter) == null ? void 0 : v.prev) === !1 &&
           !t.value.prev) ||
         t.value.prev === !1,
@@ -1084,7 +1191,7 @@ function zo() {
           !t.value.next) ||
         t.value.next === !1
     return {
-      prev: d
+      prev: c
         ? void 0
         : {
             text:
@@ -1108,7 +1215,7 @@ function zo() {
                 : typeof t.value.next == 'object'
                 ? t.value.next.text
                 : void 0) ??
-              ((I = n[r + 1]) == null ? void 0 : I.docFooterText) ??
+              ((T = n[r + 1]) == null ? void 0 : T.docFooterText) ??
               ((N = n[r + 1]) == null ? void 0 : N.text),
             link:
               (typeof t.value.next == 'object' ? t.value.next.link : void 0) ??
@@ -1117,9 +1224,9 @@ function zo() {
     }
   })
 }
-const Eo = {},
-  Fo = { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24' },
-  Do = u(
+const ss = {},
+  ns = { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24' },
+  as = d(
     'path',
     {
       d: 'M18,23H4c-1.7,0-3-1.3-3-3V6c0-1.7,1.3-3,3-3h7c0.6,0,1,0.4,1,1s-0.4,1-1,1H4C3.4,5,3,5.4,3,6v14c0,0.6,0.4,1,1,1h14c0.6,0,1-0.4,1-1v-7c0-0.6,0.4-1,1-1s1,0.4,1,1v7C21,21.7,19.7,23,18,23z',
@@ -1127,7 +1234,7 @@ const Eo = {},
     null,
     -1,
   ),
-  xo = u(
+  rs = d(
     'path',
     {
       d: 'M8,17c-0.3,0-0.5-0.1-0.7-0.3C7,16.5,6.9,16.1,7,15.8l1-4c0-0.2,0.1-0.3,0.3-0.5l9.5-9.5c1.2-1.2,3.2-1.2,4.4,0c1.2,1.2,1.2,3.2,0,4.4l-9.5,9.5c-0.1,0.1-0.3,0.2-0.5,0.3l-4,1C8.2,17,8.1,17,8,17zM9.9,12.5l-0.5,2.1l2.1-0.5l9.3-9.3c0.4-0.4,0.4-1.1,0-1.6c-0.4-0.4-1.2-0.4-1.6,0l0,0L9.9,12.5z M18.5,2.5L18.5,2.5L18.5,2.5z',
@@ -1135,11 +1242,11 @@ const Eo = {},
     null,
     -1,
   ),
-  Oo = [Do, xo]
-function Uo(o, e) {
-  return a(), l('svg', Fo, Oo)
+  is = [as, rs]
+function ls(o, e) {
+  return a(), l('svg', ns, is)
 }
-const Go = g(Eo, [['render', Uo]]),
+const cs = g(ss, [['render', ls]]),
   z = m({
     __name: 'VPLink',
     props: {
@@ -1152,11 +1259,11 @@ const Go = g(Eo, [['render', Uo]]),
     setup(o) {
       const e = o,
         t = $(() => e.tag ?? (e.href ? 'a' : 'span')),
-        s = $(() => e.href && Te.test(e.href))
+        s = $(() => e.href && Ee.test(e.href))
       return (n, r) => (
         a(),
         k(
-          U(t.value),
+          j(t.value),
           {
             class: L([
               'VPLink',
@@ -1166,29 +1273,29 @@ const Go = g(Eo, [['render', Uo]]),
                 'no-icon': n.noIcon,
               },
             ]),
-            href: n.href ? i($e)(n.href) : void 0,
+            href: n.href ? i(ye)(n.href) : void 0,
             target: n.target ?? (s.value ? '_blank' : void 0),
             rel: n.rel ?? (s.value ? 'noreferrer' : void 0),
           },
-          { default: h(() => [c(n.$slots, 'default')]), _: 3 },
+          { default: h(() => [u(n.$slots, 'default')]), _: 3 },
           8,
           ['class', 'href', 'target', 'rel'],
         )
       )
     },
   }),
-  jo = { class: 'VPLastUpdated' },
-  Ro = ['datetime'],
-  qo = m({
+  us = { class: 'VPLastUpdated' },
+  ds = ['datetime'],
+  vs = m({
     __name: 'VPDocFooterLastUpdated',
     setup(o) {
       const { theme: e, page: t, frontmatter: s, lang: n } = V(),
         r = $(() => new Date(s.value.lastUpdated ?? t.value.lastUpdated)),
-        d = $(() => r.value.toISOString()),
+        c = $(() => r.value.toISOString()),
         p = S('')
       return (
-        O(() => {
-          se(() => {
+        U(() => {
+          ne(() => {
             var v, b, y
             p.value = new Intl.DateTimeFormat(
               (b =
@@ -1209,8 +1316,8 @@ const Go = g(Eo, [['render', Uo]]),
           var y
           return (
             a(),
-            l('p', jo, [
-              H(
+            l('p', us, [
+              A(
                 P(
                   ((y = i(e).lastUpdated) == null ? void 0 : y.text) ||
                     i(e).lastUpdatedText ||
@@ -1218,46 +1325,46 @@ const Go = g(Eo, [['render', Uo]]),
                 ) + ': ',
                 1,
               ),
-              u('time', { datetime: d.value }, P(p.value), 9, Ro),
+              d('time', { datetime: c.value }, P(p.value), 9, ds),
             ])
           )
         }
       )
     },
   }),
-  Ko = g(qo, [['__scopeId', 'data-v-4ba3d317']]),
-  Wo = { key: 0, class: 'VPDocFooter' },
-  Yo = { key: 0, class: 'edit-info' },
-  Jo = { key: 0, class: 'edit-link' },
-  Zo = { key: 1, class: 'last-updated' },
-  Qo = { key: 1, class: 'prev-next' },
-  Xo = { class: 'pager' },
-  es = ['innerHTML'],
-  ts = ['innerHTML'],
-  os = { class: 'pager' },
-  ss = ['innerHTML'],
-  ns = ['innerHTML'],
-  as = m({
+  hs = g(vs, [['__scopeId', 'data-v-4ba3d317']]),
+  ps = { key: 0, class: 'VPDocFooter' },
+  fs = { key: 0, class: 'edit-info' },
+  _s = { key: 0, class: 'edit-link' },
+  ms = { key: 1, class: 'last-updated' },
+  gs = { key: 1, class: 'prev-next' },
+  $s = { class: 'pager' },
+  bs = ['innerHTML'],
+  ks = ['innerHTML'],
+  ys = { class: 'pager' },
+  ws = ['innerHTML'],
+  Vs = ['innerHTML'],
+  Ps = m({
     __name: 'VPDocFooter',
     setup(o) {
       const { theme: e, page: t, frontmatter: s } = V(),
-        n = Ho(),
-        r = zo(),
-        d = $(() => e.value.editLink && s.value.editLink !== !1),
+        n = ts(),
+        r = os(),
+        c = $(() => e.value.editLink && s.value.editLink !== !1),
         p = $(() => t.value.lastUpdated && s.value.lastUpdated !== !1),
-        v = $(() => d.value || p.value || r.value.prev || r.value.next)
+        v = $(() => c.value || p.value || r.value.prev || r.value.next)
       return (b, y) => {
-        var w, M, I, N
+        var w, M, T, N
         return v.value
           ? (a(),
-            l('footer', Wo, [
-              c(b.$slots, 'doc-footer-before', {}, void 0, !0),
-              d.value || p.value
+            l('footer', ps, [
+              u(b.$slots, 'doc-footer-before', {}, void 0, !0),
+              c.value || p.value
                 ? (a(),
-                  l('div', Yo, [
-                    d.value
+                  l('div', fs, [
+                    c.value
                       ? (a(),
-                        l('div', Jo, [
+                        l('div', _s, [
                           f(
                             z,
                             {
@@ -1267,11 +1374,11 @@ const Go = g(Eo, [['render', Uo]]),
                             },
                             {
                               default: h(() => [
-                                f(Go, {
+                                f(cs, {
                                   class: 'edit-link-icon',
                                   'aria-label': 'edit icon',
                                 }),
-                                H(' ' + P(i(n).text), 1),
+                                A(' ' + P(i(n).text), 1),
                               ]),
                               _: 1,
                             },
@@ -1280,15 +1387,15 @@ const Go = g(Eo, [['render', Uo]]),
                           ),
                         ]))
                       : _('', !0),
-                    p.value ? (a(), l('div', Zo, [f(Ko)])) : _('', !0),
+                    p.value ? (a(), l('div', ms, [f(hs)])) : _('', !0),
                   ]))
                 : _('', !0),
               ((w = i(r).prev) != null && w.link) ||
               ((M = i(r).next) != null && M.link)
                 ? (a(),
-                  l('nav', Qo, [
-                    u('div', Xo, [
-                      (I = i(r).prev) != null && I.link
+                  l('nav', gs, [
+                    d('div', $s, [
+                      (T = i(r).prev) != null && T.link
                         ? (a(),
                           k(
                             z,
@@ -1301,7 +1408,7 @@ const Go = g(Eo, [['render', Uo]]),
                               default: h(() => {
                                 var B
                                 return [
-                                  u(
+                                  d(
                                     'span',
                                     {
                                       class: 'desc',
@@ -1312,9 +1419,9 @@ const Go = g(Eo, [['render', Uo]]),
                                     },
                                     null,
                                     8,
-                                    es,
+                                    bs,
                                   ),
-                                  u(
+                                  d(
                                     'span',
                                     {
                                       class: 'title',
@@ -1322,7 +1429,7 @@ const Go = g(Eo, [['render', Uo]]),
                                     },
                                     null,
                                     8,
-                                    ts,
+                                    ks,
                                   ),
                                 ]
                               }),
@@ -1333,7 +1440,7 @@ const Go = g(Eo, [['render', Uo]]),
                           ))
                         : _('', !0),
                     ]),
-                    u('div', os, [
+                    d('div', ys, [
                       (N = i(r).next) != null && N.link
                         ? (a(),
                           k(
@@ -1347,7 +1454,7 @@ const Go = g(Eo, [['render', Uo]]),
                               default: h(() => {
                                 var B
                                 return [
-                                  u(
+                                  d(
                                     'span',
                                     {
                                       class: 'desc',
@@ -1358,9 +1465,9 @@ const Go = g(Eo, [['render', Uo]]),
                                     },
                                     null,
                                     8,
-                                    ss,
+                                    ws,
                                   ),
-                                  u(
+                                  d(
                                     'span',
                                     {
                                       class: 'title',
@@ -1368,7 +1475,7 @@ const Go = g(Eo, [['render', Uo]]),
                                     },
                                     null,
                                     8,
-                                    ns,
+                                    Vs,
                                   ),
                                 ]
                               }),
@@ -1386,50 +1493,50 @@ const Go = g(Eo, [['render', Uo]]),
       }
     },
   }),
-  rs = g(as, [['__scopeId', 'data-v-39b90627']]),
-  is = (o) => (E('data-v-3fe17779'), (o = o()), F(), o),
-  ls = { class: 'container' },
-  cs = is(() => u('div', { class: 'aside-curtain' }, null, -1)),
-  us = { class: 'aside-container' },
-  ds = { class: 'aside-content' },
-  vs = { class: 'content' },
-  hs = { class: 'content-container' },
-  ps = { class: 'main' },
-  fs = m({
+  Ls = g(Ps, [['__scopeId', 'data-v-39b90627']]),
+  Ss = (o) => (E('data-v-3fe17779'), (o = o()), F(), o),
+  Ms = { class: 'container' },
+  Cs = Ss(() => d('div', { class: 'aside-curtain' }, null, -1)),
+  Ts = { class: 'aside-container' },
+  Is = { class: 'aside-content' },
+  Ns = { class: 'content' },
+  Bs = { class: 'content-container' },
+  Hs = { class: 'main' },
+  As = m({
     __name: 'VPDoc',
     setup(o) {
       const { theme: e } = V(),
-        t = ae(),
+        t = re(),
         { hasSidebar: s, hasAside: n, leftAside: r } = D(),
-        d = $(() => t.path.replace(/[./]+/g, '_').replace(/_html$/, ''))
+        c = $(() => t.path.replace(/[./]+/g, '_').replace(/_html$/, ''))
       return (p, v) => {
-        const b = R('Content')
+        const b = q('Content')
         return (
           a(),
           l(
             'div',
             { class: L(['VPDoc', { 'has-sidebar': i(s), 'has-aside': i(n) }]) },
             [
-              c(p.$slots, 'doc-top', {}, void 0, !0),
-              u('div', ls, [
+              u(p.$slots, 'doc-top', {}, void 0, !0),
+              d('div', Ms, [
                 i(n)
                   ? (a(),
                     l(
                       'div',
                       { key: 0, class: L(['aside', { 'left-aside': i(r) }]) },
                       [
-                        cs,
-                        u('div', us, [
-                          u('div', ds, [
-                            f(Ao, null, {
+                        Cs,
+                        d('div', Ts, [
+                          d('div', Is, [
+                            f(es, null, {
                               'aside-top': h(() => [
-                                c(p.$slots, 'aside-top', {}, void 0, !0),
+                                u(p.$slots, 'aside-top', {}, void 0, !0),
                               ]),
                               'aside-bottom': h(() => [
-                                c(p.$slots, 'aside-bottom', {}, void 0, !0),
+                                u(p.$slots, 'aside-bottom', {}, void 0, !0),
                               ]),
                               'aside-outline-before': h(() => [
-                                c(
+                                u(
                                   p.$slots,
                                   'aside-outline-before',
                                   {},
@@ -1438,7 +1545,7 @@ const Go = g(Eo, [['render', Uo]]),
                                 ),
                               ]),
                               'aside-outline-after': h(() => [
-                                c(
+                                u(
                                   p.$slots,
                                   'aside-outline-after',
                                   {},
@@ -1447,10 +1554,10 @@ const Go = g(Eo, [['render', Uo]]),
                                 ),
                               ]),
                               'aside-ads-before': h(() => [
-                                c(p.$slots, 'aside-ads-before', {}, void 0, !0),
+                                u(p.$slots, 'aside-ads-before', {}, void 0, !0),
                               ]),
                               'aside-ads-after': h(() => [
-                                c(p.$slots, 'aside-ads-after', {}, void 0, !0),
+                                u(p.$slots, 'aside-ads-after', {}, void 0, !0),
                               ]),
                               _: 3,
                             }),
@@ -1460,17 +1567,17 @@ const Go = g(Eo, [['render', Uo]]),
                       2,
                     ))
                   : _('', !0),
-                u('div', vs, [
-                  u('div', hs, [
-                    c(p.$slots, 'doc-before', {}, void 0, !0),
-                    u('main', ps, [
+                d('div', Ns, [
+                  d('div', Bs, [
+                    u(p.$slots, 'doc-before', {}, void 0, !0),
+                    d('main', Hs, [
                       f(
                         b,
                         {
                           class: L([
                             'vp-doc',
                             [
-                              d.value,
+                              c.value,
                               i(e).externalLinkIcon &&
                                 'external-link-icon-enabled',
                             ],
@@ -1481,17 +1588,17 @@ const Go = g(Eo, [['render', Uo]]),
                         ['class'],
                       ),
                     ]),
-                    f(rs, null, {
+                    f(Ls, null, {
                       'doc-footer-before': h(() => [
-                        c(p.$slots, 'doc-footer-before', {}, void 0, !0),
+                        u(p.$slots, 'doc-footer-before', {}, void 0, !0),
                       ]),
                       _: 3,
                     }),
-                    c(p.$slots, 'doc-after', {}, void 0, !0),
+                    u(p.$slots, 'doc-after', {}, void 0, !0),
                   ]),
                 ]),
               ]),
-              c(p.$slots, 'doc-bottom', {}, void 0, !0),
+              u(p.$slots, 'doc-bottom', {}, void 0, !0),
             ],
             2,
           )
@@ -1499,8 +1606,8 @@ const Go = g(Eo, [['render', Uo]]),
       }
     },
   }),
-  _s = g(fs, [['__scopeId', 'data-v-3fe17779']]),
-  ms = m({
+  zs = g(As, [['__scopeId', 'data-v-3fe17779']]),
+  Es = m({
     __name: 'VPButton',
     props: {
       tag: {},
@@ -1513,51 +1620,51 @@ const Go = g(Eo, [['render', Uo]]),
     },
     setup(o) {
       const e = o,
-        t = $(() => e.href && Te.test(e.href)),
+        t = $(() => e.href && Ee.test(e.href)),
         s = $(() => (e.tag || e.href ? 'a' : 'button'))
       return (n, r) => (
         a(),
         k(
-          U(s.value),
+          j(s.value),
           {
             class: L(['VPButton', [n.size, n.theme]]),
-            href: n.href ? i($e)(n.href) : void 0,
+            href: n.href ? i(ye)(n.href) : void 0,
             target: e.target ?? (t.value ? '_blank' : void 0),
             rel: e.rel ?? (t.value ? 'noreferrer' : void 0),
           },
-          { default: h(() => [H(P(n.text), 1)]), _: 1 },
+          { default: h(() => [A(P(n.text), 1)]), _: 1 },
           8,
           ['class', 'href', 'target', 'rel'],
         )
       )
     },
   }),
-  gs = g(ms, [['__scopeId', 'data-v-a9f690c4']]),
-  $s = ['src', 'alt'],
-  ks = m({
+  Fs = g(Es, [['__scopeId', 'data-v-a9f690c4']]),
+  Ds = ['src', 'alt'],
+  xs = m({
     inheritAttrs: !1,
     __name: 'VPImage',
     props: { image: {}, alt: {} },
     setup(o) {
       return (e, t) => {
-        const s = R('VPImage', !0)
+        const s = q('VPImage', !0)
         return e.image
           ? (a(),
             l(
-              T,
+              I,
               { key: 0 },
               [
                 typeof e.image == 'string' || 'src' in e.image
                   ? (a(),
                     l(
                       'img',
-                      X(
+                      ee(
                         { key: 0, class: 'VPImage' },
                         typeof e.image == 'string'
                           ? e.$attrs
                           : { ...e.image, ...e.$attrs },
                         {
-                          src: i(me)(
+                          src: i($e)(
                             typeof e.image == 'string' ? e.image : e.image.src,
                           ),
                           alt:
@@ -1569,16 +1676,16 @@ const Go = g(Eo, [['render', Uo]]),
                       ),
                       null,
                       16,
-                      $s,
+                      Ds,
                     ))
                   : (a(),
                     l(
-                      T,
+                      I,
                       { key: 1 },
                       [
                         f(
                           s,
-                          X(
+                          ee(
                             {
                               class: 'dark',
                               image: e.image.dark,
@@ -1592,7 +1699,7 @@ const Go = g(Eo, [['render', Uo]]),
                         ),
                         f(
                           s,
-                          X(
+                          ee(
                             {
                               class: 'light',
                               image: e.image.light,
@@ -1614,46 +1721,46 @@ const Go = g(Eo, [['render', Uo]]),
       }
     },
   }),
-  te = g(ks, [['__scopeId', 'data-v-221709f0']]),
-  bs = (o) => (E('data-v-971af588'), (o = o()), F(), o),
-  ys = { class: 'container' },
-  ws = { class: 'main' },
-  Vs = { key: 0, class: 'name' },
-  Ps = ['innerHTML'],
-  Ls = ['innerHTML'],
-  Ss = ['innerHTML'],
-  Ms = { key: 0, class: 'actions' },
-  Cs = { key: 0, class: 'image' },
-  Is = { class: 'image-container' },
-  Ts = bs(() => u('div', { class: 'image-bg' }, null, -1)),
-  Ns = m({
+  oe = g(xs, [['__scopeId', 'data-v-221709f0']]),
+  Os = (o) => (E('data-v-971af588'), (o = o()), F(), o),
+  Us = { class: 'container' },
+  js = { class: 'main' },
+  Gs = { key: 0, class: 'name' },
+  Rs = ['innerHTML'],
+  qs = ['innerHTML'],
+  Ks = ['innerHTML'],
+  Ws = { key: 0, class: 'actions' },
+  Ys = { key: 0, class: 'image' },
+  Js = { class: 'image-container' },
+  Zs = Os(() => d('div', { class: 'image-bg' }, null, -1)),
+  Qs = m({
     __name: 'VPHero',
     props: { name: {}, text: {}, tagline: {}, image: {}, actions: {} },
     setup(o) {
-      const e = Y('hero-image-slot-exists')
+      const e = J('hero-image-slot-exists')
       return (t, s) => (
         a(),
         l(
           'div',
           { class: L(['VPHero', { 'has-image': t.image || i(e) }]) },
           [
-            u('div', ys, [
-              u('div', ws, [
-                c(t.$slots, 'home-hero-info-before', {}, void 0, !0),
-                c(
+            d('div', Us, [
+              d('div', js, [
+                u(t.$slots, 'home-hero-info-before', {}, void 0, !0),
+                u(
                   t.$slots,
                   'home-hero-info',
                   {},
                   () => [
                     t.name
                       ? (a(),
-                        l('h1', Vs, [
-                          u(
+                        l('h1', Gs, [
+                          d(
                             'span',
                             { innerHTML: t.name, class: 'clip' },
                             null,
                             8,
-                            Ps,
+                            Rs,
                           ),
                         ]))
                       : _('', !0),
@@ -1664,7 +1771,7 @@ const Go = g(Eo, [['render', Uo]]),
                           { key: 1, innerHTML: t.text, class: 'text' },
                           null,
                           8,
-                          Ls,
+                          qs,
                         ))
                       : _('', !0),
                     t.tagline
@@ -1674,27 +1781,27 @@ const Go = g(Eo, [['render', Uo]]),
                           { key: 2, innerHTML: t.tagline, class: 'tagline' },
                           null,
                           8,
-                          Ss,
+                          Ks,
                         ))
                       : _('', !0),
                   ],
                   !0,
                 ),
-                c(t.$slots, 'home-hero-info-after', {}, void 0, !0),
+                u(t.$slots, 'home-hero-info-after', {}, void 0, !0),
                 t.actions
                   ? (a(),
-                    l('div', Ms, [
+                    l('div', Ws, [
                       (a(!0),
                       l(
-                        T,
+                        I,
                         null,
-                        A(
+                        H(
                           t.actions,
                           (n) => (
                             a(),
                             l('div', { key: n.link, class: 'action' }, [
                               f(
-                                gs,
+                                Fs,
                                 {
                                   tag: 'a',
                                   size: 'medium',
@@ -1715,14 +1822,14 @@ const Go = g(Eo, [['render', Uo]]),
                       )),
                     ]))
                   : _('', !0),
-                c(t.$slots, 'home-hero-actions-after', {}, void 0, !0),
+                u(t.$slots, 'home-hero-actions-after', {}, void 0, !0),
               ]),
               t.image || i(e)
                 ? (a(),
-                  l('div', Cs, [
-                    u('div', Is, [
-                      Ts,
-                      c(
+                  l('div', Ys, [
+                    d('div', Js, [
+                      Zs,
+                      u(
                         t.$slots,
                         'home-hero-image',
                         {},
@@ -1730,7 +1837,7 @@ const Go = g(Eo, [['render', Uo]]),
                           t.image
                             ? (a(),
                               k(
-                                te,
+                                oe,
                                 { key: 0, class: 'image-src', image: t.image },
                                 null,
                                 8,
@@ -1750,8 +1857,8 @@ const Go = g(Eo, [['render', Uo]]),
       )
     },
   }),
-  Bs = g(Ns, [['__scopeId', 'data-v-971af588']]),
-  As = m({
+  Xs = g(Qs, [['__scopeId', 'data-v-971af588']]),
+  en = m({
     __name: 'VPHomeHero',
     setup(o) {
       const { frontmatter: e } = V()
@@ -1759,7 +1866,7 @@ const Go = g(Eo, [['render', Uo]]),
         i(e).hero
           ? (a(),
             k(
-              Bs,
+              Xs,
               {
                 key: 0,
                 class: 'VPHomeHero',
@@ -1771,16 +1878,16 @@ const Go = g(Eo, [['render', Uo]]),
               },
               {
                 'home-hero-info-before': h(() => [
-                  c(t.$slots, 'home-hero-info-before'),
+                  u(t.$slots, 'home-hero-info-before'),
                 ]),
-                'home-hero-info': h(() => [c(t.$slots, 'home-hero-info')]),
+                'home-hero-info': h(() => [u(t.$slots, 'home-hero-info')]),
                 'home-hero-info-after': h(() => [
-                  c(t.$slots, 'home-hero-info-after'),
+                  u(t.$slots, 'home-hero-info-after'),
                 ]),
                 'home-hero-actions-after': h(() => [
-                  c(t.$slots, 'home-hero-actions-after'),
+                  u(t.$slots, 'home-hero-actions-after'),
                 ]),
-                'home-hero-image': h(() => [c(t.$slots, 'home-hero-image')]),
+                'home-hero-image': h(() => [u(t.$slots, 'home-hero-image')]),
                 _: 3,
               },
               8,
@@ -1789,9 +1896,9 @@ const Go = g(Eo, [['render', Uo]]),
           : _('', !0)
     },
   }),
-  Hs = {},
-  zs = { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24' },
-  Es = u(
+  tn = {},
+  on = { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24' },
+  sn = d(
     'path',
     {
       d: 'M19.9,12.4c0.1-0.2,0.1-0.5,0-0.8c-0.1-0.1-0.1-0.2-0.2-0.3l-7-7c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l5.3,5.3H5c-0.6,0-1,0.4-1,1s0.4,1,1,1h11.6l-5.3,5.3c-0.4,0.4-0.4,1,0,1.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l7-7C19.8,12.6,19.9,12.5,19.9,12.4z',
@@ -1799,19 +1906,19 @@ const Go = g(Eo, [['render', Uo]]),
     null,
     -1,
   ),
-  Fs = [Es]
-function Ds(o, e) {
-  return a(), l('svg', zs, Fs)
+  nn = [sn]
+function an(o, e) {
+  return a(), l('svg', on, nn)
 }
-const xs = g(Hs, [['render', Ds]]),
-  Os = { class: 'box' },
-  Us = { key: 0, class: 'icon' },
-  Gs = ['innerHTML'],
-  js = ['innerHTML'],
-  Rs = ['innerHTML'],
-  qs = { key: 4, class: 'link-text' },
-  Ks = { class: 'link-text-value' },
-  Ws = m({
+const rn = g(tn, [['render', an]]),
+  ln = { class: 'box' },
+  cn = { key: 0, class: 'icon' },
+  un = ['innerHTML'],
+  dn = ['innerHTML'],
+  vn = ['innerHTML'],
+  hn = { key: 4, class: 'link-text' },
+  pn = { class: 'link-text-value' },
+  fn = m({
     __name: 'VPFeature',
     props: {
       icon: {},
@@ -1837,12 +1944,12 @@ const xs = g(Hs, [['render', Ds]]),
           },
           {
             default: h(() => [
-              u('article', Os, [
+              d('article', ln, [
                 typeof e.icon == 'object' && e.icon.wrap
                   ? (a(),
-                    l('div', Us, [
+                    l('div', cn, [
                       f(
-                        te,
+                        oe,
                         {
                           image: e.icon,
                           alt: e.icon.alt,
@@ -1857,7 +1964,7 @@ const xs = g(Hs, [['render', Ds]]),
                   : typeof e.icon == 'object'
                   ? (a(),
                     k(
-                      te,
+                      oe,
                       {
                         key: 1,
                         image: e.icon,
@@ -1876,10 +1983,10 @@ const xs = g(Hs, [['render', Ds]]),
                       { key: 2, class: 'icon', innerHTML: e.icon },
                       null,
                       8,
-                      Gs,
+                      un,
                     ))
                   : _('', !0),
-                u('h2', { class: 'title', innerHTML: e.title }, null, 8, js),
+                d('h2', { class: 'title', innerHTML: e.title }, null, 8, dn),
                 e.details
                   ? (a(),
                     l(
@@ -1887,15 +1994,15 @@ const xs = g(Hs, [['render', Ds]]),
                       { key: 3, class: 'details', innerHTML: e.details },
                       null,
                       8,
-                      Rs,
+                      vn,
                     ))
                   : _('', !0),
                 e.linkText
                   ? (a(),
-                    l('div', qs, [
-                      u('p', Ks, [
-                        H(P(e.linkText) + ' ', 1),
-                        f(xs, { class: 'link-text-icon' }),
+                    l('div', hn, [
+                      d('p', pn, [
+                        A(P(e.linkText) + ' ', 1),
+                        f(rn, { class: 'link-text-icon' }),
                       ]),
                     ]))
                   : _('', !0),
@@ -1909,11 +2016,11 @@ const xs = g(Hs, [['render', Ds]]),
       )
     },
   }),
-  Ys = g(Ws, [['__scopeId', 'data-v-7073c63f']]),
-  Js = { key: 0, class: 'VPFeatures' },
-  Zs = { class: 'container' },
-  Qs = { class: 'items' },
-  Xs = m({
+  _n = g(fn, [['__scopeId', 'data-v-7073c63f']]),
+  mn = { key: 0, class: 'VPFeatures' },
+  gn = { class: 'container' },
+  $n = { class: 'items' },
+  bn = m({
     __name: 'VPFeatures',
     props: { features: {} },
     setup(o) {
@@ -1930,14 +2037,14 @@ const xs = g(Hs, [['render', Ds]]),
       return (s, n) =>
         s.features
           ? (a(),
-            l('div', Js, [
-              u('div', Zs, [
-                u('div', Qs, [
+            l('div', mn, [
+              d('div', gn, [
+                d('div', $n, [
                   (a(!0),
                   l(
-                    T,
+                    I,
                     null,
-                    A(
+                    H(
                       s.features,
                       (r) => (
                         a(),
@@ -1946,7 +2053,7 @@ const xs = g(Hs, [['render', Ds]]),
                           { key: r.title, class: L(['item', [t.value]]) },
                           [
                             f(
-                              Ys,
+                              _n,
                               {
                                 icon: r.icon,
                                 title: r.title,
@@ -1981,8 +2088,8 @@ const xs = g(Hs, [['render', Ds]]),
           : _('', !0)
     },
   }),
-  en = g(Xs, [['__scopeId', 'data-v-f3fa1aba']]),
-  tn = m({
+  kn = g(bn, [['__scopeId', 'data-v-f3fa1aba']]),
+  yn = m({
     __name: 'VPHomeFeatures',
     setup(o) {
       const { frontmatter: e } = V()
@@ -1990,7 +2097,7 @@ const xs = g(Hs, [['render', Ds]]),
         i(e).features
           ? (a(),
             k(
-              en,
+              kn,
               { key: 0, class: 'VPHomeFeatures', features: i(e).features },
               null,
               8,
@@ -1999,56 +2106,56 @@ const xs = g(Hs, [['render', Ds]]),
           : _('', !0)
     },
   }),
-  on = { class: 'VPHome' },
-  sn = m({
+  wn = { class: 'VPHome' },
+  Vn = m({
     __name: 'VPHome',
     setup(o) {
       return (e, t) => {
-        const s = R('Content')
+        const s = q('Content')
         return (
           a(),
-          l('div', on, [
-            c(e.$slots, 'home-hero-before', {}, void 0, !0),
-            f(As, null, {
+          l('div', wn, [
+            u(e.$slots, 'home-hero-before', {}, void 0, !0),
+            f(en, null, {
               'home-hero-info-before': h(() => [
-                c(e.$slots, 'home-hero-info-before', {}, void 0, !0),
+                u(e.$slots, 'home-hero-info-before', {}, void 0, !0),
               ]),
               'home-hero-info': h(() => [
-                c(e.$slots, 'home-hero-info', {}, void 0, !0),
+                u(e.$slots, 'home-hero-info', {}, void 0, !0),
               ]),
               'home-hero-info-after': h(() => [
-                c(e.$slots, 'home-hero-info-after', {}, void 0, !0),
+                u(e.$slots, 'home-hero-info-after', {}, void 0, !0),
               ]),
               'home-hero-actions-after': h(() => [
-                c(e.$slots, 'home-hero-actions-after', {}, void 0, !0),
+                u(e.$slots, 'home-hero-actions-after', {}, void 0, !0),
               ]),
               'home-hero-image': h(() => [
-                c(e.$slots, 'home-hero-image', {}, void 0, !0),
+                u(e.$slots, 'home-hero-image', {}, void 0, !0),
               ]),
               _: 3,
             }),
-            c(e.$slots, 'home-hero-after', {}, void 0, !0),
-            c(e.$slots, 'home-features-before', {}, void 0, !0),
-            f(tn),
-            c(e.$slots, 'home-features-after', {}, void 0, !0),
+            u(e.$slots, 'home-hero-after', {}, void 0, !0),
+            u(e.$slots, 'home-features-before', {}, void 0, !0),
+            f(yn),
+            u(e.$slots, 'home-features-after', {}, void 0, !0),
             f(s),
           ])
         )
       }
     },
   }),
-  nn = g(sn, [['__scopeId', 'data-v-d2f3eedd']]),
-  an = {},
-  rn = { class: 'VPPage' }
-function ln(o, e) {
-  const t = R('Content')
+  Pn = g(Vn, [['__scopeId', 'data-v-d2f3eedd']]),
+  Ln = {},
+  Sn = { class: 'VPPage' }
+function Mn(o, e) {
+  const t = q('Content')
   return (
     a(),
-    l('div', rn, [c(o.$slots, 'page-top'), f(t), c(o.$slots, 'page-bottom')])
+    l('div', Sn, [u(o.$slots, 'page-top'), f(t), u(o.$slots, 'page-bottom')])
   )
 }
-const cn = g(an, [['render', ln]]),
-  un = m({
+const Cn = g(Ln, [['render', Mn]]),
+  Tn = m({
     __name: 'VPContent',
     setup(o) {
       const { page: e, frontmatter: t } = V(),
@@ -2066,18 +2173,18 @@ const cn = g(an, [['render', ln]]),
           },
           [
             i(e).isNotFound
-              ? c(n.$slots, 'not-found', { key: 0 }, () => [f(lo)], !0)
+              ? u(n.$slots, 'not-found', { key: 0 }, () => [f(Co)], !0)
               : i(t).layout === 'page'
               ? (a(),
                 k(
-                  cn,
+                  Cn,
                   { key: 1 },
                   {
                     'page-top': h(() => [
-                      c(n.$slots, 'page-top', {}, void 0, !0),
+                      u(n.$slots, 'page-top', {}, void 0, !0),
                     ]),
                     'page-bottom': h(() => [
-                      c(n.$slots, 'page-bottom', {}, void 0, !0),
+                      u(n.$slots, 'page-bottom', {}, void 0, !0),
                     ]),
                     _: 3,
                   },
@@ -2085,78 +2192,78 @@ const cn = g(an, [['render', ln]]),
               : i(t).layout === 'home'
               ? (a(),
                 k(
-                  nn,
+                  Pn,
                   { key: 2 },
                   {
                     'home-hero-before': h(() => [
-                      c(n.$slots, 'home-hero-before', {}, void 0, !0),
+                      u(n.$slots, 'home-hero-before', {}, void 0, !0),
                     ]),
                     'home-hero-info-before': h(() => [
-                      c(n.$slots, 'home-hero-info-before', {}, void 0, !0),
+                      u(n.$slots, 'home-hero-info-before', {}, void 0, !0),
                     ]),
                     'home-hero-info': h(() => [
-                      c(n.$slots, 'home-hero-info', {}, void 0, !0),
+                      u(n.$slots, 'home-hero-info', {}, void 0, !0),
                     ]),
                     'home-hero-info-after': h(() => [
-                      c(n.$slots, 'home-hero-info-after', {}, void 0, !0),
+                      u(n.$slots, 'home-hero-info-after', {}, void 0, !0),
                     ]),
                     'home-hero-actions-after': h(() => [
-                      c(n.$slots, 'home-hero-actions-after', {}, void 0, !0),
+                      u(n.$slots, 'home-hero-actions-after', {}, void 0, !0),
                     ]),
                     'home-hero-image': h(() => [
-                      c(n.$slots, 'home-hero-image', {}, void 0, !0),
+                      u(n.$slots, 'home-hero-image', {}, void 0, !0),
                     ]),
                     'home-hero-after': h(() => [
-                      c(n.$slots, 'home-hero-after', {}, void 0, !0),
+                      u(n.$slots, 'home-hero-after', {}, void 0, !0),
                     ]),
                     'home-features-before': h(() => [
-                      c(n.$slots, 'home-features-before', {}, void 0, !0),
+                      u(n.$slots, 'home-features-before', {}, void 0, !0),
                     ]),
                     'home-features-after': h(() => [
-                      c(n.$slots, 'home-features-after', {}, void 0, !0),
+                      u(n.$slots, 'home-features-after', {}, void 0, !0),
                     ]),
                     _: 3,
                   },
                 ))
               : i(t).layout && i(t).layout !== 'doc'
-              ? (a(), k(U(i(t).layout), { key: 3 }))
+              ? (a(), k(j(i(t).layout), { key: 3 }))
               : (a(),
                 k(
-                  _s,
+                  zs,
                   { key: 4 },
                   {
                     'doc-top': h(() => [
-                      c(n.$slots, 'doc-top', {}, void 0, !0),
+                      u(n.$slots, 'doc-top', {}, void 0, !0),
                     ]),
                     'doc-bottom': h(() => [
-                      c(n.$slots, 'doc-bottom', {}, void 0, !0),
+                      u(n.$slots, 'doc-bottom', {}, void 0, !0),
                     ]),
                     'doc-footer-before': h(() => [
-                      c(n.$slots, 'doc-footer-before', {}, void 0, !0),
+                      u(n.$slots, 'doc-footer-before', {}, void 0, !0),
                     ]),
                     'doc-before': h(() => [
-                      c(n.$slots, 'doc-before', {}, void 0, !0),
+                      u(n.$slots, 'doc-before', {}, void 0, !0),
                     ]),
                     'doc-after': h(() => [
-                      c(n.$slots, 'doc-after', {}, void 0, !0),
+                      u(n.$slots, 'doc-after', {}, void 0, !0),
                     ]),
                     'aside-top': h(() => [
-                      c(n.$slots, 'aside-top', {}, void 0, !0),
+                      u(n.$slots, 'aside-top', {}, void 0, !0),
                     ]),
                     'aside-outline-before': h(() => [
-                      c(n.$slots, 'aside-outline-before', {}, void 0, !0),
+                      u(n.$slots, 'aside-outline-before', {}, void 0, !0),
                     ]),
                     'aside-outline-after': h(() => [
-                      c(n.$slots, 'aside-outline-after', {}, void 0, !0),
+                      u(n.$slots, 'aside-outline-after', {}, void 0, !0),
                     ]),
                     'aside-ads-before': h(() => [
-                      c(n.$slots, 'aside-ads-before', {}, void 0, !0),
+                      u(n.$slots, 'aside-ads-before', {}, void 0, !0),
                     ]),
                     'aside-ads-after': h(() => [
-                      c(n.$slots, 'aside-ads-after', {}, void 0, !0),
+                      u(n.$slots, 'aside-ads-after', {}, void 0, !0),
                     ]),
                     'aside-bottom': h(() => [
-                      c(n.$slots, 'aside-bottom', {}, void 0, !0),
+                      u(n.$slots, 'aside-bottom', {}, void 0, !0),
                     ]),
                     _: 3,
                   },
@@ -2167,11 +2274,11 @@ const cn = g(an, [['render', ln]]),
       )
     },
   }),
-  dn = g(un, [['__scopeId', 'data-v-e8d52db2']]),
-  vn = { class: 'container' },
-  hn = ['innerHTML'],
-  pn = ['innerHTML'],
-  fn = m({
+  In = g(Tn, [['__scopeId', 'data-v-e8d52db2']]),
+  Nn = { class: 'container' },
+  Bn = ['innerHTML'],
+  Hn = ['innerHTML'],
+  An = m({
     __name: 'VPFooter',
     setup(o) {
       const { theme: e, frontmatter: t } = V(),
@@ -2183,7 +2290,7 @@ const cn = g(an, [['render', ln]]),
               'footer',
               { key: 0, class: L(['VPFooter', { 'has-sidebar': i(s) }]) },
               [
-                u('div', vn, [
+                d('div', Nn, [
                   i(e).footer.message
                     ? (a(),
                       l(
@@ -2195,7 +2302,7 @@ const cn = g(an, [['render', ln]]),
                         },
                         null,
                         8,
-                        hn,
+                        Bn,
                       ))
                     : _('', !0),
                   i(e).footer.copyright
@@ -2209,7 +2316,7 @@ const cn = g(an, [['render', ln]]),
                         },
                         null,
                         8,
-                        pn,
+                        Hn,
                       ))
                     : _('', !0),
                 ]),
@@ -2219,26 +2326,26 @@ const cn = g(an, [['render', ln]]),
           : _('', !0)
     },
   }),
-  _n = g(fn, [['__scopeId', 'data-v-f5761f20']])
-function De() {
+  zn = g(An, [['__scopeId', 'data-v-f5761f20']])
+function qe() {
   const { theme: o, frontmatter: e } = V(),
-    t = Ie([]),
+    t = ze([]),
     s = $(() => t.value.length > 0)
   return (
-    ne(() => {
-      t.value = be(e.value.outline ?? o.value.outline)
+    ae(() => {
+      t.value = Ve(e.value.outline ?? o.value.outline)
     }),
     { headers: t, hasLocalNav: s }
   )
 }
-const mn = {},
-  gn = {
+const En = {},
+  Fn = {
     xmlns: 'http://www.w3.org/2000/svg',
     'aria-hidden': 'true',
     focusable: 'false',
     viewBox: '0 0 24 24',
   },
-  $n = u(
+  Dn = d(
     'path',
     {
       d: 'M9,19c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l5.3-5.3L8.3,6.7c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l6,6c0.4,0.4,0.4,1,0,1.4l-6,6C9.5,18.9,9.3,19,9,19z',
@@ -2246,14 +2353,14 @@ const mn = {},
     null,
     -1,
   ),
-  kn = [$n]
-function bn(o, e) {
-  return a(), l('svg', gn, kn)
+  xn = [Dn]
+function On(o, e) {
+  return a(), l('svg', Fn, xn)
 }
-const xe = g(mn, [['render', bn]]),
-  yn = { class: 'header' },
-  wn = { class: 'outline' },
-  Vn = m({
+const Ke = g(En, [['render', On]]),
+  Un = { class: 'header' },
+  jn = { class: 'outline' },
+  Gn = m({
     __name: 'VPLocalNavOutlineDropdown',
     props: { headers: {}, navHeight: {} },
     setup(o) {
@@ -2262,14 +2369,14 @@ const xe = g(mn, [['render', bn]]),
         s = S(!1),
         n = S(0),
         r = S(),
-        d = S()
-      tt(r, () => {
+        c = S()
+      lt(r, () => {
         s.value = !1
       }),
-        ot('Escape', () => {
+        ct('Escape', () => {
           s.value = !1
         }),
-        ne(() => {
+        ae(() => {
           s.value = !1
         })
       function p() {
@@ -2279,8 +2386,8 @@ const xe = g(mn, [['render', bn]]),
       }
       function v(y) {
         y.target.classList.contains('outline-link') &&
-          (d.value && (d.value.style.transition = 'none'),
-          st(() => {
+          (c.value && (c.value.style.transition = 'none'),
+          He(() => {
             s.value = !1
           }))
       }
@@ -2294,7 +2401,7 @@ const xe = g(mn, [['render', bn]]),
           'div',
           {
             class: 'VPLocalNavOutlineDropdown',
-            style: Me({ '--vp-vh': n.value + 'px' }),
+            style: Be({ '--vp-vh': n.value + 'px' }),
             ref_key: 'main',
             ref: r,
           },
@@ -2304,7 +2411,7 @@ const xe = g(mn, [['render', bn]]),
                 l(
                   'button',
                   { key: 0, onClick: p, class: L({ open: s.value }) },
-                  [H(P(i(Ee)(i(t))) + ' ', 1), f(xe, { class: 'icon' })],
+                  [A(P(i(Ge)(i(t))) + ' ', 1), f(Ke, { class: 'icon' })],
                   2,
                 ))
               : (a(),
@@ -2315,7 +2422,7 @@ const xe = g(mn, [['render', bn]]),
                   1,
                 )),
             f(
-              oe,
+              se,
               { name: 'flyout' },
               {
                 default: h(() => [
@@ -2326,21 +2433,21 @@ const xe = g(mn, [['render', bn]]),
                         {
                           key: 0,
                           ref_key: 'items',
-                          ref: d,
+                          ref: c,
                           class: 'items',
                           onClick: v,
                         },
                         [
-                          u('div', yn, [
-                            u(
+                          d('div', Un, [
+                            d(
                               'a',
                               { class: 'top-link', href: '#', onClick: b },
                               P(i(t).returnToTopLabel || 'Return to top'),
                               1,
                             ),
                           ]),
-                          u('div', wn, [
-                            f(Fe, { headers: y.headers }, null, 8, ['headers']),
+                          d('div', jn, [
+                            f(Re, { headers: y.headers }, null, 8, ['headers']),
                           ]),
                         ],
                         512,
@@ -2356,15 +2463,15 @@ const xe = g(mn, [['render', bn]]),
       )
     },
   }),
-  Pn = g(Vn, [['__scopeId', 'data-v-d62082ce']]),
-  Ln = {},
-  Sn = {
+  Rn = g(Gn, [['__scopeId', 'data-v-d62082ce']]),
+  qn = {},
+  Kn = {
     xmlns: 'http://www.w3.org/2000/svg',
     'aria-hidden': 'true',
     focusable: 'false',
     viewBox: '0 0 24 24',
   },
-  Mn = u(
+  Wn = d(
     'path',
     {
       d: 'M17,11H3c-0.6,0-1-0.4-1-1s0.4-1,1-1h14c0.6,0,1,0.4,1,1S17.6,11,17,11z',
@@ -2372,13 +2479,13 @@ const xe = g(mn, [['render', bn]]),
     null,
     -1,
   ),
-  Cn = u(
+  Yn = d(
     'path',
     { d: 'M21,7H3C2.4,7,2,6.6,2,6s0.4-1,1-1h18c0.6,0,1,0.4,1,1S21.6,7,21,7z' },
     null,
     -1,
   ),
-  In = u(
+  Jn = d(
     'path',
     {
       d: 'M21,15H3c-0.6,0-1-0.4-1-1s0.4-1,1-1h18c0.6,0,1,0.4,1,1S21.6,15,21,15z',
@@ -2386,7 +2493,7 @@ const xe = g(mn, [['render', bn]]),
     null,
     -1,
   ),
-  Tn = u(
+  Zn = d(
     'path',
     {
       d: 'M17,19H3c-0.6,0-1-0.4-1-1s0.4-1,1-1h14c0.6,0,1,0.4,1,1S17.6,19,17,19z',
@@ -2394,33 +2501,33 @@ const xe = g(mn, [['render', bn]]),
     null,
     -1,
   ),
-  Nn = [Mn, Cn, In, Tn]
-function Bn(o, e) {
-  return a(), l('svg', Sn, Nn)
+  Qn = [Wn, Yn, Jn, Zn]
+function Xn(o, e) {
+  return a(), l('svg', Kn, Qn)
 }
-const An = g(Ln, [['render', Bn]]),
-  Hn = { class: 'container' },
-  zn = ['aria-expanded'],
-  En = { class: 'menu-text' },
-  Fn = m({
+const ea = g(qn, [['render', Xn]]),
+  ta = { class: 'container' },
+  oa = ['aria-expanded'],
+  sa = { class: 'menu-text' },
+  na = m({
     __name: 'VPLocalNav',
     props: { open: { type: Boolean } },
     emits: ['open-menu'],
     setup(o) {
       const { theme: e, frontmatter: t } = V(),
         { hasSidebar: s } = D(),
-        { headers: n } = De(),
-        { y: r } = Ne(),
-        d = S(0)
-      O(() => {
-        d.value = parseInt(
+        { headers: n } = qe(),
+        { y: r } = Fe(),
+        c = S(0)
+      U(() => {
+        c.value = parseInt(
           getComputedStyle(document.documentElement).getPropertyValue(
             '--vp-nav-height',
           ),
         )
       }),
-        ne(() => {
-          n.value = be(t.value.outline ?? e.value.outline)
+        ae(() => {
+          n.value = Ve(t.value.outline ?? e.value.outline)
         })
       const p = $(() => n.value.length === 0),
         v = $(() => p.value && !s.value),
@@ -2431,13 +2538,13 @@ const An = g(Ln, [['render', Bn]]),
           fixed: v.value,
         }))
       return (y, w) =>
-        i(t).layout !== 'home' && (!v.value || i(r) >= d.value)
+        i(t).layout !== 'home' && (!v.value || i(r) >= c.value)
           ? (a(),
             l(
               'div',
               { key: 0, class: L(b.value) },
               [
-                u('div', Hn, [
+                d('div', ta, [
                   i(s)
                     ? (a(),
                       l(
@@ -2450,14 +2557,14 @@ const An = g(Ln, [['render', Bn]]),
                           onClick: w[0] || (w[0] = (M) => y.$emit('open-menu')),
                         },
                         [
-                          f(An, { class: 'menu-icon' }),
-                          u('span', En, P(i(e).sidebarMenuLabel || 'Menu'), 1),
+                          f(ea, { class: 'menu-icon' }),
+                          d('span', sa, P(i(e).sidebarMenuLabel || 'Menu'), 1),
                         ],
                         8,
-                        zn,
+                        oa,
                       ))
                     : _('', !0),
-                  f(Pn, { headers: i(n), navHeight: d.value }, null, 8, [
+                  f(Rn, { headers: i(n), navHeight: c.value }, null, 8, [
                     'headers',
                     'navHeight',
                   ]),
@@ -2468,8 +2575,8 @@ const An = g(Ln, [['render', Bn]]),
           : _('', !0)
     },
   }),
-  Dn = g(Fn, [['__scopeId', 'data-v-a1abf90f']])
-function xn() {
+  aa = g(na, [['__scopeId', 'data-v-a1abf90f']])
+function ra() {
   const o = S(!1)
   function e() {
     ;(o.value = !0), window.addEventListener('resize', n)
@@ -2483,40 +2590,40 @@ function xn() {
   function n() {
     window.outerWidth >= 768 && t()
   }
-  const r = ae()
+  const r = re()
   return (
-    j(() => r.path, t),
+    R(() => r.path, t),
     { isScreenOpen: o, openScreen: e, closeScreen: t, toggleScreen: s }
   )
 }
-const On = {},
-  Un = { class: 'VPSwitch', type: 'button', role: 'switch' },
-  Gn = { class: 'check' },
-  jn = { key: 0, class: 'icon' }
-function Rn(o, e) {
+const ia = {},
+  la = { class: 'VPSwitch', type: 'button', role: 'switch' },
+  ca = { class: 'check' },
+  ua = { key: 0, class: 'icon' }
+function da(o, e) {
   return (
     a(),
-    l('button', Un, [
-      u('span', Gn, [
+    l('button', la, [
+      d('span', ca, [
         o.$slots.default
-          ? (a(), l('span', jn, [c(o.$slots, 'default', {}, void 0, !0)]))
+          ? (a(), l('span', ua, [u(o.$slots, 'default', {}, void 0, !0)]))
           : _('', !0),
       ]),
     ])
   )
 }
-const qn = g(On, [
-    ['render', Rn],
+const va = g(ia, [
+    ['render', da],
     ['__scopeId', 'data-v-2acdc7fc'],
   ]),
-  Kn = {},
-  Wn = {
+  ha = {},
+  pa = {
     xmlns: 'http://www.w3.org/2000/svg',
     'aria-hidden': 'true',
     focusable: 'false',
     viewBox: '0 0 24 24',
   },
-  Yn = u(
+  fa = d(
     'path',
     {
       d: 'M12.1,22c-0.3,0-0.6,0-0.9,0c-5.5-0.5-9.5-5.4-9-10.9c0.4-4.8,4.2-8.6,9-9c0.4,0,0.8,0.2,1,0.5c0.2,0.3,0.2,0.8-0.1,1.1c-2,2.7-1.4,6.4,1.3,8.4c2.1,1.6,5,1.6,7.1,0c0.3-0.2,0.7-0.3,1.1-0.1c0.3,0.2,0.5,0.6,0.5,1c-0.2,2.7-1.5,5.1-3.6,6.8C16.6,21.2,14.4,22,12.1,22zM9.3,4.4c-2.9,1-5,3.6-5.2,6.8c-0.4,4.4,2.8,8.3,7.2,8.7c2.1,0.2,4.2-0.4,5.8-1.8c1.1-0.9,1.9-2.1,2.4-3.4c-2.5,0.9-5.3,0.5-7.5-1.1C9.2,11.4,8.1,7.7,9.3,4.4z',
@@ -2524,32 +2631,32 @@ const qn = g(On, [
     null,
     -1,
   ),
-  Jn = [Yn]
-function Zn(o, e) {
-  return a(), l('svg', Wn, Jn)
+  _a = [fa]
+function ma(o, e) {
+  return a(), l('svg', pa, _a)
 }
-const Qn = g(Kn, [['render', Zn]]),
-  Xn = {},
-  ea = {
+const ga = g(ha, [['render', ma]]),
+  $a = {},
+  ba = {
     xmlns: 'http://www.w3.org/2000/svg',
     'aria-hidden': 'true',
     focusable: 'false',
     viewBox: '0 0 24 24',
   },
-  ta = nt(
+  ka = ut(
     '<path d="M12,18c-3.3,0-6-2.7-6-6s2.7-6,6-6s6,2.7,6,6S15.3,18,12,18zM12,8c-2.2,0-4,1.8-4,4c0,2.2,1.8,4,4,4c2.2,0,4-1.8,4-4C16,9.8,14.2,8,12,8z"></path><path d="M12,4c-0.6,0-1-0.4-1-1V1c0-0.6,0.4-1,1-1s1,0.4,1,1v2C13,3.6,12.6,4,12,4z"></path><path d="M12,24c-0.6,0-1-0.4-1-1v-2c0-0.6,0.4-1,1-1s1,0.4,1,1v2C13,23.6,12.6,24,12,24z"></path><path d="M5.6,6.6c-0.3,0-0.5-0.1-0.7-0.3L3.5,4.9c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l1.4,1.4c0.4,0.4,0.4,1,0,1.4C6.2,6.5,5.9,6.6,5.6,6.6z"></path><path d="M19.8,20.8c-0.3,0-0.5-0.1-0.7-0.3l-1.4-1.4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l1.4,1.4c0.4,0.4,0.4,1,0,1.4C20.3,20.7,20,20.8,19.8,20.8z"></path><path d="M3,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h2c0.6,0,1,0.4,1,1S3.6,13,3,13z"></path><path d="M23,13h-2c-0.6,0-1-0.4-1-1s0.4-1,1-1h2c0.6,0,1,0.4,1,1S23.6,13,23,13z"></path><path d="M4.2,20.8c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l1.4-1.4c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-1.4,1.4C4.7,20.7,4.5,20.8,4.2,20.8z"></path><path d="M18.4,6.6c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l1.4-1.4c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-1.4,1.4C18.9,6.5,18.6,6.6,18.4,6.6z"></path>',
     9,
   ),
-  oa = [ta]
-function sa(o, e) {
-  return a(), l('svg', ea, oa)
+  ya = [ka]
+function wa(o, e) {
+  return a(), l('svg', ba, ya)
 }
-const na = g(Xn, [['render', sa]]),
-  aa = m({
+const Va = g($a, [['render', wa]]),
+  Pa = m({
     __name: 'VPSwitchAppearance',
     setup(o) {
       const { isDark: e, theme: t } = V(),
-        s = Y('toggle-appearance', () => {
+        s = J('toggle-appearance', () => {
           e.value = !e.value
         }),
         n = $(() =>
@@ -2557,10 +2664,10 @@ const na = g(Xn, [['render', sa]]),
             ? t.value.lightModeSwitchTitle || 'Switch to light theme'
             : t.value.darkModeSwitchTitle || 'Switch to dark theme',
         )
-      return (r, d) => (
+      return (r, c) => (
         a(),
         k(
-          qn,
+          va,
           {
             title: n.value,
             class: 'VPSwitchAppearance',
@@ -2569,8 +2676,8 @@ const na = g(Xn, [['render', sa]]),
           },
           {
             default: h(() => [
-              f(na, { class: 'sun' }),
-              f(Qn, { class: 'moon' }),
+              f(Va, { class: 'sun' }),
+              f(ga, { class: 'moon' }),
             ]),
             _: 1,
           },
@@ -2580,57 +2687,57 @@ const na = g(Xn, [['render', sa]]),
       )
     },
   }),
-  ye = g(aa, [['__scopeId', 'data-v-f92d2f72']]),
-  ra = { key: 0, class: 'VPNavBarAppearance' },
-  ia = m({
+  Pe = g(Pa, [['__scopeId', 'data-v-f92d2f72']]),
+  La = { key: 0, class: 'VPNavBarAppearance' },
+  Sa = m({
     __name: 'VPNavBarAppearance',
     setup(o) {
       const { site: e } = V()
       return (t, s) =>
         i(e).appearance && i(e).appearance !== 'force-dark'
-          ? (a(), l('div', ra, [f(ye)]))
+          ? (a(), l('div', La, [f(Pe)]))
           : _('', !0)
     },
   }),
-  la = g(ia, [['__scopeId', 'data-v-39301be8']]),
-  we = S()
-let Oe = !1,
-  ce = 0
-function ca(o) {
+  Ma = g(Sa, [['__scopeId', 'data-v-39301be8']]),
+  Le = S()
+let We = !1,
+  ue = 0
+function Ca(o) {
   const e = S(!1)
-  if (K) {
-    !Oe && ua(), ce++
-    const t = j(we, (s) => {
-      var n, r, d
+  if (W) {
+    !We && Ta(), ue++
+    const t = R(Le, (s) => {
+      var n, r, c
       s === o.el.value || ((n = o.el.value) != null && n.contains(s))
         ? ((e.value = !0), (r = o.onFocus) == null || r.call(o))
-        : ((e.value = !1), (d = o.onBlur) == null || d.call(o))
+        : ((e.value = !1), (c = o.onBlur) == null || c.call(o))
     })
-    ge(() => {
-      t(), ce--, ce || da()
+    be(() => {
+      t(), ue--, ue || Ia()
     })
   }
-  return at(e)
+  return dt(e)
 }
-function ua() {
-  document.addEventListener('focusin', Ue),
-    (Oe = !0),
-    (we.value = document.activeElement)
+function Ta() {
+  document.addEventListener('focusin', Ye),
+    (We = !0),
+    (Le.value = document.activeElement)
 }
-function da() {
-  document.removeEventListener('focusin', Ue)
+function Ia() {
+  document.removeEventListener('focusin', Ye)
 }
-function Ue() {
-  we.value = document.activeElement
+function Ye() {
+  Le.value = document.activeElement
 }
-const va = {},
-  ha = {
+const Na = {},
+  Ba = {
     xmlns: 'http://www.w3.org/2000/svg',
     'aria-hidden': 'true',
     focusable: 'false',
     viewBox: '0 0 24 24',
   },
-  pa = u(
+  Ha = d(
     'path',
     {
       d: 'M12,16c-0.3,0-0.5-0.1-0.7-0.3l-6-6c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l5.3,5.3l5.3-5.3c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C12.5,15.9,12.3,16,12,16z',
@@ -2638,35 +2745,35 @@ const va = {},
     null,
     -1,
   ),
-  fa = [pa]
-function _a(o, e) {
-  return a(), l('svg', ha, fa)
+  Aa = [Ha]
+function za(o, e) {
+  return a(), l('svg', Ba, Aa)
 }
-const Ge = g(va, [['render', _a]]),
-  ma = {},
-  ga = {
+const Je = g(Na, [['render', za]]),
+  Ea = {},
+  Fa = {
     xmlns: 'http://www.w3.org/2000/svg',
     'aria-hidden': 'true',
     focusable: 'false',
     viewBox: '0 0 24 24',
   },
-  $a = u('circle', { cx: '12', cy: '12', r: '2' }, null, -1),
-  ka = u('circle', { cx: '19', cy: '12', r: '2' }, null, -1),
-  ba = u('circle', { cx: '5', cy: '12', r: '2' }, null, -1),
-  ya = [$a, ka, ba]
-function wa(o, e) {
-  return a(), l('svg', ga, ya)
+  Da = d('circle', { cx: '12', cy: '12', r: '2' }, null, -1),
+  xa = d('circle', { cx: '19', cy: '12', r: '2' }, null, -1),
+  Oa = d('circle', { cx: '5', cy: '12', r: '2' }, null, -1),
+  Ua = [Da, xa, Oa]
+function ja(o, e) {
+  return a(), l('svg', Fa, Ua)
 }
-const Va = g(ma, [['render', wa]]),
-  Pa = { class: 'VPMenuLink' },
-  La = m({
+const Ga = g(Ea, [['render', ja]]),
+  Ra = { class: 'VPMenuLink' },
+  qa = m({
     __name: 'VPMenuLink',
     props: { item: {} },
     setup(o) {
       const { page: e } = V()
       return (t, s) => (
         a(),
-        l('div', Pa, [
+        l('div', Ra, [
           f(
             z,
             {
@@ -2681,7 +2788,7 @@ const Va = g(ma, [['render', wa]]),
               target: t.item.target,
               rel: t.item.rel,
             },
-            { default: h(() => [H(P(t.item.text), 1)]), _: 1 },
+            { default: h(() => [A(P(t.item.text), 1)]), _: 1 },
             8,
             ['class', 'href', 'target', 'rel'],
           ),
@@ -2689,31 +2796,31 @@ const Va = g(ma, [['render', wa]]),
       )
     },
   }),
-  re = g(La, [['__scopeId', 'data-v-cba6f3f4']]),
-  Sa = { class: 'VPMenuGroup' },
-  Ma = { key: 0, class: 'title' },
-  Ca = m({
+  ie = g(qa, [['__scopeId', 'data-v-cba6f3f4']]),
+  Ka = { class: 'VPMenuGroup' },
+  Wa = { key: 0, class: 'title' },
+  Ya = m({
     __name: 'VPMenuGroup',
     props: { text: {}, items: {} },
     setup(o) {
       return (e, t) => (
         a(),
-        l('div', Sa, [
-          e.text ? (a(), l('p', Ma, P(e.text), 1)) : _('', !0),
+        l('div', Ka, [
+          e.text ? (a(), l('p', Wa, P(e.text), 1)) : _('', !0),
           (a(!0),
           l(
-            T,
+            I,
             null,
-            A(
+            H(
               e.items,
               (s) => (
                 a(),
                 l(
-                  T,
+                  I,
                   null,
                   [
                     'link' in s
-                      ? (a(), k(re, { key: 0, item: s }, null, 8, ['item']))
+                      ? (a(), k(ie, { key: 0, item: s }, null, 8, ['item']))
                       : _('', !0),
                   ],
                   64,
@@ -2726,37 +2833,37 @@ const Va = g(ma, [['render', wa]]),
       )
     },
   }),
-  Ia = g(Ca, [['__scopeId', 'data-v-ab7b8d91']]),
-  Ta = { class: 'VPMenu' },
-  Na = { key: 0, class: 'items' },
-  Ba = m({
+  Ja = g(Ya, [['__scopeId', 'data-v-ab7b8d91']]),
+  Za = { class: 'VPMenu' },
+  Qa = { key: 0, class: 'items' },
+  Xa = m({
     __name: 'VPMenu',
     props: { items: {} },
     setup(o) {
       return (e, t) => (
         a(),
-        l('div', Ta, [
+        l('div', Za, [
           e.items
             ? (a(),
-              l('div', Na, [
+              l('div', Qa, [
                 (a(!0),
                 l(
-                  T,
+                  I,
                   null,
-                  A(
+                  H(
                     e.items,
                     (s) => (
                       a(),
                       l(
-                        T,
+                        I,
                         { key: s.text },
                         [
                           'link' in s
                             ? (a(),
-                              k(re, { key: 0, item: s }, null, 8, ['item']))
+                              k(ie, { key: 0, item: s }, null, 8, ['item']))
                             : (a(),
                               k(
-                                Ia,
+                                Ja,
                                 { key: 1, text: s.text, items: s.items },
                                 null,
                                 8,
@@ -2771,23 +2878,23 @@ const Va = g(ma, [['render', wa]]),
                 )),
               ]))
             : _('', !0),
-          c(e.$slots, 'default', {}, void 0, !0),
+          u(e.$slots, 'default', {}, void 0, !0),
         ])
       )
     },
   }),
-  Aa = g(Ba, [['__scopeId', 'data-v-fcdcccb7']]),
-  Ha = ['aria-expanded', 'aria-label'],
-  za = { key: 0, class: 'text' },
-  Ea = ['innerHTML'],
-  Fa = { class: 'menu' },
-  Da = m({
+  er = g(Xa, [['__scopeId', 'data-v-fcdcccb7']]),
+  tr = ['aria-expanded', 'aria-label'],
+  or = { key: 0, class: 'text' },
+  sr = ['innerHTML'],
+  nr = { class: 'menu' },
+  ar = m({
     __name: 'VPFlyout',
     props: { icon: {}, button: {}, label: {}, items: {} },
     setup(o) {
       const e = S(!1),
         t = S()
-      ca({ el: t, onBlur: s })
+      Ca({ el: t, onBlur: s })
       function s() {
         e.value = !1
       }
@@ -2799,11 +2906,11 @@ const Va = g(ma, [['render', wa]]),
             class: 'VPFlyout',
             ref_key: 'el',
             ref: t,
-            onMouseenter: r[1] || (r[1] = (d) => (e.value = !0)),
-            onMouseleave: r[2] || (r[2] = (d) => (e.value = !1)),
+            onMouseenter: r[1] || (r[1] = (c) => (e.value = !0)),
+            onMouseleave: r[2] || (r[2] = (c) => (e.value = !1)),
           },
           [
-            u(
+            d(
               'button',
               {
                 type: 'button',
@@ -2811,14 +2918,14 @@ const Va = g(ma, [['render', wa]]),
                 'aria-haspopup': 'true',
                 'aria-expanded': e.value,
                 'aria-label': n.label,
-                onClick: r[0] || (r[0] = (d) => (e.value = !e.value)),
+                onClick: r[0] || (r[0] = (c) => (e.value = !e.value)),
               },
               [
                 n.button || n.icon
                   ? (a(),
-                    l('span', za, [
+                    l('span', or, [
                       n.icon
-                        ? (a(), k(U(n.icon), { key: 0, class: 'option-icon' }))
+                        ? (a(), k(j(n.icon), { key: 0, class: 'option-icon' }))
                         : _('', !0),
                       n.button
                         ? (a(),
@@ -2827,22 +2934,22 @@ const Va = g(ma, [['render', wa]]),
                             { key: 1, innerHTML: n.button },
                             null,
                             8,
-                            Ea,
+                            sr,
                           ))
                         : _('', !0),
-                      f(Ge, { class: 'text-icon' }),
+                      f(Je, { class: 'text-icon' }),
                     ]))
-                  : (a(), k(Va, { key: 1, class: 'icon' })),
+                  : (a(), k(Ga, { key: 1, class: 'icon' })),
               ],
               8,
-              Ha,
+              tr,
             ),
-            u('div', Fa, [
+            d('div', nr, [
               f(
-                Aa,
+                er,
                 { items: n.items },
                 {
-                  default: h(() => [c(n.$slots, 'default', {}, void 0, !0)]),
+                  default: h(() => [u(n.$slots, 'default', {}, void 0, !0)]),
                   _: 3,
                 },
                 8,
@@ -2855,8 +2962,8 @@ const Va = g(ma, [['render', wa]]),
       )
     },
   }),
-  Ve = g(Da, [['__scopeId', 'data-v-656060c7']]),
-  xa = {
+  Se = g(ar, [['__scopeId', 'data-v-656060c7']]),
+  rr = {
     discord:
       '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Discord</title><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>',
     facebook:
@@ -2878,13 +2985,13 @@ const Va = g(ma, [['render', wa]]),
     youtube:
       '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>YouTube</title><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>',
   },
-  Oa = ['href', 'aria-label', 'innerHTML'],
-  Ua = m({
+  ir = ['href', 'aria-label', 'innerHTML'],
+  lr = m({
     __name: 'VPSocialLink',
     props: { icon: {}, link: {}, ariaLabel: {} },
     setup(o) {
       const e = o,
-        t = $(() => (typeof e.icon == 'object' ? e.icon.svg : xa[e.icon]))
+        t = $(() => (typeof e.icon == 'object' ? e.icon.svg : rr[e.icon]))
       return (s, n) => (
         a(),
         l(
@@ -2900,29 +3007,29 @@ const Va = g(ma, [['render', wa]]),
           },
           null,
           8,
-          Oa,
+          ir,
         )
       )
     },
   }),
-  Ga = g(Ua, [['__scopeId', 'data-v-ea70026e']]),
-  ja = { class: 'VPSocialLinks' },
-  Ra = m({
+  cr = g(lr, [['__scopeId', 'data-v-ea70026e']]),
+  ur = { class: 'VPSocialLinks' },
+  dr = m({
     __name: 'VPSocialLinks',
     props: { links: {} },
     setup(o) {
       return (e, t) => (
         a(),
-        l('div', ja, [
+        l('div', ur, [
           (a(!0),
           l(
-            T,
+            I,
             null,
-            A(
+            H(
               e.links,
               ({ link: s, icon: n, ariaLabel: r }) => (
                 a(),
-                k(Ga, { key: s, icon: n, link: s, ariaLabel: r }, null, 8, [
+                k(cr, { key: s, icon: n, link: s, ariaLabel: r }, null, 8, [
                   'icon',
                   'link',
                   'ariaLabel',
@@ -2935,47 +3042,47 @@ const Va = g(ma, [['render', wa]]),
       )
     },
   }),
-  Pe = g(Ra, [['__scopeId', 'data-v-cc55c76b']]),
-  qa = { key: 0, class: 'group translations' },
-  Ka = { class: 'trans-title' },
-  Wa = { key: 1, class: 'group' },
-  Ya = { class: 'item appearance' },
-  Ja = { class: 'label' },
-  Za = { class: 'appearance-action' },
-  Qa = { key: 2, class: 'group' },
-  Xa = { class: 'item social-links' },
-  er = m({
+  Me = g(dr, [['__scopeId', 'data-v-cc55c76b']]),
+  vr = { key: 0, class: 'group translations' },
+  hr = { class: 'trans-title' },
+  pr = { key: 1, class: 'group' },
+  fr = { class: 'item appearance' },
+  _r = { class: 'label' },
+  mr = { class: 'appearance-action' },
+  gr = { key: 2, class: 'group' },
+  $r = { class: 'item social-links' },
+  br = m({
     __name: 'VPNavBarExtra',
     setup(o) {
       const { site: e, theme: t } = V(),
-        { localeLinks: s, currentLang: n } = Z({ correspondingLink: !0 }),
+        { localeLinks: s, currentLang: n } = Q({ correspondingLink: !0 }),
         r = $(
           () =>
             (s.value.length && n.value.label) ||
             e.value.appearance ||
             t.value.socialLinks,
         )
-      return (d, p) =>
+      return (c, p) =>
         r.value
           ? (a(),
             k(
-              Ve,
+              Se,
               { key: 0, class: 'VPNavBarExtra', label: 'extra navigation' },
               {
                 default: h(() => [
                   i(s).length && i(n).label
                     ? (a(),
-                      l('div', qa, [
-                        u('p', Ka, P(i(n).label), 1),
+                      l('div', vr, [
+                        d('p', hr, P(i(n).label), 1),
                         (a(!0),
                         l(
-                          T,
+                          I,
                           null,
-                          A(
+                          H(
                             i(s),
                             (v) => (
                               a(),
-                              k(re, { key: v.link, item: v }, null, 8, ['item'])
+                              k(ie, { key: v.link, item: v }, null, 8, ['item'])
                             ),
                           ),
                           128,
@@ -2984,24 +3091,24 @@ const Va = g(ma, [['render', wa]]),
                     : _('', !0),
                   i(e).appearance && i(e).appearance !== 'force-dark'
                     ? (a(),
-                      l('div', Wa, [
-                        u('div', Ya, [
-                          u(
+                      l('div', pr, [
+                        d('div', fr, [
+                          d(
                             'p',
-                            Ja,
+                            _r,
                             P(i(t).darkModeSwitchLabel || 'Appearance'),
                             1,
                           ),
-                          u('div', Za, [f(ye)]),
+                          d('div', mr, [f(Pe)]),
                         ]),
                       ]))
                     : _('', !0),
                   i(t).socialLinks
                     ? (a(),
-                      l('div', Qa, [
-                        u('div', Xa, [
+                      l('div', gr, [
+                        d('div', $r, [
                           f(
-                            Pe,
+                            Me,
                             {
                               class: 'social-links-list',
                               links: i(t).socialLinks,
@@ -3020,23 +3127,23 @@ const Va = g(ma, [['render', wa]]),
           : _('', !0)
     },
   }),
-  tr = g(er, [['__scopeId', 'data-v-ab9782f9']]),
-  or = (o) => (E('data-v-464329f9'), (o = o()), F(), o),
-  sr = ['aria-expanded'],
-  nr = or(() =>
-    u(
+  kr = g(br, [['__scopeId', 'data-v-ab9782f9']]),
+  yr = (o) => (E('data-v-464329f9'), (o = o()), F(), o),
+  wr = ['aria-expanded'],
+  Vr = yr(() =>
+    d(
       'span',
       { class: 'container' },
       [
-        u('span', { class: 'top' }),
-        u('span', { class: 'middle' }),
-        u('span', { class: 'bottom' }),
+        d('span', { class: 'top' }),
+        d('span', { class: 'middle' }),
+        d('span', { class: 'bottom' }),
       ],
       -1,
     ),
   ),
-  ar = [nr],
-  rr = m({
+  Pr = [Vr],
+  Lr = m({
     __name: 'VPNavBarHamburger',
     props: { active: { type: Boolean } },
     emits: ['click'],
@@ -3053,16 +3160,16 @@ const Va = g(ma, [['render', wa]]),
             'aria-controls': 'VPNavScreen',
             onClick: t[0] || (t[0] = (s) => e.$emit('click')),
           },
-          ar,
+          Pr,
           10,
-          sr,
+          wr,
         )
       )
     },
   }),
-  ir = g(rr, [['__scopeId', 'data-v-464329f9']]),
-  lr = ['innerHTML'],
-  cr = m({
+  Sr = g(Lr, [['__scopeId', 'data-v-464329f9']]),
+  Mr = ['innerHTML'],
+  Cr = m({
     __name: 'VPNavBarMenuLink',
     props: { item: {} },
     setup(o) {
@@ -3087,7 +3194,7 @@ const Va = g(ma, [['render', wa]]),
           },
           {
             default: h(() => [
-              u('span', { innerHTML: t.item.text }, null, 8, lr),
+              d('span', { innerHTML: t.item.text }, null, 8, Mr),
             ]),
             _: 1,
           },
@@ -3097,8 +3204,8 @@ const Va = g(ma, [['render', wa]]),
       )
     },
   }),
-  ur = g(cr, [['__scopeId', 'data-v-922d1c9b']]),
-  dr = m({
+  Tr = g(Cr, [['__scopeId', 'data-v-922d1c9b']]),
+  Ir = m({
     __name: 'VPNavBarMenuGroup',
     props: { item: {} },
     setup(o) {
@@ -3109,10 +3216,10 @@ const Va = g(ma, [['render', wa]]),
             ? G(t.value.relativePath, r.link, !!e.item.activeMatch)
             : r.items.some(s),
         n = $(() => s(e.item))
-      return (r, d) => (
+      return (r, c) => (
         a(),
         k(
-          Ve,
+          Se,
           {
             class: L({
               VPNavBarMenuGroup: !0,
@@ -3133,45 +3240,45 @@ const Va = g(ma, [['render', wa]]),
       )
     },
   }),
-  vr = (o) => (E('data-v-85770335'), (o = o()), F(), o),
-  hr = {
+  Nr = (o) => (E('data-v-85770335'), (o = o()), F(), o),
+  Br = {
     key: 0,
     'aria-labelledby': 'main-nav-aria-label',
     class: 'VPNavBarMenu',
   },
-  pr = vr(() =>
-    u(
+  Hr = Nr(() =>
+    d(
       'span',
       { id: 'main-nav-aria-label', class: 'visually-hidden' },
       'Main Navigation',
       -1,
     ),
   ),
-  fr = m({
+  Ar = m({
     __name: 'VPNavBarMenu',
     setup(o) {
       const { theme: e } = V()
       return (t, s) =>
         i(e).nav
           ? (a(),
-            l('nav', hr, [
-              pr,
+            l('nav', Br, [
+              Hr,
               (a(!0),
               l(
-                T,
+                I,
                 null,
-                A(
+                H(
                   i(e).nav,
                   (n) => (
                     a(),
                     l(
-                      T,
+                      I,
                       { key: n.text },
                       [
                         'link' in n
-                          ? (a(), k(ur, { key: 0, item: n }, null, 8, ['item']))
+                          ? (a(), k(Tr, { key: 0, item: n }, null, 8, ['item']))
                           : (a(),
-                            k(dr, { key: 1, item: n }, null, 8, ['item'])),
+                            k(Ir, { key: 1, item: n }, null, 8, ['item'])),
                       ],
                       64,
                     )
@@ -3183,46 +3290,46 @@ const Va = g(ma, [['render', wa]]),
           : _('', !0)
     },
   }),
-  _r = g(fr, [['__scopeId', 'data-v-85770335']])
-function mr(o) {
+  zr = g(Ar, [['__scopeId', 'data-v-85770335']])
+function Er(o) {
   const { localeIndex: e, theme: t } = V()
   function s(n) {
     var N, B, C
     const r = n.split('.'),
-      d = (N = t.value.search) == null ? void 0 : N.options,
-      p = d && typeof d == 'object',
+      c = (N = t.value.search) == null ? void 0 : N.options,
+      p = c && typeof c == 'object',
       v =
         (p &&
-          ((C = (B = d.locales) == null ? void 0 : B[e.value]) == null
+          ((C = (B = c.locales) == null ? void 0 : B[e.value]) == null
             ? void 0
             : C.translations)) ||
         null,
-      b = (p && d.translations) || null
+      b = (p && c.translations) || null
     let y = v,
       w = b,
       M = o
-    const I = r.pop()
-    for (const Q of r) {
+    const T = r.pop()
+    for (const X of r) {
       let x = null
-      const q = M == null ? void 0 : M[Q]
-      q && (x = M = q)
-      const ie = w == null ? void 0 : w[Q]
-      ie && (x = w = ie)
-      const le = y == null ? void 0 : y[Q]
-      le && (x = y = le), q || (M = x), ie || (w = x), le || (y = x)
+      const K = M == null ? void 0 : M[X]
+      K && (x = M = K)
+      const le = w == null ? void 0 : w[X]
+      le && (x = w = le)
+      const ce = y == null ? void 0 : y[X]
+      ce && (x = y = ce), K || (M = x), le || (w = x), ce || (y = x)
     }
     return (
-      (y == null ? void 0 : y[I]) ??
-      (w == null ? void 0 : w[I]) ??
-      (M == null ? void 0 : M[I]) ??
+      (y == null ? void 0 : y[T]) ??
+      (w == null ? void 0 : w[T]) ??
+      (M == null ? void 0 : M[T]) ??
       ''
     )
   }
   return s
 }
-const gr = ['aria-label'],
-  $r = { class: 'DocSearch-Button-Container' },
-  kr = u(
+const Fr = ['aria-label'],
+  Dr = { class: 'DocSearch-Button-Container' },
+  xr = d(
     'svg',
     {
       class: 'DocSearch-Search-Icon',
@@ -3232,7 +3339,7 @@ const gr = ['aria-label'],
       'aria-label': 'search icon',
     },
     [
-      u('path', {
+      d('path', {
         d: 'M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z',
         stroke: 'currentColor',
         fill: 'none',
@@ -3243,20 +3350,20 @@ const gr = ['aria-label'],
     ],
     -1,
   ),
-  br = { class: 'DocSearch-Button-Placeholder' },
-  yr = u(
+  Or = { class: 'DocSearch-Button-Placeholder' },
+  Ur = d(
     'span',
     { class: 'DocSearch-Button-Keys' },
     [
-      u('kbd', { class: 'DocSearch-Button-Key' }),
-      u('kbd', { class: 'DocSearch-Button-Key' }, 'K'),
+      d('kbd', { class: 'DocSearch-Button-Key' }),
+      d('kbd', { class: 'DocSearch-Button-Key' }, 'K'),
     ],
     -1,
   ),
-  Se = m({
+  Ne = m({
     __name: 'VPNavBarSearchButton',
     setup(o) {
-      const t = mr({
+      const t = Er({
         button: { buttonText: 'Search', buttonAriaLabel: 'Search' },
       })
       return (s, n) => (
@@ -3269,19 +3376,19 @@ const gr = ['aria-label'],
             'aria-label': i(t)('button.buttonAriaLabel'),
           },
           [
-            u('span', $r, [kr, u('span', br, P(i(t)('button.buttonText')), 1)]),
-            yr,
+            d('span', Dr, [xr, d('span', Or, P(i(t)('button.buttonText')), 1)]),
+            Ur,
           ],
           8,
-          gr,
+          Fr,
         )
       )
     },
   }),
-  wr = { class: 'VPNavBarSearch' },
-  Vr = { id: 'local-search' },
-  Pr = { key: 1, id: 'docsearch' },
-  Lr = m({
+  jr = { class: 'VPNavBarSearch' },
+  Gr = { id: 'local-search' },
+  Rr = { key: 1, id: 'docsearch' },
+  qr = m({
     __name: 'VPNavBarSearch',
     setup(o) {
       const e = () => null,
@@ -3289,8 +3396,8 @@ const gr = ['aria-label'],
         { theme: s } = V(),
         n = S(!1),
         r = S(!1)
-      O(() => {})
-      function d() {
+      U(() => {})
+      function c() {
         n.value || ((n.value = !0), setTimeout(p, 16))
       }
       function p() {
@@ -3308,23 +3415,23 @@ const gr = ['aria-label'],
         var M
         return (
           a(),
-          l('div', wr, [
+          l('div', jr, [
             i(b) === 'local'
               ? (a(),
                 l(
-                  T,
+                  I,
                   { key: 0 },
                   [
                     v.value
                       ? (a(),
                         k(i(e), {
                           key: 0,
-                          onClose: w[0] || (w[0] = (I) => (v.value = !1)),
+                          onClose: w[0] || (w[0] = (T) => (v.value = !1)),
                         }))
                       : _('', !0),
-                    u('div', Vr, [
-                      f(Se, {
-                        onClick: w[1] || (w[1] = (I) => (v.value = !0)),
+                    d('div', Gr, [
+                      f(Ne, {
+                        onClick: w[1] || (w[1] = (T) => (v.value = !0)),
                       }),
                     ]),
                   ],
@@ -3333,7 +3440,7 @@ const gr = ['aria-label'],
               : i(b) === 'algolia'
               ? (a(),
                 l(
-                  T,
+                  I,
                   { key: 1 },
                   [
                     n.value
@@ -3347,7 +3454,7 @@ const gr = ['aria-label'],
                                 ? void 0
                                 : M.options) ?? i(s).algolia,
                             onVnodeBeforeMount:
-                              w[2] || (w[2] = (I) => (r.value = !0)),
+                              w[2] || (w[2] = (T) => (r.value = !0)),
                           },
                           null,
                           8,
@@ -3356,7 +3463,7 @@ const gr = ['aria-label'],
                       : _('', !0),
                     r.value
                       ? _('', !0)
-                      : (a(), l('div', Pr, [f(Se, { onClick: d })])),
+                      : (a(), l('div', Rr, [f(Ne, { onClick: c })])),
                   ],
                   64,
                 ))
@@ -3366,7 +3473,7 @@ const gr = ['aria-label'],
       }
     },
   }),
-  Sr = m({
+  Kr = m({
     __name: 'VPNavBarSocialLinks',
     setup(o) {
       const { theme: e } = V()
@@ -3374,7 +3481,7 @@ const gr = ['aria-label'],
         i(e).socialLinks
           ? (a(),
             k(
-              Pe,
+              Me,
               { key: 0, class: 'VPNavBarSocialLinks', links: i(e).socialLinks },
               null,
               8,
@@ -3383,16 +3490,16 @@ const gr = ['aria-label'],
           : _('', !0)
     },
   }),
-  Mr = g(Sr, [['__scopeId', 'data-v-970392df']]),
-  Cr = ['href', 'rel', 'target'],
-  Ir = { key: 1 },
-  Tr = { key: 2 },
-  Nr = m({
+  Wr = g(Kr, [['__scopeId', 'data-v-970392df']]),
+  Yr = ['href', 'rel', 'target'],
+  Jr = { key: 1 },
+  Zr = { key: 2 },
+  Qr = m({
     __name: 'VPNavBarTitle',
     setup(o) {
       const { site: e, theme: t } = V(),
         { hasSidebar: s } = D(),
-        { currentLang: n } = Z(),
+        { currentLang: n } = Q(),
         r = $(() => {
           var v
           return typeof t.value.logoLink == 'string'
@@ -3401,7 +3508,7 @@ const gr = ['aria-label'],
             ? void 0
             : v.link
         }),
-        d = $(() => {
+        c = $(() => {
           var v
           return typeof t.value.logoLink == 'string' ||
             (v = t.value.logoLink) == null
@@ -3421,20 +3528,20 @@ const gr = ['aria-label'],
           'div',
           { class: L(['VPNavBarTitle', { 'has-sidebar': i(s) }]) },
           [
-            u(
+            d(
               'a',
               {
                 class: 'title',
-                href: r.value ?? i($e)(i(n).link),
-                rel: d.value,
+                href: r.value ?? i(ye)(i(n).link),
+                rel: c.value,
                 target: p.value,
               },
               [
-                c(v.$slots, 'nav-bar-title-before', {}, void 0, !0),
+                u(v.$slots, 'nav-bar-title-before', {}, void 0, !0),
                 i(t).logo
                   ? (a(),
                     k(
-                      te,
+                      oe,
                       { key: 0, class: 'logo', image: i(t).logo },
                       null,
                       8,
@@ -3442,14 +3549,14 @@ const gr = ['aria-label'],
                     ))
                   : _('', !0),
                 i(t).siteTitle
-                  ? (a(), l('span', Ir, P(i(t).siteTitle), 1))
+                  ? (a(), l('span', Jr, P(i(t).siteTitle), 1))
                   : i(t).siteTitle === void 0
-                  ? (a(), l('span', Tr, P(i(e).title), 1))
+                  ? (a(), l('span', Zr, P(i(e).title), 1))
                   : _('', !0),
-                c(v.$slots, 'nav-bar-title-after', {}, void 0, !0),
+                u(v.$slots, 'nav-bar-title-after', {}, void 0, !0),
               ],
               8,
-              Cr,
+              Yr,
             ),
           ],
           2,
@@ -3457,16 +3564,16 @@ const gr = ['aria-label'],
       )
     },
   }),
-  Br = g(Nr, [['__scopeId', 'data-v-d30acd41']]),
-  Ar = {},
-  Hr = {
+  Xr = g(Qr, [['__scopeId', 'data-v-d30acd41']]),
+  ei = {},
+  ti = {
     xmlns: 'http://www.w3.org/2000/svg',
     'aria-hidden': 'true',
     focusable: 'false',
     viewBox: '0 0 24 24',
   },
-  zr = u('path', { d: 'M0 0h24v24H0z', fill: 'none' }, null, -1),
-  Er = u(
+  oi = d('path', { d: 'M0 0h24v24H0z', fill: 'none' }, null, -1),
+  si = d(
     'path',
     {
       d: ' M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z ',
@@ -3475,42 +3582,42 @@ const gr = ['aria-label'],
     null,
     -1,
   ),
-  Fr = [zr, Er]
-function Dr(o, e) {
-  return a(), l('svg', Hr, Fr)
+  ni = [oi, si]
+function ai(o, e) {
+  return a(), l('svg', ti, ni)
 }
-const je = g(Ar, [['render', Dr]]),
-  xr = { class: 'items' },
-  Or = { class: 'title' },
-  Ur = m({
+const Ze = g(ei, [['render', ai]]),
+  ri = { class: 'items' },
+  ii = { class: 'title' },
+  li = m({
     __name: 'VPNavBarTranslations',
     setup(o) {
       const { theme: e } = V(),
-        { localeLinks: t, currentLang: s } = Z({ correspondingLink: !0 })
+        { localeLinks: t, currentLang: s } = Q({ correspondingLink: !0 })
       return (n, r) =>
         i(t).length && i(s).label
           ? (a(),
             k(
-              Ve,
+              Se,
               {
                 key: 0,
                 class: 'VPNavBarTranslations',
-                icon: je,
+                icon: Ze,
                 label: i(e).langMenuLabel || 'Change language',
               },
               {
                 default: h(() => [
-                  u('div', xr, [
-                    u('p', Or, P(i(s).label), 1),
+                  d('div', ri, [
+                    d('p', ii, P(i(s).label), 1),
                     (a(!0),
                     l(
-                      T,
+                      I,
                       null,
-                      A(
+                      H(
                         i(t),
-                        (d) => (
+                        (c) => (
                           a(),
-                          k(re, { key: d.link, item: d }, null, 8, ['item'])
+                          k(ie, { key: c.link, item: c }, null, 8, ['item'])
                         ),
                       ),
                       128,
@@ -3525,70 +3632,70 @@ const je = g(Ar, [['render', Dr]]),
           : _('', !0)
     },
   }),
-  Gr = g(Ur, [['__scopeId', 'data-v-6f037d1c']]),
-  jr = (o) => (E('data-v-e2d4d38c'), (o = o()), F(), o),
-  Rr = { class: 'wrapper' },
-  qr = { class: 'container' },
-  Kr = { class: 'title' },
-  Wr = { class: 'content' },
-  Yr = { class: 'content-body' },
-  Jr = jr(() =>
-    u('div', { class: 'divider' }, [u('div', { class: 'divider-line' })], -1),
+  ci = g(li, [['__scopeId', 'data-v-6f037d1c']]),
+  ui = (o) => (E('data-v-e2d4d38c'), (o = o()), F(), o),
+  di = { class: 'wrapper' },
+  vi = { class: 'container' },
+  hi = { class: 'title' },
+  pi = { class: 'content' },
+  fi = { class: 'content-body' },
+  _i = ui(() =>
+    d('div', { class: 'divider' }, [d('div', { class: 'divider-line' })], -1),
   ),
-  Zr = m({
+  mi = m({
     __name: 'VPNavBar',
     props: { isScreenOpen: { type: Boolean } },
     emits: ['toggle-screen'],
     setup(o) {
-      const { y: e } = Ne(),
+      const { y: e } = Fe(),
         { hasSidebar: t } = D(),
-        { hasLocalNav: s } = De(),
+        { hasLocalNav: s } = qe(),
         { frontmatter: n } = V(),
         r = S({})
       return (
-        Ce(() => {
+        Ae(() => {
           r.value = {
             'has-sidebar': t.value,
             'has-local-nav': s.value,
             top: n.value.layout === 'home' && e.value === 0,
           }
         }),
-        (d, p) => (
+        (c, p) => (
           a(),
           l(
             'div',
             { class: L(['VPNavBar', r.value]) },
             [
-              u('div', Rr, [
-                u('div', qr, [
-                  u('div', Kr, [
-                    f(Br, null, {
+              d('div', di, [
+                d('div', vi, [
+                  d('div', hi, [
+                    f(Xr, null, {
                       'nav-bar-title-before': h(() => [
-                        c(d.$slots, 'nav-bar-title-before', {}, void 0, !0),
+                        u(c.$slots, 'nav-bar-title-before', {}, void 0, !0),
                       ]),
                       'nav-bar-title-after': h(() => [
-                        c(d.$slots, 'nav-bar-title-after', {}, void 0, !0),
+                        u(c.$slots, 'nav-bar-title-after', {}, void 0, !0),
                       ]),
                       _: 3,
                     }),
                   ]),
-                  u('div', Wr, [
-                    u('div', Yr, [
-                      c(d.$slots, 'nav-bar-content-before', {}, void 0, !0),
-                      f(Lr, { class: 'search' }),
-                      f(_r, { class: 'menu' }),
-                      f(Gr, { class: 'translations' }),
-                      f(la, { class: 'appearance' }),
-                      f(Mr, { class: 'social-links' }),
-                      f(tr, { class: 'extra' }),
-                      c(d.$slots, 'nav-bar-content-after', {}, void 0, !0),
+                  d('div', pi, [
+                    d('div', fi, [
+                      u(c.$slots, 'nav-bar-content-before', {}, void 0, !0),
+                      f(qr, { class: 'search' }),
+                      f(zr, { class: 'menu' }),
+                      f(ci, { class: 'translations' }),
+                      f(Ma, { class: 'appearance' }),
+                      f(Wr, { class: 'social-links' }),
+                      f(kr, { class: 'extra' }),
+                      u(c.$slots, 'nav-bar-content-after', {}, void 0, !0),
                       f(
-                        ir,
+                        Sr,
                         {
                           class: 'hamburger',
-                          active: d.isScreenOpen,
+                          active: c.isScreenOpen,
                           onClick:
-                            p[0] || (p[0] = (v) => d.$emit('toggle-screen')),
+                            p[0] || (p[0] = (v) => c.$emit('toggle-screen')),
                         },
                         null,
                         8,
@@ -3598,7 +3705,7 @@ const je = g(Ar, [['render', Dr]]),
                   ]),
                 ]),
               ]),
-              Jr,
+              _i,
             ],
             2,
           )
@@ -3606,29 +3713,29 @@ const je = g(Ar, [['render', Dr]]),
       )
     },
   }),
-  Qr = g(Zr, [['__scopeId', 'data-v-e2d4d38c']]),
-  Xr = { key: 0, class: 'VPNavScreenAppearance' },
-  ei = { class: 'text' },
-  ti = m({
+  gi = g(mi, [['__scopeId', 'data-v-e2d4d38c']]),
+  $i = { key: 0, class: 'VPNavScreenAppearance' },
+  bi = { class: 'text' },
+  ki = m({
     __name: 'VPNavScreenAppearance',
     setup(o) {
       const { site: e, theme: t } = V()
       return (s, n) =>
         i(e).appearance && i(e).appearance !== 'force-dark'
           ? (a(),
-            l('div', Xr, [
-              u('p', ei, P(i(t).darkModeSwitchLabel || 'Appearance'), 1),
-              f(ye),
+            l('div', $i, [
+              d('p', bi, P(i(t).darkModeSwitchLabel || 'Appearance'), 1),
+              f(Pe),
             ]))
           : _('', !0)
     },
   }),
-  oi = g(ti, [['__scopeId', 'data-v-83332725']]),
-  si = m({
+  yi = g(ki, [['__scopeId', 'data-v-83332725']]),
+  wi = m({
     __name: 'VPNavScreenMenuLink',
     props: { item: {} },
     setup(o) {
-      const e = Y('close-screen')
+      const e = J('close-screen')
       return (t, s) => (
         a(),
         k(
@@ -3640,22 +3747,22 @@ const je = g(Ar, [['render', Dr]]),
             rel: t.item.rel,
             onClick: i(e),
           },
-          { default: h(() => [H(P(t.item.text), 1)]), _: 1 },
+          { default: h(() => [A(P(t.item.text), 1)]), _: 1 },
           8,
           ['href', 'target', 'rel', 'onClick'],
         )
       )
     },
   }),
-  ni = g(si, [['__scopeId', 'data-v-4760ddb3']]),
-  ai = {},
-  ri = {
+  Vi = g(wi, [['__scopeId', 'data-v-4760ddb3']]),
+  Pi = {},
+  Li = {
     xmlns: 'http://www.w3.org/2000/svg',
     'aria-hidden': 'true',
     focusable: 'false',
     viewBox: '0 0 24 24',
   },
-  ii = u(
+  Si = d(
     'path',
     {
       d: 'M18.9,10.9h-6v-6c0-0.6-0.4-1-1-1s-1,0.4-1,1v6h-6c-0.6,0-1,0.4-1,1s0.4,1,1,1h6v6c0,0.6,0.4,1,1,1s1-0.4,1-1v-6h6c0.6,0,1-0.4,1-1S19.5,10.9,18.9,10.9z',
@@ -3663,16 +3770,16 @@ const je = g(Ar, [['render', Dr]]),
     null,
     -1,
   ),
-  li = [ii]
-function ci(o, e) {
-  return a(), l('svg', ri, li)
+  Mi = [Si]
+function Ci(o, e) {
+  return a(), l('svg', Li, Mi)
 }
-const ui = g(ai, [['render', ci]]),
-  di = m({
+const Ti = g(Pi, [['render', Ci]]),
+  Ii = m({
     __name: 'VPNavScreenMenuGroupLink',
     props: { item: {} },
     setup(o) {
-      const e = Y('close-screen')
+      const e = J('close-screen')
       return (t, s) => (
         a(),
         k(
@@ -3684,31 +3791,31 @@ const ui = g(ai, [['render', ci]]),
             rel: t.item.rel,
             onClick: i(e),
           },
-          { default: h(() => [H(P(t.item.text), 1)]), _: 1 },
+          { default: h(() => [A(P(t.item.text), 1)]), _: 1 },
           8,
           ['href', 'target', 'rel', 'onClick'],
         )
       )
     },
   }),
-  Re = g(di, [['__scopeId', 'data-v-b7e806a3']]),
-  vi = { class: 'VPNavScreenMenuGroupSection' },
-  hi = { key: 0, class: 'title' },
-  pi = m({
+  Qe = g(Ii, [['__scopeId', 'data-v-b7e806a3']]),
+  Ni = { class: 'VPNavScreenMenuGroupSection' },
+  Bi = { key: 0, class: 'title' },
+  Hi = m({
     __name: 'VPNavScreenMenuGroupSection',
     props: { text: {}, items: {} },
     setup(o) {
       return (e, t) => (
         a(),
-        l('div', vi, [
-          e.text ? (a(), l('p', hi, P(e.text), 1)) : _('', !0),
+        l('div', Ni, [
+          e.text ? (a(), l('p', Bi, P(e.text), 1)) : _('', !0),
           (a(!0),
           l(
-            T,
+            I,
             null,
-            A(
+            H(
               e.items,
-              (s) => (a(), k(Re, { key: s.text, item: s }, null, 8, ['item'])),
+              (s) => (a(), k(Qe, { key: s.text, item: s }, null, 8, ['item'])),
             ),
             128,
           )),
@@ -3716,12 +3823,12 @@ const ui = g(ai, [['render', ci]]),
       )
     },
   }),
-  fi = g(pi, [['__scopeId', 'data-v-8a97d36f']]),
-  _i = ['aria-controls', 'aria-expanded'],
-  mi = ['innerHTML'],
-  gi = ['id'],
-  $i = { key: 1, class: 'group' },
-  ki = m({
+  Ai = g(Hi, [['__scopeId', 'data-v-8a97d36f']]),
+  zi = ['aria-controls', 'aria-expanded'],
+  Ei = ['innerHTML'],
+  Fi = ['id'],
+  Di = { key: 1, class: 'group' },
+  xi = m({
     __name: 'VPNavScreenMenuGroup',
     props: { text: {}, items: {} },
     setup(o) {
@@ -3731,13 +3838,13 @@ const ui = g(ai, [['render', ci]]),
       function n() {
         t.value = !t.value
       }
-      return (r, d) => (
+      return (r, c) => (
         a(),
         l(
           'div',
           { class: L(['VPNavScreenMenuGroup', { open: t.value }]) },
           [
-            u(
+            d(
               'button',
               {
                 class: 'button',
@@ -3746,43 +3853,43 @@ const ui = g(ai, [['render', ci]]),
                 onClick: n,
               },
               [
-                u(
+                d(
                   'span',
                   { class: 'button-text', innerHTML: r.text },
                   null,
                   8,
-                  mi,
+                  Ei,
                 ),
-                f(ui, { class: 'button-icon' }),
+                f(Ti, { class: 'button-icon' }),
               ],
               8,
-              _i,
+              zi,
             ),
-            u(
+            d(
               'div',
               { id: s.value, class: 'items' },
               [
                 (a(!0),
                 l(
-                  T,
+                  I,
                   null,
-                  A(
+                  H(
                     r.items,
                     (p) => (
                       a(),
                       l(
-                        T,
+                        I,
                         { key: p.text },
                         [
                           'link' in p
                             ? (a(),
                               l('div', { key: p.text, class: 'item' }, [
-                                f(Re, { item: p }, null, 8, ['item']),
+                                f(Qe, { item: p }, null, 8, ['item']),
                               ]))
                             : (a(),
-                              l('div', $i, [
+                              l('div', Di, [
                                 f(
-                                  fi,
+                                  Ai,
                                   { text: p.text, items: p.items },
                                   null,
                                   8,
@@ -3798,7 +3905,7 @@ const ui = g(ai, [['render', ci]]),
                 )),
               ],
               8,
-              gi,
+              Fi,
             ),
           ],
           2,
@@ -3806,33 +3913,33 @@ const ui = g(ai, [['render', ci]]),
       )
     },
   }),
-  bi = g(ki, [['__scopeId', 'data-v-66bd100f']]),
-  yi = { key: 0, class: 'VPNavScreenMenu' },
-  wi = m({
+  Oi = g(xi, [['__scopeId', 'data-v-66bd100f']]),
+  Ui = { key: 0, class: 'VPNavScreenMenu' },
+  ji = m({
     __name: 'VPNavScreenMenu',
     setup(o) {
       const { theme: e } = V()
       return (t, s) =>
         i(e).nav
           ? (a(),
-            l('nav', yi, [
+            l('nav', Ui, [
               (a(!0),
               l(
-                T,
+                I,
                 null,
-                A(
+                H(
                   i(e).nav,
                   (n) => (
                     a(),
                     l(
-                      T,
+                      I,
                       { key: n.text },
                       [
                         'link' in n
-                          ? (a(), k(ni, { key: 0, item: n }, null, 8, ['item']))
+                          ? (a(), k(Vi, { key: 0, item: n }, null, 8, ['item']))
                           : (a(),
                             k(
-                              bi,
+                              Oi,
                               { key: 1, text: n.text || '', items: n.items },
                               null,
                               8,
@@ -3849,7 +3956,7 @@ const ui = g(ai, [['render', ci]]),
           : _('', !0)
     },
   }),
-  Vi = m({
+  Gi = m({
     __name: 'VPNavScreenSocialLinks',
     setup(o) {
       const { theme: e } = V()
@@ -3857,7 +3964,7 @@ const ui = g(ai, [['render', ci]]),
         i(e).socialLinks
           ? (a(),
             k(
-              Pe,
+              Me,
               {
                 key: 0,
                 class: 'VPNavScreenSocialLinks',
@@ -3870,16 +3977,16 @@ const ui = g(ai, [['render', ci]]),
           : _('', !0)
     },
   }),
-  Pi = { class: 'list' },
-  Li = m({
+  Ri = { class: 'list' },
+  qi = m({
     __name: 'VPNavScreenTranslations',
     setup(o) {
-      const { localeLinks: e, currentLang: t } = Z({ correspondingLink: !0 }),
+      const { localeLinks: e, currentLang: t } = Q({ correspondingLink: !0 }),
         s = S(!1)
       function n() {
         s.value = !s.value
       }
-      return (r, d) =>
+      return (r, c) =>
         i(e).length && i(t).label
           ? (a(),
             l(
@@ -3889,17 +3996,17 @@ const ui = g(ai, [['render', ci]]),
                 class: L(['VPNavScreenTranslations', { open: s.value }]),
               },
               [
-                u('button', { class: 'title', onClick: n }, [
-                  f(je, { class: 'icon lang' }),
-                  H(' ' + P(i(t).label) + ' ', 1),
-                  f(Ge, { class: 'icon chevron' }),
+                d('button', { class: 'title', onClick: n }, [
+                  f(Ze, { class: 'icon lang' }),
+                  A(' ' + P(i(t).label) + ' ', 1),
+                  f(Je, { class: 'icon chevron' }),
                 ]),
-                u('ul', Pi, [
+                d('ul', Ri, [
                   (a(!0),
                   l(
-                    T,
+                    I,
                     null,
-                    A(
+                    H(
                       i(e),
                       (p) => (
                         a(),
@@ -3907,7 +4014,7 @@ const ui = g(ai, [['render', ci]]),
                           f(
                             z,
                             { class: 'link', href: p.link },
-                            { default: h(() => [H(P(p.text), 1)]), _: 2 },
+                            { default: h(() => [A(P(p.text), 1)]), _: 2 },
                             1032,
                             ['href'],
                           ),
@@ -3923,18 +4030,18 @@ const ui = g(ai, [['render', ci]]),
           : _('', !0)
     },
   }),
-  Si = g(Li, [['__scopeId', 'data-v-230aa62c']]),
-  Mi = { class: 'container' },
-  Ci = m({
+  Ki = g(qi, [['__scopeId', 'data-v-230aa62c']]),
+  Wi = { class: 'container' },
+  Yi = m({
     __name: 'VPNavScreen',
     props: { open: { type: Boolean } },
     setup(o) {
       const e = S(null),
-        t = Be(K ? document.body : null)
+        t = De(W ? document.body : null)
       return (s, n) => (
         a(),
         k(
-          oe,
+          se,
           {
             name: 'fade',
             onEnter: n[0] || (n[0] = (r) => (t.value = !0)),
@@ -3954,19 +4061,19 @@ const ui = g(ai, [['render', ci]]),
                       id: 'VPNavScreen',
                     },
                     [
-                      u('div', Mi, [
-                        c(
+                      d('div', Wi, [
+                        u(
                           s.$slots,
                           'nav-screen-content-before',
                           {},
                           void 0,
                           !0,
                         ),
-                        f(wi, { class: 'menu' }),
-                        f(Si, { class: 'translations' }),
-                        f(oi, { class: 'appearance' }),
-                        f(Vi, { class: 'social-links' }),
-                        c(s.$slots, 'nav-screen-content-after', {}, void 0, !0),
+                        f(ji, { class: 'menu' }),
+                        f(Ki, { class: 'translations' }),
+                        f(yi, { class: 'appearance' }),
+                        f(Gi, { class: 'social-links' }),
+                        u(s.$slots, 'nav-screen-content-after', {}, void 0, !0),
                       ]),
                     ],
                     512,
@@ -3979,38 +4086,38 @@ const ui = g(ai, [['render', ci]]),
       )
     },
   }),
-  Ii = g(Ci, [['__scopeId', 'data-v-62af7f20']]),
-  Ti = { key: 0, class: 'VPNav' },
-  Ni = m({
+  Ji = g(Yi, [['__scopeId', 'data-v-62af7f20']]),
+  Zi = { key: 0, class: 'VPNav' },
+  Qi = m({
     __name: 'VPNav',
     setup(o) {
-      const { isScreenOpen: e, closeScreen: t, toggleScreen: s } = xn(),
+      const { isScreenOpen: e, closeScreen: t, toggleScreen: s } = ra(),
         { frontmatter: n } = V(),
         r = $(() => n.value.navbar !== !1)
       return (
-        fe('close-screen', t),
-        se(() => {
-          K && document.documentElement.classList.toggle('hide-nav', !r.value)
+        me('close-screen', t),
+        ne(() => {
+          W && document.documentElement.classList.toggle('hide-nav', !r.value)
         }),
-        (d, p) =>
+        (c, p) =>
           r.value
             ? (a(),
-              l('header', Ti, [
+              l('header', Zi, [
                 f(
-                  Qr,
+                  gi,
                   { 'is-screen-open': i(e), onToggleScreen: i(s) },
                   {
                     'nav-bar-title-before': h(() => [
-                      c(d.$slots, 'nav-bar-title-before', {}, void 0, !0),
+                      u(c.$slots, 'nav-bar-title-before', {}, void 0, !0),
                     ]),
                     'nav-bar-title-after': h(() => [
-                      c(d.$slots, 'nav-bar-title-after', {}, void 0, !0),
+                      u(c.$slots, 'nav-bar-title-after', {}, void 0, !0),
                     ]),
                     'nav-bar-content-before': h(() => [
-                      c(d.$slots, 'nav-bar-content-before', {}, void 0, !0),
+                      u(c.$slots, 'nav-bar-content-before', {}, void 0, !0),
                     ]),
                     'nav-bar-content-after': h(() => [
-                      c(d.$slots, 'nav-bar-content-after', {}, void 0, !0),
+                      u(c.$slots, 'nav-bar-content-after', {}, void 0, !0),
                     ]),
                     _: 3,
                   },
@@ -4018,14 +4125,14 @@ const ui = g(ai, [['render', ci]]),
                   ['is-screen-open', 'onToggleScreen'],
                 ),
                 f(
-                  Ii,
+                  Ji,
                   { open: i(e) },
                   {
                     'nav-screen-content-before': h(() => [
-                      c(d.$slots, 'nav-screen-content-before', {}, void 0, !0),
+                      u(c.$slots, 'nav-screen-content-before', {}, void 0, !0),
                     ]),
                     'nav-screen-content-after': h(() => [
-                      c(d.$slots, 'nav-screen-content-after', {}, void 0, !0),
+                      u(c.$slots, 'nav-screen-content-after', {}, void 0, !0),
                     ]),
                     _: 3,
                   },
@@ -4037,12 +4144,12 @@ const ui = g(ai, [['render', ci]]),
       )
     },
   }),
-  Bi = g(Ni, [['__scopeId', 'data-v-86036eb2']]),
-  Ai = (o) => (E('data-v-2d8c65e0'), (o = o()), F(), o),
-  Hi = ['role', 'tabindex'],
-  zi = Ai(() => u('div', { class: 'indicator' }, null, -1)),
-  Ei = { key: 1, class: 'items' },
-  Fi = m({
+  Xi = g(Qi, [['__scopeId', 'data-v-86036eb2']]),
+  el = (o) => (E('data-v-2d8c65e0'), (o = o()), F(), o),
+  tl = ['role', 'tabindex'],
+  ol = el(() => d('div', { class: 'indicator' }, null, -1)),
+  sl = { key: 1, class: 'items' },
+  nl = m({
     __name: 'VPSidebarItem',
     props: { item: {}, depth: {} },
     setup(o) {
@@ -4052,23 +4159,23 @@ const ui = g(ai, [['render', ci]]),
           collapsible: s,
           isLink: n,
           isActiveLink: r,
-          hasActiveLink: d,
+          hasActiveLink: c,
           hasChildren: p,
           toggle: v,
-        } = ho($(() => e.item)),
+        } = Bo($(() => e.item)),
         b = $(() => (p.value ? 'section' : 'div')),
         y = $(() => (n.value ? 'a' : 'div')),
         w = $(() =>
           p.value ? (e.depth + 2 === 7 ? 'p' : `h${e.depth + 2}`) : 'p',
         ),
         M = $(() => (n.value ? void 0 : 'button')),
-        I = $(() => [
+        T = $(() => [
           [`level-${e.depth}`],
           { collapsible: s.value },
           { collapsed: t.value },
           { 'is-link': n.value },
           { 'is-active': r.value },
-          { 'has-active': d.value },
+          { 'has-active': c.value },
         ])
       function N(C) {
         ;('key' in C && C.key !== 'Enter') || (!e.item.link && v())
@@ -4076,26 +4183,26 @@ const ui = g(ai, [['render', ci]]),
       function B() {
         e.item.link && v()
       }
-      return (C, Q) => {
-        const x = R('VPSidebarItem', !0)
+      return (C, X) => {
+        const x = q('VPSidebarItem', !0)
         return (
           a(),
           k(
-            U(b.value),
-            { class: L(['VPSidebarItem', I.value]) },
+            j(b.value),
+            { class: L(['VPSidebarItem', T.value]) },
             {
               default: h(() => [
                 C.item.text
                   ? (a(),
                     l(
                       'div',
-                      X(
+                      ee(
                         { key: 0, class: 'item', role: M.value },
-                        it(C.item.items ? { click: N, keydown: N } : {}, !0),
+                        ht(C.item.items ? { click: N, keydown: N } : {}, !0),
                         { tabindex: C.item.items && 0 },
                       ),
                       [
-                        zi,
+                        ol,
                         C.item.link
                           ? (a(),
                             k(
@@ -4112,7 +4219,7 @@ const ui = g(ai, [['render', ci]]),
                                 default: h(() => [
                                   (a(),
                                   k(
-                                    U(w.value),
+                                    j(w.value),
                                     { class: 'text', innerHTML: C.item.text },
                                     null,
                                     8,
@@ -4126,7 +4233,7 @@ const ui = g(ai, [['render', ci]]),
                             ))
                           : (a(),
                             k(
-                              U(w.value),
+                              j(w.value),
                               { key: 1, class: 'text', innerHTML: C.item.text },
                               null,
                               8,
@@ -4142,33 +4249,33 @@ const ui = g(ai, [['render', ci]]),
                                 role: 'button',
                                 'aria-label': 'toggle section',
                                 onClick: B,
-                                onKeydown: rt(B, ['enter']),
+                                onKeydown: vt(B, ['enter']),
                                 tabindex: '0',
                               },
-                              [f(xe, { class: 'caret-icon' })],
+                              [f(Ke, { class: 'caret-icon' })],
                               32,
                             ))
                           : _('', !0),
                       ],
                       16,
-                      Hi,
+                      tl,
                     ))
                   : _('', !0),
                 C.item.items && C.item.items.length
                   ? (a(),
-                    l('div', Ei, [
+                    l('div', sl, [
                       C.depth < 5
                         ? (a(!0),
                           l(
-                            T,
+                            I,
                             { key: 0 },
-                            A(
+                            H(
                               C.item.items,
-                              (q) => (
+                              (K) => (
                                 a(),
                                 k(
                                   x,
-                                  { key: q.text, item: q, depth: C.depth + 1 },
+                                  { key: K.text, item: K, depth: C.depth + 1 },
                                   null,
                                   8,
                                   ['item', 'depth'],
@@ -4190,75 +4297,75 @@ const ui = g(ai, [['render', ci]]),
       }
     },
   }),
-  Di = g(Fi, [['__scopeId', 'data-v-2d8c65e0']]),
-  qe = (o) => (E('data-v-875a24b2'), (o = o()), F(), o),
-  xi = qe(() => u('div', { class: 'curtain' }, null, -1)),
-  Oi = {
+  al = g(nl, [['__scopeId', 'data-v-2d8c65e0']]),
+  Xe = (o) => (E('data-v-875a24b2'), (o = o()), F(), o),
+  rl = Xe(() => d('div', { class: 'curtain' }, null, -1)),
+  il = {
     class: 'nav',
     id: 'VPSidebarNav',
     'aria-labelledby': 'sidebar-aria-label',
     tabindex: '-1',
   },
-  Ui = qe(() =>
-    u(
+  ll = Xe(() =>
+    d(
       'span',
       { class: 'visually-hidden', id: 'sidebar-aria-label' },
       ' Sidebar Navigation ',
       -1,
     ),
   ),
-  Gi = m({
+  cl = m({
     __name: 'VPSidebar',
     props: { open: { type: Boolean } },
     setup(o) {
       const { sidebarGroups: e, hasSidebar: t } = D(),
         s = o,
         n = S(null),
-        r = Be(K ? document.body : null)
+        r = De(W ? document.body : null)
       return (
-        j(
+        R(
           [s, n],
           () => {
-            var d
+            var c
             s.open
-              ? ((r.value = !0), (d = n.value) == null || d.focus())
+              ? ((r.value = !0), (c = n.value) == null || c.focus())
               : (r.value = !1)
           },
           { immediate: !0, flush: 'post' },
         ),
-        (d, p) =>
+        (c, p) =>
           i(t)
             ? (a(),
               l(
                 'aside',
                 {
                   key: 0,
-                  class: L(['VPSidebar', { open: d.open }]),
+                  class: L(['VPSidebar', { open: c.open }]),
                   ref_key: 'navEl',
                   ref: n,
-                  onClick: p[0] || (p[0] = lt(() => {}, ['stop'])),
+                  onClick: p[0] || (p[0] = pt(() => {}, ['stop'])),
                 },
                 [
-                  xi,
-                  u('nav', Oi, [
-                    Ui,
-                    c(d.$slots, 'sidebar-nav-before', {}, void 0, !0),
+                  rl,
+                  d('nav', il, [
+                    ll,
+                    u(c.$slots, 'sidebar-nav-before', {}, void 0, !0),
                     (a(!0),
                     l(
-                      T,
+                      I,
                       null,
-                      A(
+                      H(
                         i(e),
                         (v) => (
                           a(),
                           l('div', { key: v.text, class: 'group' }, [
-                            f(Di, { item: v, depth: 0 }, null, 8, ['item']),
+                            f(al, { item: v, depth: 0 }, null, 8, ['item']),
                           ])
                         ),
                       ),
                       128,
                     )),
-                    c(d.$slots, 'sidebar-nav-after', {}, void 0, !0),
+                    u(c.$slots, 'sidebar-nav-after', {}, void 0, !0),
                   ]),
                 ],
                 2,
@@ -4267,24 +4374,24 @@ const ui = g(ai, [['render', ci]]),
       )
     },
   }),
-  ji = g(Gi, [['__scopeId', 'data-v-875a24b2']]),
-  Ri = m({
+  ul = g(cl, [['__scopeId', 'data-v-875a24b2']]),
+  dl = m({
     __name: 'VPSkipLink',
     setup(o) {
-      const e = ae(),
+      const e = re(),
         t = S()
-      j(
+      R(
         () => e.path,
         () => t.value.focus(),
       )
       function s({ target: n }) {
         const r = document.getElementById(decodeURIComponent(n.hash).slice(1))
         if (r) {
-          const d = () => {
-            r.removeAttribute('tabindex'), r.removeEventListener('blur', d)
+          const c = () => {
+            r.removeAttribute('tabindex'), r.removeEventListener('blur', c)
           }
           r.setAttribute('tabindex', '-1'),
-            r.addEventListener('blur', d),
+            r.addEventListener('blur', c),
             r.focus(),
             window.scrollTo(0, 0)
         }
@@ -4292,16 +4399,16 @@ const ui = g(ai, [['render', ci]]),
       return (n, r) => (
         a(),
         l(
-          T,
+          I,
           null,
           [
-            u(
+            d(
               'span',
               { ref_key: 'backToTop', ref: t, tabindex: '-1' },
               null,
               512,
             ),
-            u(
+            d(
               'a',
               {
                 href: '#VPContent',
@@ -4316,149 +4423,149 @@ const ui = g(ai, [['render', ci]]),
       )
     },
   }),
-  qi = g(Ri, [['__scopeId', 'data-v-bc7e97a6']]),
-  Ki = m({
+  vl = g(dl, [['__scopeId', 'data-v-bc7e97a6']]),
+  hl = m({
     __name: 'Layout',
     setup(o) {
       const { isOpen: e, open: t, close: s } = D(),
-        n = ae()
-      j(() => n.path, s), vo(e, s)
+        n = re()
+      R(() => n.path, s), No(e, s)
       const { frontmatter: r } = V(),
-        d = ct(),
-        p = $(() => !!d['home-hero-image'])
+        c = ft(),
+        p = $(() => !!c['home-hero-image'])
       return (
-        fe('hero-image-slot-exists', p),
+        me('hero-image-slot-exists', p),
         (v, b) => {
-          const y = R('Content')
+          const y = q('Content')
           return i(r).layout !== !1
             ? (a(),
               l(
                 'div',
                 { key: 0, class: L(['Layout', i(r).pageClass]) },
                 [
-                  c(v.$slots, 'layout-top', {}, void 0, !0),
-                  f(qi),
+                  u(v.$slots, 'layout-top', {}, void 0, !0),
+                  f(vl),
                   f(
-                    Jt,
+                    mo,
                     { class: 'backdrop', show: i(e), onClick: i(s) },
                     null,
                     8,
                     ['show', 'onClick'],
                   ),
-                  f(Bi, null, {
+                  f(Xi, null, {
                     'nav-bar-title-before': h(() => [
-                      c(v.$slots, 'nav-bar-title-before', {}, void 0, !0),
+                      u(v.$slots, 'nav-bar-title-before', {}, void 0, !0),
                     ]),
                     'nav-bar-title-after': h(() => [
-                      c(v.$slots, 'nav-bar-title-after', {}, void 0, !0),
+                      u(v.$slots, 'nav-bar-title-after', {}, void 0, !0),
                     ]),
                     'nav-bar-content-before': h(() => [
-                      c(v.$slots, 'nav-bar-content-before', {}, void 0, !0),
+                      u(v.$slots, 'nav-bar-content-before', {}, void 0, !0),
                     ]),
                     'nav-bar-content-after': h(() => [
-                      c(v.$slots, 'nav-bar-content-after', {}, void 0, !0),
+                      u(v.$slots, 'nav-bar-content-after', {}, void 0, !0),
                     ]),
                     'nav-screen-content-before': h(() => [
-                      c(v.$slots, 'nav-screen-content-before', {}, void 0, !0),
+                      u(v.$slots, 'nav-screen-content-before', {}, void 0, !0),
                     ]),
                     'nav-screen-content-after': h(() => [
-                      c(v.$slots, 'nav-screen-content-after', {}, void 0, !0),
+                      u(v.$slots, 'nav-screen-content-after', {}, void 0, !0),
                     ]),
                     _: 3,
                   }),
-                  f(Dn, { open: i(e), onOpenMenu: i(t) }, null, 8, [
+                  f(aa, { open: i(e), onOpenMenu: i(t) }, null, 8, [
                     'open',
                     'onOpenMenu',
                   ]),
                   f(
-                    ji,
+                    ul,
                     { open: i(e) },
                     {
                       'sidebar-nav-before': h(() => [
-                        c(v.$slots, 'sidebar-nav-before', {}, void 0, !0),
+                        u(v.$slots, 'sidebar-nav-before', {}, void 0, !0),
                       ]),
                       'sidebar-nav-after': h(() => [
-                        c(v.$slots, 'sidebar-nav-after', {}, void 0, !0),
+                        u(v.$slots, 'sidebar-nav-after', {}, void 0, !0),
                       ]),
                       _: 3,
                     },
                     8,
                     ['open'],
                   ),
-                  f(dn, null, {
+                  f(In, null, {
                     'page-top': h(() => [
-                      c(v.$slots, 'page-top', {}, void 0, !0),
+                      u(v.$slots, 'page-top', {}, void 0, !0),
                     ]),
                     'page-bottom': h(() => [
-                      c(v.$slots, 'page-bottom', {}, void 0, !0),
+                      u(v.$slots, 'page-bottom', {}, void 0, !0),
                     ]),
                     'not-found': h(() => [
-                      c(v.$slots, 'not-found', {}, void 0, !0),
+                      u(v.$slots, 'not-found', {}, void 0, !0),
                     ]),
                     'home-hero-before': h(() => [
-                      c(v.$slots, 'home-hero-before', {}, void 0, !0),
+                      u(v.$slots, 'home-hero-before', {}, void 0, !0),
                     ]),
                     'home-hero-info-before': h(() => [
-                      c(v.$slots, 'home-hero-info-before', {}, void 0, !0),
+                      u(v.$slots, 'home-hero-info-before', {}, void 0, !0),
                     ]),
                     'home-hero-info': h(() => [
-                      c(v.$slots, 'home-hero-info', {}, void 0, !0),
+                      u(v.$slots, 'home-hero-info', {}, void 0, !0),
                     ]),
                     'home-hero-info-after': h(() => [
-                      c(v.$slots, 'home-hero-info-after', {}, void 0, !0),
+                      u(v.$slots, 'home-hero-info-after', {}, void 0, !0),
                     ]),
                     'home-hero-actions-after': h(() => [
-                      c(v.$slots, 'home-hero-actions-after', {}, void 0, !0),
+                      u(v.$slots, 'home-hero-actions-after', {}, void 0, !0),
                     ]),
                     'home-hero-image': h(() => [
-                      c(v.$slots, 'home-hero-image', {}, void 0, !0),
+                      u(v.$slots, 'home-hero-image', {}, void 0, !0),
                     ]),
                     'home-hero-after': h(() => [
-                      c(v.$slots, 'home-hero-after', {}, void 0, !0),
+                      u(v.$slots, 'home-hero-after', {}, void 0, !0),
                     ]),
                     'home-features-before': h(() => [
-                      c(v.$slots, 'home-features-before', {}, void 0, !0),
+                      u(v.$slots, 'home-features-before', {}, void 0, !0),
                     ]),
                     'home-features-after': h(() => [
-                      c(v.$slots, 'home-features-after', {}, void 0, !0),
+                      u(v.$slots, 'home-features-after', {}, void 0, !0),
                     ]),
                     'doc-footer-before': h(() => [
-                      c(v.$slots, 'doc-footer-before', {}, void 0, !0),
+                      u(v.$slots, 'doc-footer-before', {}, void 0, !0),
                     ]),
                     'doc-before': h(() => [
-                      c(v.$slots, 'doc-before', {}, void 0, !0),
+                      u(v.$slots, 'doc-before', {}, void 0, !0),
                     ]),
                     'doc-after': h(() => [
-                      c(v.$slots, 'doc-after', {}, void 0, !0),
+                      u(v.$slots, 'doc-after', {}, void 0, !0),
                     ]),
                     'doc-top': h(() => [
-                      c(v.$slots, 'doc-top', {}, void 0, !0),
+                      u(v.$slots, 'doc-top', {}, void 0, !0),
                     ]),
                     'doc-bottom': h(() => [
-                      c(v.$slots, 'doc-bottom', {}, void 0, !0),
+                      u(v.$slots, 'doc-bottom', {}, void 0, !0),
                     ]),
                     'aside-top': h(() => [
-                      c(v.$slots, 'aside-top', {}, void 0, !0),
+                      u(v.$slots, 'aside-top', {}, void 0, !0),
                     ]),
                     'aside-bottom': h(() => [
-                      c(v.$slots, 'aside-bottom', {}, void 0, !0),
+                      u(v.$slots, 'aside-bottom', {}, void 0, !0),
                     ]),
                     'aside-outline-before': h(() => [
-                      c(v.$slots, 'aside-outline-before', {}, void 0, !0),
+                      u(v.$slots, 'aside-outline-before', {}, void 0, !0),
                     ]),
                     'aside-outline-after': h(() => [
-                      c(v.$slots, 'aside-outline-after', {}, void 0, !0),
+                      u(v.$slots, 'aside-outline-after', {}, void 0, !0),
                     ]),
                     'aside-ads-before': h(() => [
-                      c(v.$slots, 'aside-ads-before', {}, void 0, !0),
+                      u(v.$slots, 'aside-ads-before', {}, void 0, !0),
                     ]),
                     'aside-ads-after': h(() => [
-                      c(v.$slots, 'aside-ads-after', {}, void 0, !0),
+                      u(v.$slots, 'aside-ads-after', {}, void 0, !0),
                     ]),
                     _: 3,
                   }),
-                  f(_n),
-                  c(v.$slots, 'layout-bottom', {}, void 0, !0),
+                  f(zn),
+                  u(v.$slots, 'layout-bottom', {}, void 0, !0),
                 ],
                 2,
               ))
@@ -4467,17 +4574,17 @@ const ui = g(ai, [['render', ci]]),
       )
     },
   }),
-  Wi = g(Ki, [['__scopeId', 'data-v-066deec2']]),
-  Yi = {
-    Layout: Wi,
+  pl = g(hl, [['__scopeId', 'data-v-066deec2']]),
+  fl = {
+    Layout: pl,
     enhanceApp: ({ app: o }) => {
-      o.component('Badge', Kt)
+      o.component('Badge', po)
     },
   },
-  Zi = {
-    ...Yi,
+  ml = {
+    ...fl,
     enhanceApp({ app: o }) {
-      o.use(qt)
+      o.use(ho)
     },
   }
-export { Zi as R, jt as a }
+export { ml as R, Jt as a }

@@ -2,7 +2,7 @@
   "extends": "../../tsconfig.json",
   "include": ["src"], // 哪些内容需要编译
   "compilerOptions": {
-    "moduleResolution": "node",
+    "moduleResolution": "Node",
     "baseUrl": "."
   }
 }
