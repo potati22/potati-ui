@@ -1,7 +1,7 @@
 import {
   d as g,
   f as c,
-  M as e,
+  N as e,
   o as p,
   a as k,
   k as i,
@@ -10,7 +10,7 @@ import {
   t as y,
   b as a,
   $ as u,
-} from './chunks/framework.CD4fBMdo.js'
+} from './chunks/framework.D7pjZlIy.js'
 const _ = { style: { 'margin-top': '15px' } },
   F = g({
     __name: 'basic',

@@ -1,26 +1,26 @@
 import {
-  B as o,
-  a6 as p,
-  a7 as u,
-  a8 as c,
-  a9 as l,
-  aa as f,
-  ab as d,
-  ac as m,
-  ad as h,
-  ae as g,
-  af as A,
-  ag as v,
+  C as o,
+  a7 as p,
+  a8 as u,
+  a9 as c,
+  aa as l,
+  ab as f,
+  ac as d,
+  ad as m,
+  ae as h,
+  af as g,
+  ag as A,
+  ah as v,
   d as P,
-  x as w,
-  g as y,
-  H as C,
-  ah as R,
-  ai as _,
-  aj as b,
-  ak as E,
-} from './chunks/framework.CD4fBMdo.js'
-import { R as D } from './chunks/theme.D_nzjXxa.js'
+  y,
+  g as C,
+  I as w,
+  ai as R,
+  aj as _,
+  ak as b,
+  al as E,
+} from './chunks/framework.D7pjZlIy.js'
+import { R as D } from './chunks/theme.CjlbvN5R.js'
 function i(e) {
   if (e.extends) {
     const a = i(e.extends)
@@ -39,10 +39,10 @@ const s = i(D),
   T = P({
     name: 'VitePressApp',
     setup() {
-      const { site: e, lang: a, dir: t } = w()
+      const { site: e, lang: a, dir: t } = y()
       return (
-        y(() => {
-          C(() => {
+        C(() => {
+          w(() => {
             ;(document.documentElement.lang = a.value),
               (document.documentElement.dir = t.value)
           })
@@ -56,8 +56,8 @@ const s = i(D),
     },
   })
 async function j() {
-  const e = L(),
-    a = x()
+  const e = O(),
+    a = L()
   a.provide(u, e)
   const t = c(e.route)
   return (
@@ -80,10 +80,10 @@ async function j() {
     { app: a, router: e, data: t }
   )
 }
-function x() {
+function L() {
   return h(T)
 }
-function L() {
+function O() {
   let e = o,
     a
   return g((t) => {

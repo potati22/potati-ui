@@ -1,4 +1,4 @@
-import { _ as s, a as i, o as a, $ as n } from './chunks/framework.CD4fBMdo.js'
+import { _ as s, a as i, o as a, $ as n } from './chunks/framework.D7pjZlIy.js'
 const g = JSON.parse(
     '{"title":"快速开始","description":"","frontmatter":{},"headers":[],"relativePath":"guide/index.md","filePath":"guide/index.md"}',
   ),
