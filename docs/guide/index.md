@@ -37,16 +37,19 @@ pnpm add @potati/resolver unplugin-vue-components unplugin-auto-import -D
 ```ts
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
-import { PotatiResolver } from '@potati/resolver'
+import {
+  PotatiComponentResolver,
+  PotatiDirectiveResolver,
+} from '@potati/resolver'
 
 export default defineConfig({
   plugins: [
     // ...
     Components({
-      resolvers: [PotatiResolver()],
+      resolvers: [PotatiComponentResolver(), PotatiDirectiveResolver()],
     }),
     AutoImport({
-      resolvers: [PotatiResolver()],
+      resolvers: [PotatiComponentResolver()],
     }),
   ],
   // ...

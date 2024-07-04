@@ -60,7 +60,7 @@ function warning() {
 
 ### 方法
 
-调用`PotMessage`或者`getCurrentInstance().appContext.config.globalProperties.$message`（完整导入可用）会返回当前 Message 的实例
+调用`PotMessage`会返回当前 Message 的实例
 
 如果需要手动关闭实例，可以调用它的 close 方法
 
