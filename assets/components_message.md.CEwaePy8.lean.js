@@ -92,13 +92,13 @@ const y = o({
     -1,
   ),
   f = g('', 8),
-  x = JSON.parse(
+  A = JSON.parse(
     '{"title":"Message 消息提示","description":"","frontmatter":{},"headers":[],"relativePath":"components/message.md","filePath":"components/message.md"}',
   ),
   C = { name: 'components/message.md' },
-  A = Object.assign(C, {
+  x = Object.assign(C, {
     setup(d) {
       return (l, h) => (p(), k('div', null, [u, F, _, m, a(y), f]))
     },
   })
-export { x as __pageData, A as default }
+export { A as __pageData, x as default }

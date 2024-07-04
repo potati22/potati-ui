@@ -120,16 +120,16 @@ const y = o({
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    message: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&#39;这是一条Warning类型的消息&#39;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  })</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">script</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt;</span></span></code></pre></div></details><h2 id="api" tabindex="-1">API <a class="header-anchor" href="#api" aria-label="Permalink to &quot;API&quot;">​</a></h2><h3 id="属性" tabindex="-1">属性 <a class="header-anchor" href="#属性" aria-label="Permalink to &quot;属性&quot;">​</a></h3><table><thead><tr><th>属性名</th><th>说明</th><th>类型</th><th>默认值</th></tr></thead><tbody><tr><td>type</td><td>提示类型，非必选</td><td><code>string</code></td><td><code>info</code></td></tr><tr><td>message</td><td>消息内容，必选</td><td><code>string</code></td><td>-</td></tr><tr><td>duration</td><td>消息停留时间，非必选</td><td><code>number</code></td><td><code>3000</code></td></tr></tbody></table><h3 id="方法" tabindex="-1">方法 <a class="header-anchor" href="#方法" aria-label="Permalink to &quot;方法&quot;">​</a></h3><p>调用<code>PotMessage</code>或者<code>getCurrentInstance().appContext.config.globalProperties.$message</code>（完整导入可用）会返回当前 Message 的实例</p><p>如果需要手动关闭实例，可以调用它的 close 方法</p><table><thead><tr><th>名称</th><th>说明</th><th>类型</th></tr></thead><tbody><tr><td>close</td><td>关闭当前Message</td><td><code>Function</code></td></tr></tbody></table>`,
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">script</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt;</span></span></code></pre></div></details><h2 id="api" tabindex="-1">API <a class="header-anchor" href="#api" aria-label="Permalink to &quot;API&quot;">​</a></h2><h3 id="属性" tabindex="-1">属性 <a class="header-anchor" href="#属性" aria-label="Permalink to &quot;属性&quot;">​</a></h3><table><thead><tr><th>属性名</th><th>说明</th><th>类型</th><th>默认值</th></tr></thead><tbody><tr><td>type</td><td>提示类型，非必选</td><td><code>string</code></td><td><code>info</code></td></tr><tr><td>message</td><td>消息内容，必选</td><td><code>string</code></td><td>-</td></tr><tr><td>duration</td><td>消息停留时间，非必选</td><td><code>number</code></td><td><code>3000</code></td></tr></tbody></table><h3 id="方法" tabindex="-1">方法 <a class="header-anchor" href="#方法" aria-label="Permalink to &quot;方法&quot;">​</a></h3><p>调用<code>PotMessage</code>会返回当前 Message 的实例</p><p>如果需要手动关闭实例，可以调用它的 close 方法</p><table><thead><tr><th>名称</th><th>说明</th><th>类型</th></tr></thead><tbody><tr><td>close</td><td>关闭当前Message</td><td><code>Function</code></td></tr></tbody></table>`,
     8,
   ),
-  x = JSON.parse(
+  A = JSON.parse(
     '{"title":"Message 消息提示","description":"","frontmatter":{},"headers":[],"relativePath":"components/message.md","filePath":"components/message.md"}',
   ),
   C = { name: 'components/message.md' },
-  A = Object.assign(C, {
+  x = Object.assign(C, {
     setup(d) {
       return (l, h) => (p(), k('div', null, [u, F, _, m, a(y), f]))
     },
   })
-export { x as __pageData, A as default }
+export { A as __pageData, x as default }
