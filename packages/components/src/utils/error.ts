@@ -1,3 +1,3 @@
 export function throwError(scope: string, m: string): never {
-  throw new ElementPlusError(`[${scope}] ${m}`)
+  throw new Error(`[${scope}] ${m}`)
 }

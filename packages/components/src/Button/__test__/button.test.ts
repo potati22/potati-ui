@@ -1,26 +1,42 @@
-import { describe, expect, it } from 'vitest'
 import { mount } from '@vue/test-utils'
-import button from '../src/button.vue'
+import { describe, it, expect } from 'vitest'
+import PotButton from '../src/button.vue'
 
-describe('test button', () => {
-  it('should render slot', () => {
-    const wrapper = mount(button, {
-      slots: {
-        default: 'PotButton',
-      },
-    })
-
-    expect(wrapper.html()).toContain('PotButton')
+describe('PotButton', () => {
+  it('renders default slot content when no type is provided', () => {
+    const wrapper = mount(PotButton)
+    expect(wrapper.text()).toBe('Default')
   })
 
-  it('should have class and default slot', () => {
-    const wrapper = mount(button, {
+  it('renders slot content based on type prop', () => {
+    const wrapper = mount(PotButton, {
       props: {
         type: 'yellow',
       },
     })
+    expect(wrapper.text()).toBe('Yellow')
+  })
 
+  it('applies correct class based on type prop', () => {
+    const wrapper = mount(PotButton, {
+      props: {
+        type: 'yellow',
+      },
+    })
     expect(wrapper.classes()).toContain('pot-button--yellow')
-    expect(wrapper.html()).toContain('Yellow')
+  })
+
+  it('has the correct default class', () => {
+    const wrapper = mount(PotButton)
+    expect(wrapper.classes()).toContain('pot-button')
+  })
+
+  it('renders custom slot content', () => {
+    const wrapper = mount(PotButton, {
+      slots: {
+        default: 'Custom Button',
+      },
+    })
+    expect(wrapper.text()).toBe('Custom Button')
   })
 })

@@ -45,7 +45,7 @@ export default defineConfig({
       ],
     },
   },
-  /* test: {
+  test: {
     environment: 'happy-dom',
-  }, */
+  },
 })

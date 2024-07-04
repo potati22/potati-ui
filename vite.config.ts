@@ -15,7 +15,7 @@ export default defineConfig({
       resolvers: [PotatiComponentResolver(), PotatiDirectiveResolver()],
     }),
     AutoImport({
-      resolvers: [PotatiDirectiveResolver()],
+      resolvers: [PotatiComponentResolver()],
     }),
   ],
   resolve: {

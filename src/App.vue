@@ -12,7 +12,7 @@
   >
     <li v-for="i in count" :key="i" class="list-item">{{ i }}</li>
   </ul>
-  <PotButton></PotButton>
+  <PotButton @click="success"></PotButton>
 </template>
 
 <script setup lang="ts">
@@ -28,5 +28,12 @@ const load = () => {
     count.value += 5
     loading.value = false
   }, 2000)
+}
+
+function success() {
+  PotMessage({
+    type: 'success',
+    message: '这是一条Success类型的消息',
+  })
 }
 </script>
